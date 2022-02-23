@@ -21,3 +21,4 @@ const sassTask = () =>
 
 
 exports.default = series(sassTask, parallel(browserTask, watcher));
+exports.build = series(sassTask);
