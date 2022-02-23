@@ -104,5 +104,9 @@ dist
 .tern-port
 
 .idea
+<<<<<<< HEAD
 
 .DS_Store
+=======
+src/css
+>>>>>>> master
