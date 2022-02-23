@@ -1,0 +1,44 @@
+.promo {
+  padding-top: 18px;
+  padding-bottom: 62px;
+}
+.promo__title {
+  padding-bottom: 47px;
+  font-size: 4.4rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+}
+.promo__colored-title {
+  color: var(--color-text-yellow);
+}
+.promo__card-group {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+  padding-bottom: 48px;
+}
+.promo__lit-cards {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 29px;
+  row-gap: 27px;
+}
+.promo__small-img {
+  height: 189px;
+}
+.promo__button {
+  text-align: center;
+}
+.promo__all-button {
+  display: inline-block;
+  width: 160px;
+  padding: 10px 0;
+  border-radius: 23px;
+  background: var(--color-text-yellow);
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2;
+  text-align: center;
+}
