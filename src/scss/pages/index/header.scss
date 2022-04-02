@@ -2,33 +2,27 @@
   padding-top: 13px;
   padding-bottom: 71px;
 }
-
 .header__upper-elements {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
-
 .header__upper-wrapper {
   display: flex;
   align-items: center;
   gap: 52px;
-
 }
-
 .header__item-description {
+  display: flex;
+  padding-bottom: 9px;
   font-size: 1.7rem;
   font-weight: 600;
   line-height: 1.17;
-  display: flex;
   gap: 6px;
-  padding-bottom: 9px
 }
-
 .header__subtitle-city {
   color: var(--color-text-yellow);
 }
-
 .header__item-yandex {
   display: flex;
   font-size: 1.3rem;
@@ -36,55 +30,47 @@
   line-height: 1.15;
   gap: 20px;
 }
-
 .header__yandex-descript {
   display: flex;
   gap: 7px;
   align-items: center;
 }
-
 .header__round {
   width: 4px;
   height: 4px;
   border: 2px solid var(--color-red-dot);
   border-radius: 50%;
 }
-
 .header__upper-phone-wrapper {
-  gap:28px;
+  gap: 28px;
   display: flex;
   align-items: center;
-
 }
-
 .header__call-button {
-  width: 180px;
   display: inline-block;
-  text-align: center;
-  padding: 7px 0px;
+  width: 180px;
+  padding: 7px 0;
+  border-radius: 28px;
   background: var(--color-button-call-back);
   color: var(--color-button-link);
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 2;
-  border-radius: 28px;
+  text-align: center;
 }
-
 .header__phone-number {
+  color: var(--color-text-yellow);
   font-size: 2.6rem;
   font-weight: 700;
   line-height: 1.19;
-  color: var(--color-text-yellow);
 }
-
 .header__nav {
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 31px;
   align-items: center;
   justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 31px;
 }
-
 .header__list {
   display: flex;
   gap: 16px;
@@ -92,41 +78,35 @@
   font-weight: 600;
   line-height: 1.19;
 }
-
 .header__enter-link {
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.75;
   color: var(--color-button-link);
-}
-
-.header__shop-button{
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.75;
-  width: 160px;
+}
+.header__shop-button {
   display: inline-block;
-  text-align: center;
-  padding: 7px 0px;
-  background: var(--color-text-yellow);
+  width: 160px;
+  padding: 7px 0;
   border-radius: 8px;
+  background: var(--color-text-yellow);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.75;
+  text-align: center;
 }
-
 .header__shop-link {
-  border-right: 2px solid black;
-  padding-right: 14px;
   margin-right: 14px;
+  padding-right: 14px;
+  border-right: 2px solid black;
 }
-
 .header__slider {
   display: flex;
   justify-content: center;
 }
-
 .header__slider-arrow-l {
   padding: 20px;
 }
-
 .header__slider-arrow-r {
   padding: 20px;
   transform: scale(-1, 1);
