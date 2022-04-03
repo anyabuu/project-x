@@ -333,12 +333,16 @@ a {
   --color-text-yellow: #F7D22D;
   --color-button-call-back: #F3F3F7;
   --color-button-link: #696F7A;
+<<<<<<< HEAD
   --color-red-dot: #FF2E65;
   --color-box-shadow: rgba(0, 0, 0, 0.06);
   --color-menu-catalog: #797979;
   --color-menu-catalog-descript: #686466;
   --color-delivery-back: #E3ECF5;
   --color-text: #473E43; }
+=======
+  --color-red-dot: #FF2E65; }
+>>>>>>> feature/homepage
 
 * {
   box-sizing: border-box; }
@@ -470,6 +474,7 @@ html {
 .header__slider-arrow-r {
   padding: 20px;
   transform: scale(-1, 1); }
+<<<<<<< HEAD
 
 .catalog__novelties {
   font-weight: 700;
@@ -649,3 +654,5 @@ html {
 
 .delivery__map {
   padding-top: 32px; }
+=======
+>>>>>>> feature/homepage
