@@ -8,7 +8,8 @@
     "gulp": "gulp",
     "build": "gulp build",
     "start": "node server.js",
-    "lint": "stylelint src/**/*.scss"
+    "lint": "stylelint  \"src/**/*.scss\"",
+    "fix": "stylelint --fix  \"src/**/*.scss\""
   },
   "repository": {
     "type": "git",
