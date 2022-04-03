@@ -104,4 +104,7 @@ dist
 .tern-port
 
 .idea
+
+.DS_Store
 src/css
+
