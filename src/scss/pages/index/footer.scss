@@ -1,0 +1,115 @@
+.footer {
+  padding-top: 55px;
+  padding-bottom: 62px;
+  background: url('../img/footer-logo-ppf.svg') no-repeat, no-repeat right bottom;
+}
+.footer__part-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.footer__logo {
+  padding-bottom: 33px;
+}
+.footer__logo-part-subtitle {
+  opacity: 0.85;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.75;
+}
+.footer__logo-part-subtitle-group {
+  display: flex;
+  gap: 52px;
+  padding-bottom: 23px;
+}
+.footer__logo-part-media-list {
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  gap: 103px;
+}
+.footer__logo-part-media-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer__logo-part-media-item {
+  opacity: 0.7;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+.footer__logo-part-adress {
+  font-size: 1.4rem;
+  line-height: 2.35;
+}
+.footer__logo-part-info {
+  display: flex;
+  align-items: center;
+  gap: 157px;
+}
+.footer__logo-part-rights {
+  opacity: 0.8;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2;
+}
+.footer__logo-part-wallet {
+  display: flex;
+  gap: 23px;
+  align-items: baseline;
+}
+.footer__ask-part {
+  width: 500px;
+}
+.footer__ask-title {
+  padding-bottom: 33px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.21;
+  text-transform: uppercase;
+}
+.footer__ask-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-bottom: 47px;
+}
+.footer__ask-socials-logo {
+  width: 100px;
+  padding: 11px 36px;
+  border: 2px solid var(--color-delivery-back);
+  border-radius: 13px;
+}
+.footer__ask-socials-message {
+  padding: 16px 56px;
+  border: 2px solid var(--color-delivery-back);
+  border-radius: 13px;
+  opacity: 0.8;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.footer__ask-phone-number {
+  padding-bottom: 20px;
+  color: var(--color-text-yellow);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.footer__bottom-part {
+  display: flex;
+  align-items: center;
+  gap: 149px;
+}
+.footer__ask-button {
+  display: inline-block;
+  width: 180px;
+  padding: 7px 27px;
+  border-radius: 27px;
+  background: var(--color-button-call-back);
+  color: var(--color-button-link);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2;
+}
