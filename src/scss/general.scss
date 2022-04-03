@@ -1,4 +1,5 @@
 :root {
+
   --color-text-yellow: #F7D22D;
   --color-button-call-back: #F3F3F7;
   --color-button-link: #696F7A;
@@ -7,25 +8,21 @@
   --color-menu-catalog: #797979;
   --color-menu-catalog-descript: #686466;
 }
-
 * {
   box-sizing: border-box;
 }
-
 body,
 html {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', serif;
   font-size: 10px;
 }
-
 .container {
   width: 1110px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
-
 .container-bg {
   width: 1320px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
