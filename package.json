@@ -8,7 +8,8 @@
     "gulp": "gulp",
     "build": "gulp build",
     "start": "node server.js",
-    "lint": "stylelint src/**/*.scss"
+    "lint": "stylelint  \"src/**/*.scss\"",
+    "fix": "stylelint --fix  \"src/**/*.scss\""
   },
   "repository": {
     "type": "git",
@@ -48,5 +49,9 @@
   },
   "stylelint": {
     "extends": "@rubygarage/stylelint-scss-config"
+  },
+  "volta": {
+    "node": "14.18.3",
+    "npm": "6.14.15"
   }
 }

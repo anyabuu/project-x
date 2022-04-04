@@ -1,0 +1,29 @@
+:root {
+  --color-text-yellow: #f7d22d;
+  --color-button-call-back: #f3f3f7;
+  --color-button-link: #696f7a;
+  --color-red-dot: #ff2e65;
+  --color-box-shadow: rgba(0, 0, 0, 0.06);
+  --color-menu-catalog: #797979;
+  --color-menu-catalog-descript: #686466;
+  --color-delivery-back: #e3ecf5;
+  --color-text: #473e43;
+}
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  font-family: 'Montserrat', serif;
+  font-size: 10px;
+}
+.container {
+  width: 1110px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-bg {
+  width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+}
