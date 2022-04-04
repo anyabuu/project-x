@@ -1,7 +1,7 @@
 .footer {
   padding-top: 55px;
   padding-bottom: 62px;
-  background: url('../img/footer-logo-ppf.svg') no-repeat, no-repeat right bottom;
+  background: url('../img/footer-logo-ppf.svg') no-repeat right bottom;
 }
 .footer__part-wrapper {
   display: flex;
@@ -25,19 +25,17 @@
 .footer__logo-part-media-list {
   display: flex;
   padding-top: 15px;
-  padding-bottom: 25px;
+  padding-bottom: 36px;
   gap: 103px;
 }
-.footer__logo-part-media-list-wrapper {
+.footer__logo-part-media-item {
   display: flex;
   flex-direction: column;
-  gap: 7px;
-}
-.footer__logo-part-media-item {
   opacity: 0.7;
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.75;
+  gap: 7px;
 }
 .footer__logo-part-adress {
   font-size: 1.4rem;
@@ -69,7 +67,7 @@
   line-height: 1.21;
   text-transform: uppercase;
 }
-.footer__ask-socials {
+.footer__ask-socials-list {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
@@ -91,6 +89,7 @@
   line-height: 1.15;
 }
 .footer__ask-phone-number {
+  display: block;
   padding-bottom: 20px;
   color: var(--color-text-yellow);
   font-size: 3rem;
