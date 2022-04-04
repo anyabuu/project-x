@@ -29,7 +29,7 @@
     "gulp-sass": "^5.1.0",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
-    "rammfall-stylelint-scss": "^0.1.0",
+    "rammfall-stylelint-scss": "^0.1.1",
     "sass": "^1.49.11",
     "stylelint": "^14.6.1"
   },
