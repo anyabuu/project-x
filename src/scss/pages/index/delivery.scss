@@ -33,9 +33,7 @@
   font-weight: 700;
   line-height: 1.5;
 }
-
-.delivery__card-image {
-  margin: auto;
+.delivery__icon-wrapper {
   display: flex;
   position: absolute;
   bottom: 60px;
@@ -43,6 +41,9 @@
   height: 77px;
   border-radius: 50%;
   background: white;
+}
+.delivery__card-image {
+  margin: auto;
 }
 .delivery__map {
   padding-top: 32px;
