@@ -16,14 +16,23 @@ body,
 html {
   font-family: Montserrat, serif;
   font-size: 10px;
+  @include media-tablet {
+    font-size: 8px;
+  }
 }
 .container {
   width: 1110px;
   margin-right: auto;
   margin-left: auto;
+  @include media-tablet {
+    width: 96%;
+  }
 }
 .container-bg {
   width: 1320px;
   margin-right: auto;
   margin-left: auto;
+  @include media-tablet {
+    width: 96%;
+  }
 }
