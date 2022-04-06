@@ -1,16 +1,30 @@
 .catalog {
+  /*
   background: url('../img/pizza-man.png') no-repeat left top;
+   */
+  @include media-tablet {
+    overflow: hidden;
+  }
 }
 .catalog__novelties {
   padding-bottom: 33px;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.2;
+  @include media-tablet {
+    padding-bottom: 18px;
+    font-size: 2.1rem;
+    line-height: 1.19;
+  }
 }
 .catalog__novelties-list {
   display: flex;
   justify-content: space-between;
   padding-bottom: 46px;
+  @include media-tablet {
+    gap: 30px;
+    padding-bottom: 38px;
+  }
 }
 .catalog__novelties-card {
   display: flex;
@@ -39,15 +53,46 @@
   font-size: 3.2rem;
   font-weight: 800;
   line-height: 1.21;
+  @include media-tablet {
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
 }
 .catalog__menu-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include media-tablet {
+    justify-content: center;
+    column-gap: 30px;
+  }
 }
 .catalog__card {
   width: 256px;
   margin-bottom: 49px;
+  @include media-tablet {
+    width: 44%;
+    margin-bottom: 30px;
+  }
+}
+.catalog__card-link {
+  @include media-tablet {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    padding-bottom: 17px;
+  }
+}
+.catalog__card-image {
+  @include media-tablet {
+    height: 122px;
+  }
+}
+.catalog__card-text-group {
+  @include media-tablet {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .catalog__menu-title {
   padding-top: 8px;
@@ -56,18 +101,33 @@
   font-size: 2.4rem;
   font-weight: 800;
   line-height: 1.16;
+  @include media-tablet {
+    padding-bottom: 3px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
 }
 .catalog__menu-descript {
   padding-bottom: 31px;
-  color: var(--color-menu-catalog-descrip);
+  color: var(--color-menu-catalog-descript);
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.46;
+  @include media-tablet {
+    padding-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 }
 .catalog__buy-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include media-tablet {
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 22px;
+  }
 }
 .catalog__menu-price {
   font-size: 2.2rem;
@@ -85,4 +145,7 @@
   font-weight: 700;
   line-height: 2;
   text-align: center;
+  @include media-tablet {
+    color: var(--color-text);
+  }
 }

@@ -16,9 +16,6 @@ body,
 html {
   font-family: Montserrat, serif;
   font-size: 10px;
-  @include media-tablet {
-    font-size: 8px;
-  }
 }
 .container {
   width: 1110px;
