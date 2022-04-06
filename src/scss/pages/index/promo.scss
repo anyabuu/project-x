@@ -1,7 +1,14 @@
 .promo {
   padding-top: 18px;
   padding-bottom: 62px;
+
+  /*
   background: url('../img/noodle-fone-girl.png') no-repeat 100% 171%;
+   */
+  @include media-tablet {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
 }
 .promo__title {
   padding-bottom: 47px;
@@ -9,6 +16,11 @@
   font-weight: 800;
   line-height: 1.2;
   text-align: center;
+  @include media-tablet {
+    padding-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
 }
 .promo__colored-title {
   color: var(--color-text-yellow);
@@ -19,6 +31,12 @@
   grid-template-rows: 189px;
   gap: 29px;
   padding-bottom: 48px;
+  @include media-tablet {
+    grid-template-rows: auto;
+    padding-bottom: 30px;
+    column-gap: 15px;
+    row-gap: 17px;
+  }
 }
 .promo__card-item {
   &:nth-child(1) {
@@ -44,4 +62,7 @@
   font-weight: 700;
   line-height: 2;
   text-align: center;
+  @include media-tablet {
+    color: var(--color-text);
+  }
 }
