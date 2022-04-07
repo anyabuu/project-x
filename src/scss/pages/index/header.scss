@@ -4,6 +4,9 @@
   @include media-tablet {
     padding-bottom: 28px;
   }
+  @include media-phone {
+    padding-bottom: 24px;
+  }
 }
 .header__container {
   @include media-tablet {
@@ -84,6 +87,9 @@
   font-size: 2.6rem;
   font-weight: 700;
   line-height: 1.19;
+  @include media-phone {
+    display: none;
+  }
 }
 .header__nav {
   display: flex;
@@ -132,6 +138,9 @@
   font-weight: 700;
   line-height: 1.75;
   text-align: center;
+  @include media-phone {
+    display: none;
+  }
 }
 .header__shop-link {
   margin-right: 14px;
@@ -158,5 +167,8 @@
 .header__slider-img {
   @include media-tablet {
     width: 100%;
+  }
+  @include media-mini-phone {
+    width: 213px;
   }
 }

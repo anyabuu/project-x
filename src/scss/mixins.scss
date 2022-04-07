@@ -3,13 +3,13 @@
     @content;
   }
 }
-@mixin media-tablet-big {
-  @media (max-width: 950px) {
+@mixin media-phone {
+  @media (max-width: 767px) {
     @content;
   }
 }
-@mixin media-phone {
-  @media (max-width: 767px) {
+@mixin media-mini-phone {
+  @media (max-width: 550px) {
     @content;
   }
 }

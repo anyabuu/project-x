@@ -24,6 +24,9 @@ html {
   @include media-tablet {
     width: 96%;
   }
+  @include media-phone {
+    width: 90%;
+  }
 }
 .container-bg {
   width: 1320px;
