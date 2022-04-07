@@ -1,15 +1,15 @@
 .footer {
   padding-top: 55px;
   padding-bottom: 62px;
-
-  /*
   background: url('../img/footer-logo-ppf.svg') no-repeat right bottom;
-   */
   @include media-tablet {
     padding-bottom: 20px;
+    background-position: 90% 100%;
+    background-size: 20%;
   }
   @include media-phone {
     padding-top: 20px;
+    background: none;
   }
 }
 .footer__part-wrapper {
@@ -214,8 +214,11 @@
   @include media-tablet {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     row-gap: 20px;
+    column-gap: 85px;
+  }
+  @include media-phone {
+    justify-content: space-between;
   }
   @include media-mini-phone {
     row-gap: 4px;
