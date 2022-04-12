@@ -2,10 +2,10 @@
   padding-top: 13px;
   padding-bottom: 71px;
   @include media-tablet {
-    padding-bottom: 28px;
+    padding-bottom: 0px;
   }
   @include media-phone {
-    padding-bottom: 24px;
+    padding-bottom: 16px;
   }
 }
 .header__container {

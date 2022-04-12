@@ -1,7 +1,13 @@
 .catalog {
   background: url('../img/pizza-man.png') no-repeat left top;
   @include media-tablet {
+    padding-top: 28px;
     overflow: hidden;
+    background: url('../img/piza-man-opacity-font.png') no-repeat left -16px;
+  }
+  @include media-phone {
+    padding-top: 0px;
+    background: url('../img/piza-man-opacity-font-mobile.png') no-repeat left 6px;
   }
 }
 .catalog__novelties {
@@ -38,6 +44,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 24px var(--color-box-shadow);
   gap: 25px;
+  background-color: white;
   @include media-phone {
     width: 200px;
     padding: 11px 32px 11px 14px;
@@ -100,7 +107,7 @@
   width: 256px;
   margin-bottom: 49px;
   @include media-tablet {
-    width: 44%;
+    width: 47%;
     margin-bottom: 30px;
   }
   @include media-phone {
@@ -154,7 +161,7 @@
 }
 .catalog__menu-descript {
   padding-bottom: 31px;
-  color: var(--color-menu-catalog-descript);
+  color: var(--color-menu-catalog-description);
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.46;
