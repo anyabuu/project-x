@@ -21,19 +21,23 @@
   }
 }
 .footer__logo-part {
-  @include media-phone {
-    display: flex;
-    flex-direction: column;
+  @include media-tablet {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    align-items: end;
+    column-gap: 30px;
   }
   @include media-phone {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 .footer__logo {
   padding-bottom: 33px;
   @include media-tablet {
-    margin: -27px 30px 15px 0;
-    float: left;
+    padding-bottom: 10px;
   }
   @include media-phone {
     margin: 0;
@@ -46,9 +50,10 @@
 .footer__mobile-connect {
   display: none;
   @include media-phone {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: flex-end;
   }
 }
 .number-style {
@@ -88,6 +93,17 @@
     font-size: 1rem;
   }
 }
+.footer__logo-part-subtitle-group {
+  display: flex;
+  gap: 47px;
+  padding-bottom: 23px;
+  @include media-phone {
+    padding-top: 20px;
+  }
+  @include media-mini-phone {
+    padding-top: 14px;
+  }
+}
 .footer__logo-part-subtitle {
   opacity: 0.85;
   font-size: 1.5rem;
@@ -97,15 +113,9 @@
     font-size: 1rem;
   }
 }
-.footer__logo-part-subtitle-group {
-  display: flex;
-  gap: 52px;
-  padding-bottom: 23px;
-  @include media-phone {
-    padding-top: 20px;
-  }
-  @include media-mini-phone {
-    padding-top: 14px;
+.footer__socials {
+  @include media-tablet {
+    grid-column: 2/3;
   }
 }
 .footer__logo-part-media-list {

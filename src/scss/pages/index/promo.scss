@@ -1,14 +1,23 @@
 .promo {
   padding-top: 18px;
   padding-bottom: 62px;
-  background: url('../img/noodle-fone-girl.png') no-repeat 100% 171%;
+  background: url('../img/noodle-fone-girl.svg') no-repeat 103% 136%;
+  background-size: 15%;
+  @media (max-width: 1410px) {
+    background-position: 100% 115%;
+    background-size: 127px;
+  }
   @include media-tablet {
     padding-top: 0;
     padding-bottom: 50px;
+    background-position: 100% 100%;
+    background-size: 67px;
   }
   @include media-phone {
     padding-top: 20px;
     padding-bottom: 36px;
+    background-position: 100% 104%;
+    background-size: 64px;
   }
 }
 .promo__title {

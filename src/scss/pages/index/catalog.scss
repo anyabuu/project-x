@@ -1,12 +1,15 @@
 .catalog {
   background: url('../img/pizza-man.png') no-repeat left top;
+  @media (max-width: 1384px) {
+    background-size: 10%;
+  }
   @include media-tablet {
     padding-top: 28px;
     overflow: hidden;
     background: url('../img/piza-man-opacity-font.png') no-repeat left -16px;
   }
   @include media-phone {
-    padding-top: 0px;
+    padding-top: 0;
     background: url('../img/piza-man-opacity-font-mobile.png') no-repeat left 6px;
   }
 }
@@ -42,9 +45,9 @@
   width: 255px;
   padding: 14px 35px 14px 17px;
   border-radius: 12px;
+  background-color: white;
   box-shadow: 0 4px 24px var(--color-box-shadow);
   gap: 25px;
-  background-color: white;
   @include media-phone {
     width: 200px;
     padding: 11px 32px 11px 14px;

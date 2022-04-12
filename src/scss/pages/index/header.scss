@@ -2,7 +2,7 @@
   padding-top: 13px;
   padding-bottom: 71px;
   @include media-tablet {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
   @include media-phone {
     padding-bottom: 16px;
@@ -153,6 +153,9 @@
 }
 .header__slider-arrow-l {
   padding: 20px;
+  @media (max-width: 1319px) {
+    padding: 0;
+  }
   @include media-tablet {
     display: none;
   }
