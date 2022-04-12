@@ -5,7 +5,7 @@
   --color-red-dot: #ff2e65;
   --color-box-shadow: rgb(0 0 0 / 6%);
   --color-menu-catalog: #797979;
-  --color-menu-catalog-descript: #686466;
+  --color-menu-catalog-description: #686466;
   --color-delivery-back: #e3ecf5;
   --color-text: #473e43;
 }
@@ -21,9 +21,18 @@ html {
   width: 1110px;
   margin-right: auto;
   margin-left: auto;
+  @include media-tablet {
+    width: 95%;
+  }
+  @include media-phone {
+    width: 94%;
+  }
 }
 .container-bg {
   width: 1320px;
   margin-right: auto;
   margin-left: auto;
+  @include media-tablet {
+    width: 96%;
+  }
 }

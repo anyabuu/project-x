@@ -1,16 +1,37 @@
 .hero {
   padding-top: 13px;
   padding-bottom: 71px;
+  @include media-tablet {
+    padding-bottom: 0;
+  }
+  @include media-phone {
+    padding-bottom: 16px;
+  }
+}
+.header__container {
+  @include media-tablet {
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+  }
 }
 .header__upper-elements {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include media-tablet {
+    flex-grow: 1;
+  }
 }
 .header__upper-wrapper {
   display: flex;
   align-items: center;
   gap: 52px;
+}
+.header__upper-item {
+  @include media-tablet {
+    display: none;
+  }
 }
 .header__item-description {
   display: flex;
@@ -57,12 +78,18 @@
   font-weight: 700;
   line-height: 2;
   text-align: center;
+  @include media-tablet {
+    display: none;
+  }
 }
 .header__phone-number {
   color: var(--color-text-yellow);
   font-size: 2.6rem;
   font-weight: 700;
   line-height: 1.19;
+  @include media-phone {
+    display: none;
+  }
 }
 .header__nav {
   display: flex;
@@ -70,6 +97,11 @@
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 31px;
+  @include media-tablet {
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: 21px;
+  }
 }
 .header__list {
   display: flex;
@@ -77,12 +109,24 @@
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.19;
+  @include media-tablet {
+    display: none;
+  }
+}
+.header__menu-bar {
+  display: none;
+  @include media-tablet {
+    display: block;
+  }
 }
 .header__enter-link {
   color: var(--color-button-link);
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.75;
+  @include media-tablet {
+    display: none;
+  }
 }
 .header__shop-button {
   display: inline-block;
@@ -94,6 +138,9 @@
   font-weight: 700;
   line-height: 1.75;
   text-align: center;
+  @include media-phone {
+    display: none;
+  }
 }
 .header__shop-link {
   margin-right: 14px;
@@ -106,8 +153,25 @@
 }
 .header__slider-arrow-l {
   padding: 20px;
+  @media (max-width: 1319px) {
+    padding: 0;
+  }
+  @include media-tablet {
+    display: none;
+  }
 }
 .header__slider-arrow-r {
   padding: 20px;
   transform: scale(-1, 1);
+  @include media-tablet {
+    display: none;
+  }
+}
+.header__slider-img {
+  @include media-tablet {
+    width: 100%;
+  }
+  @include media-mini-phone {
+    width: 213px;
+  }
 }

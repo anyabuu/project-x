@@ -1,0 +1,15 @@
+@mixin media-tablet {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin media-phone {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin media-mini-phone {
+  @media (max-width: 550px) {
+    @content;
+  }
+}
