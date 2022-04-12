@@ -106,4 +106,4 @@ dist
 .idea
 .DS_Store
 src/css
-
+build
