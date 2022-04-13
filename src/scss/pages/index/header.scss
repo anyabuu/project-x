@@ -1,6 +1,7 @@
 .hero {
   padding-top: 13px;
   padding-bottom: 71px;
+  overflow: hidden;
   @include media-tablet {
     padding-bottom: 0;
   }
@@ -147,9 +148,17 @@
   padding-right: 14px;
   border-right: 2px solid black;
 }
-.header__slider {
+.header__slide-list {
   display: flex;
   justify-content: center;
+  @include media-tablet {
+    margin-top: 26px;
+    margin-bottom: 38px;
+  }
+  @include media-phone {
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
 }
 .header__slider-arrow-l {
   padding: 20px;
@@ -168,8 +177,13 @@
   }
 }
 .header__slider-img {
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.26));
+  border-radius: 13px;
   @include media-tablet {
-    width: 100%;
+    width: 355px;
+  }
+  @include media-phone {
+    width: 300px;
   }
   @include media-mini-phone {
     width: 213px;
