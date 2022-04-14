@@ -10,11 +10,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     animationTimingFunc: 'linear',
     perView: 2,
 
-
     breakpoints: {
-      1200: {
-        gap: 20,
-      },
       767: {
         perView: 1,
       }
