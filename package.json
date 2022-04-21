@@ -44,6 +44,7 @@
     "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.5.2",
     "express": "^4.17.3"
   },
   "prettier": {

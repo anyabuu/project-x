@@ -1,11 +1,20 @@
 .hero {
   padding-top: 13px;
   padding-bottom: 71px;
+  overflow: hidden;
+  @include media-small-lap {
+    padding-bottom: 40px;
+  }
   @include media-tablet {
     padding-bottom: 0;
   }
   @include media-phone {
     padding-bottom: 16px;
+  }
+}
+.header {
+  @include media-tablet {
+    margin-bottom: 36px;
   }
 }
 .header__container {
@@ -147,31 +156,91 @@
   padding-right: 14px;
   border-right: 2px solid black;
 }
-.header__slider {
+.header__slide-list {
   display: flex;
+  align-items: center;
   justify-content: center;
-}
-.header__slider-arrow-l {
-  padding: 20px;
-  @media (max-width: 1319px) {
-    padding: 0;
-  }
   @include media-tablet {
-    display: none;
+    margin-top: 26px;
+    margin-bottom: 38px;
+  }
+  @include media-phone {
+    margin-top: 20px;
+    margin-bottom: 24px;
   }
 }
-.header__slider-arrow-r {
-  padding: 20px;
-  transform: scale(-1, 1);
-  @include media-tablet {
-    display: none;
-  }
+.header__slider-card {
+  display: block;
 }
 .header__slider-img {
+  width: 100%;
+  height: 276px;
+  margin: -15px;
+  border-radius: 13px;
+  filter: drop-shadow(0 4px 10px rgb(0 0 0 / 26%));
+  opacity: 0.6;
   @include media-tablet {
-    width: 100%;
+    height: 100%;
+    margin: -16px;
   }
   @include media-mini-phone {
-    width: 213px;
+    margin: -9px;
   }
+}
+.header__slider-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  @include media-small-lap {
+    padding-top: 30px;
+  }
+  @include media-tablet {
+    padding-top: 0;
+  }
+  @include media-phone {
+    gap: 20px;
+  }
+}
+.button-arrows {
+  position: absolute;
+  top: 134px;
+  width: 31px;
+  height: 31px;
+  border: none;
+  border-radius: 27px;
+  background-color: var(--color-text-yellow);
+  @include media-small-lap {
+    position: unset;
+  }
+  @include media-mini-phone {
+    width: 20px;
+    height: 20px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: relative;
+    left: 6px;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    border-bottom: 3px solid var(--color-button-arr);
+    border-left: 3px solid var(--color-button-arr);
+    @include media-mini-phone {
+      left: 2px;
+      width: 5px;
+      height: 5px;
+      border-bottom: 2px solid var(--color-button-arr);
+      border-left: 2px solid var(--color-button-arr);
+    }
+  }
+}
+.header__prev-button {
+  left: -7%;
+}
+.header__next-button {
+  right: -7%;
+  transform: rotate(180deg);
+  text-align: right;
 }

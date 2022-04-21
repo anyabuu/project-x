@@ -11,7 +11,8 @@
 
 <!--HEADER SECTION STARTS-->
 
-    <section class="hero container">
+    <section class="hero">
+      <div class="container">
         <header class="header">
             <div class="container header__container">
                 <div class="header__upper-elements">
@@ -133,16 +134,38 @@
                 </nav>
             </div>
         </header>
-        <div class="header__slider">
-            <img class="header__slider-arrow-l" src="img/left-arr.svg" alt="this is image">
-            <a class="header__slider-card" href="#">
-                <img class="header__slider-img" src="img/yellow-slider.png" alt="this is image">
-            </a>
-            <a class="header__slider-card" href="#">
-                <img class="header__slider-img" src="img/black-slider.png" alt="this is image">
-            </a>
-            <img class="header__slider-arrow-r" src="img/left-arr.svg" alt="this is image">
+
+        <div class="glide">
+          <div class="header__slider" data-glide-el="track">
+            <ul class="header__slide-list">
+              <li class="header__slide-item">
+                <a class="header__slider-card" href="#">
+                  <img class="header__slider-img" src="img/yellow-slider.png" alt="this is image">
+                </a>
+              </li>
+              <li class="header__slide-item">
+                <a class="header__slider-card" href="#">
+                  <img class="header__slider-img" src="img/black-slider.png" alt="this is image">
+                </a>
+              </li>
+              <li class="header__slide-item">
+                <a class="header__slider-card" href="#">
+                  <img class="header__slider-img" src="img/yellow-slider.png" alt="this is image">
+                </a>
+              </li>
+              <li class="header__slide-item">
+                <a class="header__slider-card" href="#">
+                  <img class="header__slider-img" src="img/black-slider.png" alt="this is image">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__slider-buttons" data-glide-el="controls">
+            <button class="header__prev-button button-arrows" data-glide-dir=">"></button>
+            <button class="header__next-button button-arrows" data-glide-dir="<"></button>
+          </div>
         </div>
+      </div>
     </section>
 
 <!--HEADER SECTION ENDS-->
