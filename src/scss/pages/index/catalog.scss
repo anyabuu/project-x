@@ -1,6 +1,6 @@
 .catalog {
   background: url('../img/pizza-man.png') no-repeat left top;
-  @media (max-width: 1384px) {
+  @include media-medium-lap {
     background-size: 10%;
   }
   @include media-tablet {

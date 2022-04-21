@@ -3,7 +3,7 @@
   padding-bottom: 62px;
   background: url('../img/noodle-fone-girl.svg') no-repeat 103% 136%;
   background-size: 15%;
-  @media (max-width: 1410px) {
+  @include media-max-lap {
     background-position: 100% 115%;
     background-size: 127px;
   }

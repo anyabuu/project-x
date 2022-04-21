@@ -6,13 +6,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   new Glide('.glide', {
     type: 'carousel',
-    autoplay: 2000,
     animationTimingFunc: 'linear',
     perView: 2,
+    gap: 30,
 
     breakpoints: {
+      1200: {
+        perView: 2,
+      },
       767: {
-        perView: 1,
+        perView: 2,
+      },
+      550: {
+        gap: 17,
       }
     }
 
