@@ -172,16 +172,6 @@
 .header__slider-card {
   display: block;
 }
-.glide__slide--active .header__slider-img,
-.glide__slide--active + li .header__slider-img {
-  height: 100%;
-  transition: ease;
-  transition-duration: 500ms;
-  opacity: unset;
-  @include media-phone {
-    width: 100%;
-  }
-}
 .header__slider-img {
   width: 100%;
   height: 276px;
