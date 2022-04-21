@@ -212,7 +212,6 @@
   background-color: var(--color-text-yellow);
   @include media-small-lap {
     position: unset;
-    top: 0;
   }
   @include media-mini-phone {
     width: 20px;
