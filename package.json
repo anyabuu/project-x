@@ -9,7 +9,8 @@
     "build": "webpack --mode=production",
     "start": "node server.js",
     "lint": "stylelint  \"src/**/*.scss\"",
-    "fix": "stylelint --fix  \"src/**/*.scss\""
+    "fix": "stylelint --fix  \"src/**/*.scss\"",
+    "postinstall": "npx @arkweid/lefthook install"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/Rammfall/sass-template#readme",
   "devDependencies": {
+    "@arkweid/lefthook": "^0.7.7",
     "@babel/core": "^7.17.9",
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
