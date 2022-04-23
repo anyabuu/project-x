@@ -33,7 +33,7 @@
   flex-wrap: wrap;
   gap: 30px;
   @include media-tablet {
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   @include media-mini-phone {
     gap: 20px;
