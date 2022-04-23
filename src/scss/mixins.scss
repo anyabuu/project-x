@@ -18,6 +18,11 @@
     @content;
   }
 }
+@mixin media-max-tablet {
+  @media (max-width: 1168px) {
+    @content;
+  }
+}
 @mixin media-phone {
   @media (max-width: 767px) {
     @content;

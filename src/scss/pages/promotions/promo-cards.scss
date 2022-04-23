@@ -1,7 +1,7 @@
 .promo-cards {
   margin-top: -40px;
   padding-bottom: 24px;
-  background: url('../img/pizza-man.png'), url('../img/noodle-fone-girl-big.png');
+  background-image: url('../img/pizza-man.png'), url('../img/noodle-fone-girl-big.png');
   background-repeat: no-repeat, no-repeat;
   background-position: left 30%, right 83%;
   @include media-medium-lap {
@@ -10,15 +10,11 @@
   @include media-tablet {
     padding-top: 28px;
     overflow: hidden;
-    background: url('../img/piza-man-opacity-font.png'), url('../img/noodle-fone-girl-big.png');
-    background-repeat: no-repeat, no-repeat;
-    background-position: left 12%, 103% 86%;
+    background: none;
   }
   @include media-phone {
     margin-top: -30px;
     padding-top: 0;
-    background-position: left 1%, 103% 86%;
-    background-size: 22%;
   }
 }
 .promo-cards__title {
@@ -37,7 +33,7 @@
   flex-wrap: wrap;
   gap: 30px;
   @include media-tablet {
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   @include media-mini-phone {
     gap: 20px;
@@ -47,6 +43,9 @@
   width: 350px;
   border-radius: 14px;
   box-shadow: 0 4px 24px rgb(0 0 0 / 6%);
+  @include media-max-tablet {
+    width: 47%;
+  }
   @include media-phone {
     width: 100%;
   }
@@ -59,7 +58,7 @@
   margin-right: auto;
   margin-left: auto;
   padding: 13px 7px 20px 20px;
-  @include media-phone {
+  @include media-max-tablet {
     width: 100%;
   }
 }
