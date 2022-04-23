@@ -169,39 +169,60 @@
     </h1>
     <form class="profile__form" action="" method="post">
       <ul class="profile__list">
+
         <li class="profile__list-item">
           <label class="profile__form-label" for="name">
             Имя
           </label>
-          <input class="profile__form-input" type="text" name="user_name" id="name" value="Илья" placeholder="Введите имя">
+          <div class="profile__change-input">
+            <input class="profile__form-input" type="text" name="user_name" id="name" placeholder="Введите имя" value="Илья">
+            <button class="profile__form-res-button" type="submit">
+              Изменить
+            </button>
+          </div>
         </li>
+
+
         <li class="profile__list-item">
           <label class="profile__form-label" for="phone">
             Номер телефона
           </label>
-          <input class="profile__form-input" type="tel" name="user_phone" id="phone" value="+380123456789" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Введите номер телефона">
+          <input class="profile__form-input plain__input-grey" type="tel" name="user_phone" id="phone" value="+380123456789" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Введите номер телефона">
         </li>
+
+
         <li class="profile__list-item">
           <label class="profile__form-label" for="data_birth">
             Дата рождения
           </label>
           <input class="profile__form-input" type="date" name="user_data-birth" id="data_birth">
         </li>
+
+
         <li class="profile__list-item">
           <label class="profile__form-label" for="phone-sec">
             Номер телефона
           </label>
           <input class="profile__form-input" type="tel" name="user_phone" id="phone-sec" value="+380123456789" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Введите номер телефона">
         </li>
+
+
         <li class="profile__list-item">
           <label class="profile__form-label" for="code">
             Код доступа
           </label>
-          <input class="profile__form-input" type="number" name="user_code" id="code" value="1223">
+          <div class="profile__change-input">
+            <input class="profile__form-input" type="number" name="user_code" placeholder="Ведите код доступа" id="code" value="1234">
+            <button class="profile__form-res-button"  type="submit">
+              Изменить
+            </button>
+          </div>
           <p class="profile__form-code-info">
             Введите четыре цифры
           </p>
         </li>
+
+
       </ul>
     </form>
   </div>
@@ -217,7 +238,7 @@
       Подписки
     </h1>
     <form class="subscribe__form" action="" method="post">
-      <input class="subscribe__input" type="radio" name="subscribe" id="subscribe" checked="checked">
+      <input class="subscribe__input" type="checkbox" name="subscribe" id="subscribe" checked="checked">
       <label class="subscribe__label" for="subscribe">
         Сообщать о бонусах, акциях и новых продуктах
       </label>

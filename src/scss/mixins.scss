@@ -33,3 +33,21 @@
   font-weight: 700;
   line-height: 2;
 }
+@mixin plain-input {
+  width: 350px;
+  height: 48px;
+  border: 1.5px solid var(--color-delivery-back);
+  border-radius: 8px;
+  padding: 10px;
+}
+@mixin plain-input-grey {
+  @include plain-input;
+  background: rgb(241 242 245 / 60%);
+}
+@mixin change-input {
+  @include plain-input;
+  display: flex;
+  margin-bottom: 9px;
+  justify-content: space-between;
+  align-items: center;
+}

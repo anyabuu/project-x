@@ -16,17 +16,30 @@
   padding-bottom: 6px;
   opacity: 0.7;
 }
+.profile__change-input {
+  @include change-input;
+}
 .profile__form-input {
-  width: 350px;
-  height: 48px;
-  border: 1.5px solid var(--color-delivery-back);
-  border-radius: 8px;
-  background: rgb(241 242 245 / 60%);
-  padding: 10px;
-  margin-bottom: 9px;
   @include form-text;
   font-size: 1.8rem;
   opacity: 0.82;
+  border: none;
+  background-color: inherit;
+}
+.plain__input {
+  @include plain-input;
+}
+.plain__input-grey {
+  @include plain-input-grey;
+}
+.profile__form-res-button {
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.86;
+  color: var(--color-text-yellow);
+  background: none;
+  border: none;
 }
 .profile__form-code-info {
   font-size: 1.2rem;
