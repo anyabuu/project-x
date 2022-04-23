@@ -41,18 +41,31 @@
 @mixin plain-input {
   width: 350px;
   height: 48px;
+  padding-left: 15px;
   border: 1.5px solid var(--color-delivery-back);
   border-radius: 8px;
-  padding: 10px;
 }
-@mixin plain-input-grey {
-  @include plain-input;
-  background: rgb(241 242 245 / 60%);
+@mixin button-form {
+  width: fit-content;
+  border: none;
+  background: none;
+  color: var(--color-text-yellow);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.86;
 }
-@mixin change-input {
+@mixin change-input-container {
   @include plain-input;
+  height: 100%;
   display: flex;
-  margin-bottom: 9px;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 19px 0 0;
+  & > input {
+    border: none;
+    background-color: inherit;
+  }
+  & > button {
+    @include button-form;
+  }
 }

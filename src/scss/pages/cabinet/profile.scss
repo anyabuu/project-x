@@ -9,41 +9,58 @@
 .profile__list-item {
   display: flex;
   flex-direction: column;
+  padding-bottom: 9px;
 }
 .profile__form-label {
   @include form-text;
   color: var(--color-button-arr);
   padding-bottom: 6px;
-  opacity: 0.7;
+  opacity: 0.8;
 }
-.profile__change-input {
-  @include change-input;
+.profile__change-input-container {
+  @include change-input-container;
 }
 .profile__form-input {
   @include form-text;
+  @include plain-input;
   font-size: 1.8rem;
   opacity: 0.82;
-  border: none;
-  background-color: inherit;
 }
-.plain__input {
-  @include plain-input;
+.profile__form-input__grey {
+  background-color: var(--color-info-radio);
 }
-.plain__input-grey {
-  @include plain-input-grey;
+.profile__form-save-button {
+  @include button-form;
+  position: absolute;
+  transform: translate(360px, 45px);
+  color: var(--color-back-text);
 }
-.profile__form-res-button {
-  width: fit-content;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.86;
-  color: var(--color-text-yellow);
-  background: none;
-  border: none;
+.profile__form-cancel-button {
+  @include button-form;
+  position: absolute;
+  transform: translate(360px, 45px);
 }
 .profile__form-code-info {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 2;
   opacity: 0.7;
+}
+.profile__data-birth {
+  @include plain-input;
+  display: flex;
+}
+.profile__form-input__day {
+  width: 80px;
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  border-right: var(--color-delivery-back) 1.5px solid;
+  padding-left: 0;
+}
+.profile__form-input__month {
+  width: 100%;
+  height: 100%;
+  border: none;
+
 }

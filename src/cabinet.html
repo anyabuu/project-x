@@ -174,9 +174,9 @@
           <label class="profile__form-label" for="name">
             Имя
           </label>
-          <div class="profile__change-input">
+          <div class="profile__change-input-container profile__form-input__grey">
             <input class="profile__form-input" type="text" name="user_name" id="name" placeholder="Введите имя" value="Илья">
-            <button class="profile__form-res-button" type="submit">
+            <button class="profile__form-sub-button" type="submit">
               Изменить
             </button>
           </div>
@@ -187,15 +187,21 @@
           <label class="profile__form-label" for="phone">
             Номер телефона
           </label>
-          <input class="profile__form-input plain__input-grey" type="tel" name="user_phone" id="phone" value="+380123456789" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Введите номер телефона">
+          <input class="profile__form-input profile__form-input__grey" type="tel" name="user_phone" id="phone" value="+380123456789" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Введите номер телефона">
         </li>
 
 
         <li class="profile__list-item">
-          <label class="profile__form-label" for="data_birth">
+          <label class="profile__form-label">
             Дата рождения
           </label>
-          <input class="profile__form-input" type="date" name="user_data-birth" id="data_birth">
+          <div class="profile__data-birth">
+            <input class="profile__form-input profile__form-input__day" type="number" name="user_data-birth" value="4">
+            <input class="profile__form-input profile__form-input__month" type="text" name="user_data-birth" value="Мая">
+          </div>
+          <button class="profile__form-save-button" type="submit">
+            Сохранить
+          </button>
         </li>
 
 
@@ -203,7 +209,15 @@
           <label class="profile__form-label" for="phone-sec">
             Номер телефона
           </label>
-          <input class="profile__form-input" type="tel" name="user_phone" id="phone-sec" value="+380123456789" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Введите номер телефона">
+          <div class="profile__change-input-container">
+            <input class="profile__form-input" type="tel" name="user_phone" id="phone-sec" value="+380123456789" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Введите номер телефона">
+            <button class="profile__form-sub-button" type="submit">
+              Сохранить
+            </button>
+          </div>
+          <button class="profile__form-cancel-button" type="reset">
+            Отменить
+          </button>
         </li>
 
 
@@ -211,9 +225,9 @@
           <label class="profile__form-label" for="code">
             Код доступа
           </label>
-          <div class="profile__change-input">
+          <div class="profile__change-input-container profile__form-input__grey">
             <input class="profile__form-input" type="number" name="user_code" placeholder="Ведите код доступа" id="code" value="1234">
-            <button class="profile__form-res-button"  type="submit">
+            <button class="profile__form-sub-button"  type="submit">
               Изменить
             </button>
           </div>
