@@ -37,8 +37,11 @@ module.exports = {
     ]
   },
   plugins: [
+      //new HtmlWebpackPlugin({
+        //template: './src/index.html'
+      //}),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/promotions.html'
     }),
     new MiniCssExtractPlugin()
   ],
