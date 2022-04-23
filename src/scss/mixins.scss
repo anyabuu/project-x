@@ -56,16 +56,16 @@
 }
 @mixin change-input-container {
   @include plain-input;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
   padding: 0 19px 0 0;
-  & > input {
+  > input {
     border: none;
     background-color: inherit;
   }
-  & > button {
+  > button {
     @include button-form;
   }
 }

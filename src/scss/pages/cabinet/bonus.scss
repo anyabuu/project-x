@@ -1,44 +1,44 @@
 .bonus {
-  background-color: var(--color-delivery-back);
-  padding-bottom: 41px;
   margin-top: -45px;
+  padding-bottom: 41px;
+  background-color: var(--color-delivery-back);
 }
 .bonus__title {
+  padding-top: 43px;
+  padding-bottom: 33px;
+  color: var(--color-text-yellow);
   font-size: 3.4rem;
   font-weight: 800;
   line-height: 1.2;
-  color: var(--color-text-yellow);
-  padding-bottom: 33px;
-  padding-top: 43px;
 }
 .bonus__table {
-  width: 255px;
-  height: 338px;
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 38px;
-  box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
+  width: 255px;
+  height: 338px;
   margin-bottom: 42px;
+  padding: 38px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 28px rgb(0 0 0 / 8%);
 }
 .bonus__link-image {
   width: 121px;
   padding-bottom: 32px;
 }
 .bonus__subtitle {
+  color: var(--color-menu-catalog-description);
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.5;
-  color: var(--color-menu-catalog-description);
   text-align: center;
 }
 .bonus__all {
+  padding-bottom: 3px;
+  border-bottom: 2px dashed;
+  color: var(--color-text-yellow);
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--color-text-yellow);
-  border-bottom: 2px dashed;
-  padding-bottom: 3px;
 }
