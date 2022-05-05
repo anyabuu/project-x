@@ -38,50 +38,6 @@
   font-weight: 700;
   line-height: 2;
 }
-@mixin plain-input {
-  width: 350px;
-  height: 48px;
-  padding-left: 15px;
-  border: 1.5px solid var(--color-delivery-back);
-  border-radius: 8px;
-  @include media-phone {
-    width: 75%;
-  }
-  @include media-mini-phone {
-    width: 100%;
-  }
-}
-@mixin button-form {
-  width: fit-content;
-  border: none;
-  background: none;
-  color: var(--color-text-yellow);
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.86;
-  @include media-phone {
-    padding-right: 20px;
-  }
-}
-@mixin change-input-container {
-  @include plain-input;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  padding: 0 19px 0 0;
-  @include media-phone {
-    width: 75%;
-    padding: 0;
-  }
-  @include media-mini-phone {
-    width: 100%;
-  }
-  > input {
-    border: none;
-    background-color: inherit;
-  }
-  > button {
-    @include button-form;
-  }
+@mixin shadow-0 {
+  box-shadow: 0 4px 24px var(--color-box-shadow);
 }

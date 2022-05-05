@@ -40,13 +40,13 @@
   }
 }
 .catalog__novelties-card {
+  @include shadow-0;
   display: flex;
   align-items: center;
   width: 255px;
   padding: 14px 35px 14px 17px;
   border-radius: 12px;
   background-color: white;
-  box-shadow: 0 4px 24px var(--color-box-shadow);
   gap: 25px;
   @include media-phone {
     width: 200px;
@@ -70,7 +70,7 @@
   }
 }
 .catalog__novelty-price {
-  color: var(--color-text-yellow);
+  color: var(--primary-color);
   font-size: 1.6rem;
   font-weight: 800;
   line-height: 1.18;
@@ -80,7 +80,7 @@
 }
 .catalog__menu {
   padding-bottom: 26px;
-  color: var(--color-text-yellow);
+  color: var(--primary-color);
   font-size: 3.2rem;
   font-weight: 800;
   line-height: 1.21;
@@ -149,7 +149,7 @@
 .catalog__menu-title {
   padding-top: 8px;
   padding-bottom: 14px;
-  color: var(--color-menu-catalog);
+  color: var(--color-secondary-200);
   font-size: 2.4rem;
   font-weight: 800;
   line-height: 1.16;
@@ -164,7 +164,7 @@
 }
 .catalog__menu-descript {
   padding-bottom: 31px;
-  color: var(--color-menu-catalog-description);
+  color: var(--color-secondary-300);
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.46;
@@ -193,17 +193,13 @@
   line-height: 1.15;
 }
 .catalog__basket-button {
-  display: inline-block;
   width: 126px;
   padding: 4px 0;
-  border-radius: 8px;
-  background: var(--color-text-yellow);
   color: white;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 2;
-  text-align: center;
   @include media-tablet {
-    color: var(--color-text);
+    color: var(--color-secondary-500);
   }
 }

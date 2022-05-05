@@ -1,16 +1,16 @@
 :root {
-  --color-text-yellow: #f7d22d;
-  --color-button-call-back: #f3f3f7;
-  --color-button-link: #696f7a;
-  --color-red-dot: #ff2e65;
+  --primary-color: #f7d22d;
+  --color-accent: #ff2e65;
+  --color-secondary-100: #9d9d9b;
+  --color-secondary-200: #797979;
+  --color-secondary-300: #686466;
+  --color-secondary-400: #696f7a;
+  --color-secondary-500: #473e43;
+  --color-secondary-600: #231f20cc;
+  --color-background-100: #e3ecf5;
+  --color-background-200: #f1f2f5;
+  --color-background-300: #f3f3f7;
   --color-box-shadow: rgb(0 0 0 / 6%);
-  --color-menu-catalog: #797979;
-  --color-menu-catalog-description: #686466;
-  --color-delivery-back: #e3ecf5;
-  --color-text: #473e43;
-  --color-button-arr: #231f20cc;
-  --color-info-radio: #f1f2f5;
-  --color-back-text: #9d9d9b;
 }
 * {
   box-sizing: border-box;

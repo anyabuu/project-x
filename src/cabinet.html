@@ -52,7 +52,7 @@
             </div>
           </div>
           <div class="header__upper-phone-wrapper">
-            <a class="header__call-button" href="#">
+            <a class="header__call-button button__secondary" href="#">
               Заказать звонок
             </a>
             <p class="header__phone-number">
@@ -122,7 +122,7 @@
           <a class="header__enter-link" href="#">
             Войти
           </a>
-          <div class="header__shop-button">
+          <div class="header__shop-button button__primary">
             <a class="header__shop-link" href="#">
               Корзина
             </a>
@@ -169,56 +169,61 @@
     </h1>
     <form class="profile__form" action="" method="post">
       <ul class="profile__list">
+
         <li class="profile__list-item">
           <label class="profile__form-label" for="name">
             Имя
           </label>
-          <div class="profile__change-input-container profile__form-input-grey">
-            <input class="profile__form-input" type="text" name="user_name" id="name" placeholder="Введите имя" value="Илья">
-            <button class="profile__form-sub-button" type="submit">
+          <div class="profile__input-container">
+            <input class="profile__form-input input__form" type="text" name="user_name" id="name" placeholder="Введите имя" value="Илья" disabled>
+            <button class="profile__form-inside-button button__tertiary" type="submit">
               Изменить
             </button>
           </div>
         </li>
+
         <li class="profile__list-item">
           <label class="profile__form-label" for="phone">
             Номер телефона
           </label>
-          <input class="profile__form-input profile__form-input-grey" type="tel" name="user_phone" id="phone" value="+380123456789" readonly pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}">
+          <input class="profile__form-input input__form" type="tel" name="user_phone" id="phone" value="+380123456789" readonly pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" disabled>
         </li>
+
         <li class="profile__list-item">
           <label class="profile__form-label">
             Дата рождения
           </label>
-          <div class="profile__data-birth">
+          <div class="profile__data-birth  profile__form-input input__form">
             <input class="profile__form-input profile__form-input-day" type="number" name="user_data-birth" value="4">
             <input class="profile__form-input profile__form-input-month" type="text" name="user_data-birth" value="Мая">
           </div>
-          <button class="profile__form-save-button" type="submit">
+          <button class="profile__form-out-button button__tertiary" type="submit">
             Сохранить
           </button>
         </li>
+
         <li class="profile__list-item">
           <label class="profile__form-label" for="phone-sec">
             Номер телефона
           </label>
-          <div class="profile__change-input-container">
-            <input class="profile__form-input" type="tel" name="user_phone" id="phone-sec" value="+380123456789" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Введите номер телефона">
-            <button class="profile__form-sub-button" type="submit">
+          <div class="profile__input-container">
+            <input class="profile__form-input input__form" type="tel" name="user_phone" id="phone-sec" value="+380123456789" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Введите номер телефона">
+            <button class="profile__form-inside-button button__tertiary" type="submit">
               Сохранить
             </button>
           </div>
-          <button class="profile__form-cancel-button" type="reset">
+          <button class="profile__form-out-button button__tertiary" type="reset">
             Отменить
           </button>
         </li>
+
         <li class="profile__list-item">
           <label class="profile__form-label" for="code">
             Код доступа
           </label>
-          <div class="profile__change-input-container profile__form-input-grey">
-            <input class="profile__form-input" type="number" name="user_code" placeholder="Ведите код доступа" id="code" value="1234">
-            <button class="profile__form-sub-button"  type="submit">
+          <div class="profile__input-container">
+            <input class="profile__form-input input__form" type="number" name="user_code" placeholder="Ведите код доступа" id="code" value="1234" disabled>
+            <button class="profile__form-inside-button button__tertiary"  type="submit">
               Изменить
             </button>
           </div>
@@ -226,6 +231,7 @@
             Введите четыре цифры
           </p>
         </li>
+
       </ul>
     </form>
   </div>
@@ -251,7 +257,7 @@
         </p>
       </div>
     </form>
-    <button class="subscribe__button">
+    <button class="subscribe__button button__exit">
       Выйти
     </button>
   </div>
@@ -270,7 +276,7 @@
           <a class="footer__mobile-phone number-style" href="tel:84993918449">
             +380 44 501 0050
           </a>
-          <a class="footer__mobile-button button-phone-style" href="#">
+          <a class="footer__mobile-button button-phone-style button__secondary" href="#">
             Заказать звонок
           </a>
         </div>
@@ -318,36 +324,36 @@
         </h2>
         <ul class="footer__ask-socials-list">
           <li class="footer__ask-socials-item">
-            <a class="footer__ask-social-link" href="#">
+            <a class="footer__ask-social-link button__outline" href="#">
               <img class="footer__ask-socials-logo" src="img/viber-logo.svg" alt="this is our viber media">
             </a>
           </li>
           <li class="footer__ask-socials-item">
-            <a class="footer__ask-social-link" href="#">
+            <a class="footer__ask-social-link button__outline" href="#">
               <img class="footer__ask-socials-logo" src="img/skype-logo.svg" alt="this is our skype media">
             </a>
           </li>
           <li class="footer__ask-socials-item">
-            <a class="footer__ask-social-link" href="#">
+            <a class="footer__ask-social-link button__outline" href="#">
               <img class="footer__ask-socials-logo" src="img/watsapp-logo.svg" alt="this is our watsapp media">
             </a>
           </li>
           <li class="footer__ask-socials-item">
-            <a class="footer__ask-social-link" href="#">
+            <a class="footer__ask-social-link button__outline" href="#">
               <img class="footer__ask-socials-logo" src="img/tg-logo.svg" alt="this is our telegram media">
             </a>
           </li>
           <li class="footer__ask-socials-item">
-            <a class="footer__ask-social-link" href="#">
+            <a class="footer__ask-social-link button__outline" href="#">
               <img class="footer__ask-socials-logo" src="img/facebook-logo.svg" alt="this is our facebook media">
             </a>
           </li>
           <li class="footer__ask-socials-item">
-            <a class="footer__ask-social-link" href="#">
+            <a class="footer__ask-social-link button__outline" href="#">
               <img class="footer__ask-socials-logo" src="img/vk-logo.svg" alt="this is our vkontakte media">
             </a>
           </li>
-          <li class="footer__ask-socials-item">
+          <li class="footer__ask-socials-item footer__button-message-wrapper button__outline">
             <a class="footer__ask-social-link" href="#">
               <p class="footer__ask-socials-message">
                 Написать нам
@@ -355,7 +361,6 @@
             </a>
           </li>
         </ul>
-
       </div>
     </div>
     <div class="footer__bottom-part">
@@ -370,7 +375,7 @@
         <img class="footer__logo-part-wallet-img" src="img/pp-footer.png" alt="this is wallet image">
         <img class="footer__logo-part-wallet-img" src="img/mastercard-footer.png" alt="this is wallet image">
       </div>
-      <a class="footer__bottom-button button-phone-style" href="#">
+      <a class="footer__bottom-button button-phone-style button__secondary" href="#">
         Заказать звонок
       </a>
     </div>

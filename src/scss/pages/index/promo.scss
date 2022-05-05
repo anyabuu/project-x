@@ -37,7 +37,7 @@
   }
 }
 .promo__colored-title {
-  color: var(--color-text-yellow);
+  color: var(--primary-color);
 }
 .promo__card-group {
   display: grid;
@@ -79,14 +79,14 @@
   width: 160px;
   padding: 10px 0;
   border-radius: 23px;
-  background: var(--color-text-yellow);
+  background: var(--primary-color);
   color: white;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 2;
   text-align: center;
   @include media-tablet {
-    color: var(--color-text);
+    color: var(--color-secondary-500);
   }
   @include media-mini-phone {
     width: 100px;

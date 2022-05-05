@@ -1,0 +1,11 @@
+.input__form {
+  @include form-text;
+  width: 350px;
+  height: 48px;
+  padding-left: 15px;
+  border: 1.5px solid var(--color-background-100);
+  border-radius: 8px;
+  &:disabled {
+    background-color: var(--color-background-200);
+  }
+}
