@@ -1,6 +1,6 @@
 .delivery {
   padding-bottom: 74px;
-  background-color: var(--color-delivery-back);
+  background-color: var(--color-background-100);
   @include media-phone {
     padding-bottom: 26px;
   }
@@ -8,7 +8,7 @@
 .delivery__title {
   padding-top: 56px;
   padding-bottom: 63px;
-  color: var(--color-text-yellow);
+  color: var(--primary-color);
   font-size: 3rem;
   font-weight: 800;
   line-height: 1.2;
@@ -51,7 +51,7 @@
   }
 }
 .delivery__card-text {
-  color: var(--color-text);
+  color: var(--color-secondary-500);
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.5;

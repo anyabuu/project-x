@@ -1,7 +1,8 @@
-/* stylelint-disable */
 @import 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Roboto:wght@400;500;900&display=swap');
 @import 'mixins';
+@import 'components/inputs';
+@import 'components/buttons';
 @import 'general';
 @import 'libs/glide';
 @import 'pages/index/header';
@@ -10,3 +11,6 @@
 @import 'pages/index/delivery';
 @import 'pages/index/footer';
 @import 'pages/promotions/promo-cards';
+@import 'pages/cabinet/bonus';
+@import 'pages/cabinet/profile';
+@import 'pages/cabinet/subscribe';

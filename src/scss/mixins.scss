@@ -33,3 +33,11 @@
     @content;
   }
 }
+@mixin form-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2;
+}
+@mixin shadow-0 {
+  box-shadow: 0 4px 24px var(--color-box-shadow);
+}

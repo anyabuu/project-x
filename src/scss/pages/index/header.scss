@@ -51,7 +51,7 @@
   gap: 6px;
 }
 .header__subtitle-city {
-  color: var(--color-text-yellow);
+  color: var(--primary-color);
 }
 .header__item-yandex {
   display: flex;
@@ -68,7 +68,7 @@
 .header__round {
   width: 4px;
   height: 4px;
-  border: 2px solid var(--color-red-dot);
+  border: 2px solid var(--color-accent);
   border-radius: 50%;
 }
 .header__upper-phone-wrapper {
@@ -77,22 +77,16 @@
   align-items: center;
 }
 .header__call-button {
-  display: inline-block;
   width: 180px;
-  padding: 7px 0;
-  border-radius: 28px;
-  background: var(--color-button-call-back);
-  color: var(--color-button-link);
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 2;
-  text-align: center;
   @include media-tablet {
     display: none;
   }
 }
 .header__phone-number {
-  color: var(--color-text-yellow);
+  color: var(--primary-color);
   font-size: 2.6rem;
   font-weight: 700;
   line-height: 1.19;
@@ -129,7 +123,7 @@
   }
 }
 .header__enter-link {
-  color: var(--color-button-link);
+  color: var(--color-secondary-400);
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.75;
@@ -138,15 +132,11 @@
   }
 }
 .header__shop-button {
-  display: inline-block;
   width: 160px;
   padding: 7px 0;
-  border-radius: 8px;
-  background: var(--color-text-yellow);
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.75;
-  text-align: center;
   @include media-phone {
     display: none;
   }
@@ -209,7 +199,7 @@
   height: 31px;
   border: none;
   border-radius: 27px;
-  background-color: var(--color-text-yellow);
+  background-color: var(--primary-color);
   @include media-small-lap {
     position: unset;
   }
@@ -225,14 +215,14 @@
     width: 7px;
     height: 7px;
     transform: rotate(45deg);
-    border-bottom: 3px solid var(--color-button-arr);
-    border-left: 3px solid var(--color-button-arr);
+    border-bottom: 3px solid var(--color-secondary-600);
+    border-left: 3px solid var(--color-secondary-600);
     @include media-mini-phone {
       left: 2px;
       width: 5px;
       height: 5px;
-      border-bottom: 2px solid var(--color-button-arr);
-      border-left: 2px solid var(--color-button-arr);
+      border-bottom: 2px solid var(--color-secondary-600);
+      border-left: 2px solid var(--color-secondary-600);
     }
   }
 }

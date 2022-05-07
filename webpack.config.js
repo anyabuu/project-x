@@ -40,8 +40,11 @@ module.exports = {
       //new HtmlWebpackPlugin({
         //template: './src/index.html'
       //}),
+    //new HtmlWebpackPlugin({
+      //template: './src/promotions.html'
+    //}),
     new HtmlWebpackPlugin({
-      template: './src/promotions.html'
+      template: './src/cabinet.html'
     }),
     new MiniCssExtractPlugin()
   ],
