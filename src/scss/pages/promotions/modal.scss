@@ -1,16 +1,12 @@
 .modal__wrapper {
   display: flex;
   position: fixed;
+  z-index: 1;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   background: var(--color-modal-gradient);
-  z-index: 1;
-}
-.modal {
-  width: 668px;
-  height: 350px;
 }
 .modal__window {
   display: flex;
@@ -185,11 +181,6 @@
 ///
 ///
 // MODAL-ADDRESS
-.modal-address {
-  width: 668px;
-  height: fit-content;
-  padding: 30px 54px 40px 40px;
-}
 .modal-address__up-part {
   display: flex;
   align-items: center;
@@ -206,21 +197,21 @@
 .modal-address__label {
   display: block;
   width: 166px;
-  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px 38px;
+  border-radius: 8px;
+  background-color: var(--color-background-300);
+  color: var(--color-secondary-400);
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 2;
-  color: var(--color-secondary-400);
-  border-radius: 8px;
-  background-color: var(--color-background-300);
-  padding: 10px 38px;
+  text-align: center;
   cursor: pointer;
-  margin-bottom: 20px;
 }
 .modal-address__radio-wrapper input:checked + label {
   background: var(--primary-color);
-  font-weight: 700;
   color: var(--color-secondary-600);
+  font-weight: 700;
 }
 .modal-address__form {
   display: flex;
@@ -241,13 +232,56 @@
 .modal-address__form-textarea {
   width: 100%;
   height: 76px;
-  resize: none;
   font-family: inherit;
+  resize: none;
 }
 .modal-address__button {
+  margin-top: 19px;
   padding: 14px 25px;
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 1.8;
-  margin-top: 19px;
+}
+
+///
+///
+///
+// MODAL-DELIVERY-TIME
+.modal-delivery-time {
+  background-color: var(--color-background-100);
+}
+.modal-delivery-time__up-part {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-delivery-time__title {
+  color: var(--color-secondary-400);
+}
+.modal-delivery-time__choose {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+  row-gap: 17px;
+}
+.modal-delivery-time__radio {
+  display: none;
+}
+.modal-delivery-time__label {
+  display: block;
+  width: 280px;
+  padding: 12px 19px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: white;
+  color: var(--color-secondary-600);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8;
+  cursor: pointer;
+}
+.modal-delivery-time__radio-wrapper input:checked + label {
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 4px 28px var(--color-box-shadow-100);
 }

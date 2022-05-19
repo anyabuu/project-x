@@ -1,6 +1,8 @@
 .modal-window {
   @include shadow-1;
-  padding: 30px 60px 40px 40px;
+  width: 668px;
+  height: fit-content;
+  padding: 30px 54px 40px 40px;
   border-radius: 12px;
   background: white;
 }
@@ -11,8 +13,8 @@
   line-height: 1.8;
 }
 .close {
-  cursor: pointer;
   padding: 20px;
+  cursor: pointer;
   &:before,
   &:after {
     content: '';
@@ -32,18 +34,18 @@
   padding: 10px 19px;
   border: 1.5px solid var(--color-background-400);
   border-radius: 8px;
+  color: var(--color-secondary-600);
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.8;
-  color: var(--color-secondary-600);
   &::placeholder {
     opacity: 0.6;
   }
 }
 .modal-form-info-text {
+  opacity: 0.9;
+  color: var(--primary-color);
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 2;
-  color: var(--primary-color);
-  opacity: 0.9;
 }
