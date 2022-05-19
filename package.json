@@ -25,7 +25,7 @@
   "homepage": "https://github.com/Rammfall/sass-template#readme",
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.7",
-    "@babel/core": "^7.17.10",
+    "@babel/core": "^7.17.12",
     "@babel/plugin-transform-runtime": "^7.17.12",
     "@babel/preset-env": "^7.17.12",
     "babel-loader": "^8.2.5",
