@@ -9,6 +9,176 @@
 </head>
 <body>
 
+<!-- MODAL SECTION STARTS -->
+
+<div class="modal__wrapper">
+
+
+  <!-- MODAL SIGN-IN STARTS -->
+
+  <div class="modal modal-window invisible">
+    <div class="modal__window">
+      <h1 class="modal__title modal-main-title">
+        Вход на сайт
+      </h1>
+      <div class="modal__close-button close"></div>
+    </div>
+    <div class="modal__enter-number-wrapper">
+      <div class="modal__form-enter-number">
+        <label class="modal__form-label-enter-number" for="phone">
+          Номер телефона
+        </label>
+        <input class="modal__input-enter-number" type="tel" name="user_phone" id="phone" value="+380" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}">
+      </div>
+      <div class="modal__send-code-enter-number">
+        <div class="modal__button-enter-number button__primary">
+          Выслать код
+        </div>
+        <p class="modal__info-text-enter-number">
+          Продолжая, вы соглашаетесь <a href="#" class="modal__info-link-enter-number">со сбором и обработкой персональных данных и пользовательским соглашением</a>
+        </p>
+      </div>
+    </div>
+    <div class="send-code-wrapper">
+      <div class="modal__form-send-code">
+        <label class="modal__form-label-send-code" for="phone-send-code">
+          Номер телефона
+        </label>
+        <input class="modal__input-tel-send-code" type="tel" name="user_phone" id="phone-send-code" value="+380 (50) 888-88-88" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" readonly>
+        <div class="modal__change-button-send-code button__tertiary">
+          Изменить
+        </div>
+      </div>
+      <div class="modal__send-code">
+        <label class="modal__form-label-send-code" for="code">
+          Код из СМС
+        </label>
+        <input class="modal__input-send-code" type="text" name="user_code" id="code" value="1234">
+        <div class="modal__change-button-send-code button__tertiary">
+          Получить новый код
+        </div>
+      </div>
+    </div>
+
+    <div class="entered-code-wrapper">
+      <div class="modal__form-send-code">
+        <label class="modal__form-label-send-code" for="phone-send-entered-code">
+          Номер телефона
+        </label>
+        <input class="modal__input-tel-send-code" type="tel" name="user_phone" id="phone-send-entered-code" value="+380 (50) 888-88-88" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" readonly>
+        <div class="modal__change-button-send-code button__tertiary">
+          Изменить
+        </div>
+      </div>
+      <div class="modal__send-code">
+        <label class="modal__form-label-send-code" for="entered-code">
+          Код из СМС
+        </label>
+        <input class="modal__input-entered-code" type="text" name="user-entered-code" id="entered-code" value="1234" readonly>
+        <div class="modal__change-button-send-code button__tertiary">
+          Получить новый код
+        </div>
+      </div>
+    </div>
+
+    <div class="error-code-wrapper">
+      <div class="modal__form-send-code">
+        <label class="modal__form-label-send-code" for="phone-send-entered-code">
+          Номер телефона
+        </label>
+        <input class="modal__input-tel-send-code" type="tel" name="user_phone" id="phone-send-error-code" value="+380 (50) 888-88-88" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" readonly>
+        <div class="modal__change-button-send-code button__tertiary">
+          Изменить
+        </div>
+      </div>
+      <div class="modal__send-code">
+        <label class="modal__form-label-send-code" for="error-code">
+          Код из СМС
+        </label>
+        <input class="modal__input-error-code" type="text" name="user-entered-code" id="error-code" value="1">
+        <div class="modal__change-button-send-code button__tertiary">
+          Получить новый код
+        </div>
+      </div>
+      <div class="modal__notification-error-code">
+        <img class="modal__notification-signal" src="img/notification.svg" alt="this is signal">
+        <p class="modal__notification-error-text">
+          Неверный код
+        </p>
+        <span class="modal__notification-error-part"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MODAL SIGN-IN ENDS -->
+
+  <!-- MODAL ADDRESS STARTS -->
+
+  <div class="modal-address modal-window ">
+    <div class="modal-address__up-part">
+      <h1 class="modal-address__title modal-main-title">
+        Куда доставить?
+      </h1>
+      <div class="modal-address__close-button close"></div>
+    </div>
+    <div class="modal-address__delivery">
+      <div class="modal-address__radio-wrapper">
+        <input class="modal-address__radio" type="radio" id="shipping"
+               name="delivery-type" value="shipping" checked>
+        <label class="modal-address__label" for="shipping">Доставка</label>
+      </div>
+      <div class="modal-address__radio-wrapper">
+        <input class="modal-address__radio" type="radio" id="pickup"
+               name="delivery-type" value="pickup">
+        <label class="modal-address__label" for="pickup">Самовывоз</label>
+      </div>
+    </div>
+    <form class="modal-address__form" action="" method="post">
+      <input class="modal-address__form-input-street modal-form-input" type="text" name="user_address" id="address" placeholder="Введите адрес доставки" value="Киев, ул.Крещатик">
+      <input class="modal-address__form-input-house modal-form-input" type="text" name="user_address" id="house-1" placeholder="Дом">
+      <input class="modal-address__form-input-house modal-form-input" type="text" name="user_address" id="house-2" placeholder="Дом">
+      <div class="modal-address__form-input-house-info">
+        <input class="modal-address__form-input-house modal-form-input" type="text" name="user_address" id="house-3" placeholder="Дом">
+        <p class="modal-address__form-input-house-info-text modal-form-info-text">
+          Последний
+        </p>
+      </div>
+      <div class="modal-address__form-input-house-info">
+        <input class="modal-address__form-input-house modal-form-input" type="text" name="user_address" id="house-4" placeholder="Дом">
+        <p class="modal-address__form-input-house-info-text modal-form-info-text">
+          Домофон
+        </p>
+      </div>
+      <div class="modal-address__form-input-house-info">
+        <input class="modal-address__form-input-house modal-form-input" type="text" name="user_address" id="house-5" placeholder="Дом">
+        <p class="modal-address__form-input-house-info-text modal-form-info-text">
+          Последний
+        </p>
+      </div>
+      <div class="modal-address__form-input-house-type">
+        <input class="modal-address__form-input-house-type modal-form-input" type="text" name="user_address-type" id="address-type" placeholder="Тип адреса">
+        <p class="modal-address__form-input-house-type-text modal-form-info-text">
+          <span style="color:var(--color-secondary-400)">Например,</span> Дом <span style="color:var(--color-secondary-400)">или</span> Работа
+        </p>
+      </div>
+      <textarea class="modal-address__form-textarea modal-form-input" type="text" name="user_comment" id="delivery-comment" placeholder="Комментарий к заказу"></textarea>
+      <div class="modal-address__button button__primary">
+        Подтвердить адрес
+      </div>
+    </form>
+  </div>
+
+
+  <!-- MODAL ADDRESS ENDS -->
+
+
+</div>
+
+  <!-- MODAL SECTION ENDS -->
+
+
+
 <!--HEADER SECTION STARTS-->
 
 <section class="hero">

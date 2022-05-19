@@ -3,6 +3,7 @@
 @import 'mixins';
 @import 'components/inputs';
 @import 'components/buttons';
+@import 'components/modals';
 @import 'general';
 @import 'libs/glide';
 @import 'pages/index/header';
@@ -10,6 +11,7 @@
 @import 'pages/index/promo';
 @import 'pages/index/delivery';
 @import 'pages/index/footer';
+@import 'pages/promotions/modal';
 @import 'pages/promotions/promo-cards';
 @import 'pages/cabinet/bonus';
 @import 'pages/cabinet/profile';

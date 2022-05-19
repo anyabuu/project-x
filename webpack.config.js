@@ -1,12 +1,12 @@
-const { join, resolve } = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { join, resolve } = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: resolve(__dirname, 'build'),
-    filename: '[name].[fullhash].js'
+    path: resolve(__dirname, "build"),
+    filename: "[name].[fullhash].js",
   },
   module: {
     rules: [
@@ -16,10 +16,10 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env'],
-            plugins: ["@babel/plugin-transform-runtime"]
-          }
-        }
+            presets: ["@babel/preset-env"],
+            plugins: ["@babel/plugin-transform-runtime"],
+          },
+        },
       },
       {
         test: /\.s[ac]ss$/i,
@@ -32,26 +32,26 @@ module.exports = {
       },
       {
         test: /\.(html)$/,
-        use: ['html-loader']
-      }
-    ]
+        use: ["html-loader"],
+      },
+    ],
   },
   plugins: [
-      //new HtmlWebpackPlugin({
-        //template: './src/index.html'
-      //}),
     //new HtmlWebpackPlugin({
-      //template: './src/promotions.html'
+    //template: './src/index.html'
     //}),
     new HtmlWebpackPlugin({
-      template: './src/cabinet.html'
+      template: "./src/promotions.html",
     }),
-    new MiniCssExtractPlugin()
+    // new HtmlWebpackPlugin({
+    //   template: './src/cabinet.html'
+    // }),
+    new MiniCssExtractPlugin(),
   ],
   devServer: {
     static: {
-      directory: join(__dirname, 'src')
+      directory: join(__dirname, "src"),
     },
     port: 3000,
-  }
+  },
 };

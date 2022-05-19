@@ -41,3 +41,6 @@
 @mixin shadow-0 {
   box-shadow: 0 4px 24px var(--color-box-shadow);
 }
+@mixin shadow-1 {
+  box-shadow: 0 4px 28px var(--color-box-shadow-100), 0 4px 28px var(--color-box-shadow-100);
+}

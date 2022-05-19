@@ -10,7 +10,11 @@
   --color-background-100: #e3ecf5;
   --color-background-200: #f1f2f5;
   --color-background-300: #f3f3f7;
+  --color-background-400: #e2e2e9;
   --color-box-shadow: rgb(0 0 0 / 6%);
+  --color-box-shadow-100: rgb(0 0 0 / 8%);
+  --color-modal-gradient: linear-gradient(0deg, rgb(247 210 45 / 40%), rgb(247 210 45 / 40%)),
+    rgb(33 49 52 / 20%);
 }
 * {
   box-sizing: border-box;
@@ -38,4 +42,7 @@ html {
   @include media-tablet {
     width: 96%;
   }
+}
+.invisible {
+  display: none;
 }
