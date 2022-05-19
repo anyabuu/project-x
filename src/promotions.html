@@ -126,12 +126,12 @@
       <div class="modal-address__radio-wrapper">
         <input class="modal-address__radio" type="radio" id="shipping"
                name="delivery-type" value="shipping" checked>
-        <label class="modal-address__label" for="shipping">Доставка</label>
+        <label class="modal-address__label modal-label" for="shipping">Доставка</label>
       </div>
       <div class="modal-address__radio-wrapper">
         <input class="modal-address__radio" type="radio" id="pickup"
                name="delivery-type" value="pickup">
-        <label class="modal-address__label" for="pickup">Самовывоз</label>
+        <label class="modal-address__label modal-label" for="pickup">Самовывоз</label>
       </div>
     </div>
     <form class="modal-address__form" action="" method="post">
@@ -174,71 +174,111 @@
 
   <!-- MODAL DELIVERY-TIME STARTS -->
 
-  <div class="modal-delivery-time modal-window">
-
-  <div class="modal-delivery-time__up-part">
-    <h1 class="modal-delivery-time__title modal-main-title">
-      Время доставки
-    </h1>
-    <div class="modal-delivery-time__close-button close"></div>
-  </div>
-
-  <div class="modal-delivery-time__choose">
-    <div class="modal-delivery-time__radio-wrapper">
-      <input class="modal-delivery-time__radio" type="radio" id="delivery-time-1"
-             name="delivery-time" value="time" checked>
-      <label class="modal-delivery-time__label" for="delivery-time-1">Побыстрее</label>
+  <div class="modal-delivery-time modal-window invisible">
+    <div class="modal-delivery-time__up-part">
+      <h1 class="modal-delivery-time__title modal-main-title">
+        Время доставки
+      </h1>
+      <div class="modal-delivery-time__close-button close"></div>
     </div>
-    <div class="modal-delivery-time__radio-wrapper">
-      <input class="modal-delivery-time__radio" type="radio" id="delivery-time-2"
-             name="delivery-time" value="time">
-      <label class="modal-delivery-time__label" for="delivery-time-2">15:00 - 15:30</label>
+    <div class="modal-delivery-time__choose">
+      <div class="modal-delivery-time__radio-wrapper">
+        <input class="modal-delivery-time__radio" type="radio" id="delivery-time-1"
+               name="delivery-time" value="time" checked>
+        <label class="modal-delivery-time__label modal-label" for="delivery-time-1">Побыстрее</label>
+      </div>
+      <div class="modal-delivery-time__radio-wrapper">
+        <input class="modal-delivery-time__radio" type="radio" id="delivery-time-2"
+               name="delivery-time" value="time">
+        <label class="modal-delivery-time__label modal-label" for="delivery-time-2">15:00 - 15:30</label>
+      </div>
+      <div class="modal-delivery-time__radio-wrapper">
+        <input class="modal-delivery-time__radio" type="radio" id="delivery-time-3"
+               name="delivery-time" value="time">
+        <label class="modal-delivery-time__label modal-label" for="delivery-time-3">15:00 - 15:30</label>
+      </div>
+      <div class="modal-delivery-time__radio-wrapper">
+        <input class="modal-delivery-time__radio" type="radio" id="delivery-time-4"
+               name="delivery-time" value="time">
+        <label class="modal-delivery-time__label modal-label" for="delivery-time-4">15:00 - 15:30</label>
+      </div>
+      <div class="modal-delivery-time__radio-wrapper">
+        <input class="modal-delivery-time__radio" type="radio" id="delivery-time-5"
+               name="delivery-time" value="time">
+        <label class="modal-delivery-time__label modal-label" for="delivery-time-5">15:00 - 15:30</label>
+      </div>
+      <div class="modal-delivery-time__radio-wrapper">
+        <input class="modal-delivery-time__radio" type="radio" id="delivery-time-6"
+               name="delivery-time" value="time">
+        <label class="modal-delivery-time__label modal-label" for="delivery-time-6">15:00 - 15:30</label>
+      </div>
+      <div class="modal-delivery-time__radio-wrapper">
+        <input class="modal-delivery-time__radio" type="radio" id="delivery-time-7"
+               name="delivery-time" value="time">
+        <label class="modal-delivery-time__label modal-label" for="delivery-time-7">15:00 - 15:30</label>
+      </div>
+      <div class="modal-delivery-time__radio-wrapper">
+        <input class="modal-delivery-time__radio" type="radio" id="delivery-time-8"
+               name="delivery-time" value="time">
+        <label class="modal-delivery-time__label modal-label" for="delivery-time-8">15:00 - 15:30</label>
+      </div>
+      <div class="modal-delivery-time__radio-wrapper">
+        <input class="modal-delivery-time__radio" type="radio" id="delivery-time-9"
+               name="delivery-time" value="time">
+        <label class="modal-delivery-time__label modal-label" for="delivery-time-9">15:00 - 15:30</label>
+      </div>
+      <div class="modal-delivery-time__radio-wrapper">
+        <input class="modal-delivery-time__radio" type="radio" id="delivery-time-10"
+               name="delivery-time" value="time">
+        <label class="modal-delivery-time__label modal-label" for="delivery-time-10">15:00 - 15:30</label>
+      </div>
     </div>
-    <div class="modal-delivery-time__radio-wrapper">
-      <input class="modal-delivery-time__radio" type="radio" id="delivery-time-3"
-             name="delivery-time" value="time">
-      <label class="modal-delivery-time__label" for="delivery-time-3">15:00 - 15:30</label>
-    </div>
-    <div class="modal-delivery-time__radio-wrapper">
-      <input class="modal-delivery-time__radio" type="radio" id="delivery-time-4"
-             name="delivery-time" value="time">
-      <label class="modal-delivery-time__label" for="delivery-time-4">15:00 - 15:30</label>
-    </div>
-    <div class="modal-delivery-time__radio-wrapper">
-      <input class="modal-delivery-time__radio" type="radio" id="delivery-time-5"
-             name="delivery-time" value="time">
-      <label class="modal-delivery-time__label" for="delivery-time-5">15:00 - 15:30</label>
-    </div>
-    <div class="modal-delivery-time__radio-wrapper">
-      <input class="modal-delivery-time__radio" type="radio" id="delivery-time-6"
-             name="delivery-time" value="time">
-      <label class="modal-delivery-time__label" for="delivery-time-6">15:00 - 15:30</label>
-    </div>
-    <div class="modal-delivery-time__radio-wrapper">
-      <input class="modal-delivery-time__radio" type="radio" id="delivery-time-7"
-             name="delivery-time" value="time">
-      <label class="modal-delivery-time__label" for="delivery-time-7">15:00 - 15:30</label>
-    </div>
-    <div class="modal-delivery-time__radio-wrapper">
-      <input class="modal-delivery-time__radio" type="radio" id="delivery-time-8"
-             name="delivery-time" value="time">
-      <label class="modal-delivery-time__label" for="delivery-time-8">15:00 - 15:30</label>
-    </div>
-    <div class="modal-delivery-time__radio-wrapper">
-      <input class="modal-delivery-time__radio" type="radio" id="delivery-time-9"
-             name="delivery-time" value="time">
-      <label class="modal-delivery-time__label" for="delivery-time-9">15:00 - 15:30</label>
-    </div>
-    <div class="modal-delivery-time__radio-wrapper">
-      <input class="modal-delivery-time__radio" type="radio" id="delivery-time-10"
-             name="delivery-time" value="time">
-      <label class="modal-delivery-time__label" for="delivery-time-10">15:00 - 15:30</label>
-    </div>
-  </div>
 
   </div>
 
   <!-- MODAL DELIVERY-TIME ENDS -->
+
+  <!-- MODAL PIZZA-MAKE STARTS -->
+
+  <div class="modal-pizza-make modal-window">
+
+   <img class="modal-pizza-make__image" src="img/pizza-make.jpg" alt="this is your pizza">
+    <div class="modal-pizza-make__blank">
+      <h1 class="modal-pizza-make__title">
+        С креветками и трюфелями
+      </h1>
+      <p class="modal-pizza-make__description">
+        25 см, традиционное тесто, 360 г
+      </p>
+<!--      список?-->
+      <p class="modal-pizza-make__selected-options">
+        Моцарелла, соус альфредо
+      </p>
+      <div class="modal-pizza-make__size">
+        <div class="modal-pizza-make__radio-size-wrapper">
+          <input class="modal-pizza-make__radio" type="radio" id="small-size"
+                 name="pizza-size" value="small">
+          <label class="modal-pizza-make__label modal-label" for="small-size">Маленькая</label>
+        </div>
+        <div class="modal-pizza-make__radio-size-wrapper">
+          <input class="modal-pizza-make__radio" type="radio" id="medium-size"
+                 name="pizza-size" value="small">
+          <label class="modal-pizza-make__label modal-label" for="medium-size">Средняя</label>
+        </div>
+        <div class="modal-pizza-make__radio-size-wrapper">
+          <input class="modal-pizza-make__radio" type="radio" id="big-size"
+                 name="pizza-size" value="small">
+          <label class="modal-pizza-make__label modal-label" for="big-size">Большая</label>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  <!-- MODAL PIZZA-MAKE ENDS -->
 
 
 </div>

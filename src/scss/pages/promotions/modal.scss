@@ -195,18 +195,15 @@
   display: none;
 }
 .modal-address__label {
-  display: block;
   width: 166px;
   margin-bottom: 20px;
   padding: 10px 38px;
-  border-radius: 8px;
   background-color: var(--color-background-300);
   color: var(--color-secondary-400);
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 2;
   text-align: center;
-  cursor: pointer;
 }
 .modal-address__radio-wrapper input:checked + label {
   background: var(--primary-color);
@@ -269,19 +266,42 @@
   display: none;
 }
 .modal-delivery-time__label {
-  display: block;
   width: 280px;
   padding: 12px 19px;
   border: 2px solid transparent;
-  border-radius: 8px;
   background-color: white;
   color: var(--color-secondary-600);
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.8;
-  cursor: pointer;
 }
 .modal-delivery-time__radio-wrapper input:checked + label {
   border: 2px solid var(--primary-color);
   box-shadow: 0 4px 28px var(--color-box-shadow-100);
+}
+
+///
+///
+///
+// MODAL-PIZZA-MAKE
+.modal-pizza-make {
+  width: fit-content;
+  display: flex;
+}
+.modal-pizza-make__radio {
+  display: none;
+}
+.modal-pizza-make__label {
+  width: 110px;
+  padding: 3px 21px;
+  color: var(--)
+  background-color: var(--color-background-300);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 2.5;
+  text-align: center;
+}
+.modal-pizza-make__radio-size-wrapper input:checked + label {
+  background-color: var(--primary-color);
+  color: var(--color-secondary-600);
 }
