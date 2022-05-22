@@ -285,23 +285,145 @@
 ///
 // MODAL-PIZZA-MAKE
 .modal-pizza-make {
-  width: fit-content;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 965px;
+  padding: 30px 71px 40px 29px;
+  gap: 27px;
+}
+.modal-pizza-make__image {
+  width: 100%;
+  height: 100%;
+}
+.modal-pizza-make__upper-part-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.modal-pizza-make__title {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+.modal-pizza-make__description {
+  color: var(--color-secondary-300);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2;
+}
+.modal-pizza-make__selected-options {
+  opacity: 0.6;
+  color: var(--color-secondary-300);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 2.5;
+}
+.modal-pizza-make__opt {
+  border-bottom: 2px var(--color-secondary-300) dashed;
+  font-weight: 700;
+}
+.modal-pizza-make__size {
+  display: flex;
+  gap: 13px;
+  padding-top: 9px;
 }
 .modal-pizza-make__radio {
   display: none;
 }
-.modal-pizza-make__label {
+.modal-pizza-make__label-size,
+.modal-pizza-make__label-dough {
   width: 110px;
   padding: 3px 21px;
-  color: var(--)
   background-color: var(--color-background-300);
+  color: var(--color-secondary-400);
   font-size: 1.1rem;
   font-weight: 700;
   line-height: 2.5;
   text-align: center;
 }
-.modal-pizza-make__radio-size-wrapper input:checked + label {
+.modal-pizza-make__radio-size-wrapper input:checked + label,
+.modal-pizza-make__radio-dough-wrapper input:checked + label {
   background-color: var(--primary-color);
   color: var(--color-secondary-600);
+}
+.modal-pizza-make__dough {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 9px;
+  padding-bottom: 20px;
+}
+.modal-pizza-make__label-dough {
+  width: 172px;
+  padding: 3px 40px;
+}
+.modal-pizza-make__ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 327px;
+  padding-right: 6px;
+  overflow: scroll;
+  row-gap: 13px;
+  &:after {
+    content: '';
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    background: var(--color-modal-gradient-100);
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 80%;
+    background-color: #f9f9fd;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--color-background-300);
+    box-shadow: inset 0 0 6px rgb(0 0 0 / 20%);
+  }
+}
+.modal-pizza-make__ingredient-input {
+  display: none;
+}
+.modal-pizza-make__ingredient-label {
+  width: 110px;
+  padding: 14px 12px 17px 13px;
+  border: 1.5px solid var(--color-background-400);
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8;
+  text-align: center;
+}
+.modal-pizza-make__ingredients-input-wrapper input:checked + label {
+  border: 2.5px solid rgb(247 210 45 / 40%);
+}
+.modal-pizza-make__ingredient-label-title {
+  padding-top: 1px;
+  padding-bottom: 11px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.modal-pizza-make__ingredient-label-price {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.modal-pizza-make__button {
+  position: relative;
+  width: 100%;
+  margin-top: -26px;
+  padding: 15px 55px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.8;
 }

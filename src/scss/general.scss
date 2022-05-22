@@ -12,9 +12,16 @@
   --color-background-300: #f3f3f7;
   --color-background-400: #e2e2e9;
   --color-box-shadow: rgb(0 0 0 / 6%);
+  --color-box-shadow-acent: rgb(247 210 45 / 40%);
   --color-box-shadow-100: rgb(0 0 0 / 8%);
   --color-modal-gradient: linear-gradient(0deg, rgb(247 210 45 / 40%), rgb(247 210 45 / 40%)),
     rgb(33 49 52 / 20%);
+  --color-modal-gradient-100: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 60%) 0%,
+    rgb(255 255 255 / 98%) 40.42%,
+    white 100%
+  );
 }
 * {
   box-sizing: border-box;

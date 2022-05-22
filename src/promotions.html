@@ -244,32 +244,172 @@
 
    <img class="modal-pizza-make__image" src="img/pizza-make.jpg" alt="this is your pizza">
     <div class="modal-pizza-make__blank">
-      <h1 class="modal-pizza-make__title">
-        С креветками и трюфелями
-      </h1>
-      <p class="modal-pizza-make__description">
-        25 см, традиционное тесто, 360 г
-      </p>
-<!--      список?-->
-      <p class="modal-pizza-make__selected-options">
-        Моцарелла, соус альфредо
-      </p>
+
+      <div class="modal-pizza-make__upper-part-wrapper">
+        <div class="modal-pizza-make__upper-part">
+          <h1 class="modal-pizza-make__title">
+            С креветками и трюфелями
+          </h1>
+          <p class="modal-pizza-make__description">
+            25 см, традиционное тесто, 360 г
+          </p>
+          <p class="modal-pizza-make__selected-options">
+            Моцарелла, соус
+            <span class="modal-pizza-make__opt">
+              альфредо
+            </span>
+            <img class="modal-pizza-make__opt-cancel" src="img/option-cross.svg" alt="cancel">
+          </p>
+        </div>
+        <div class="modal-pizza-make__blank__close-button close"></div>
+      </div>
+
+
       <div class="modal-pizza-make__size">
         <div class="modal-pizza-make__radio-size-wrapper">
           <input class="modal-pizza-make__radio" type="radio" id="small-size"
-                 name="pizza-size" value="small">
-          <label class="modal-pizza-make__label modal-label" for="small-size">Маленькая</label>
+                 name="pizza-size" value="small" checked>
+          <label class="modal-pizza-make__label-size modal-label" for="small-size">Маленькая</label>
         </div>
         <div class="modal-pizza-make__radio-size-wrapper">
           <input class="modal-pizza-make__radio" type="radio" id="medium-size"
                  name="pizza-size" value="small">
-          <label class="modal-pizza-make__label modal-label" for="medium-size">Средняя</label>
+          <label class="modal-pizza-make__label-size modal-label" for="medium-size">Средняя</label>
         </div>
         <div class="modal-pizza-make__radio-size-wrapper">
           <input class="modal-pizza-make__radio" type="radio" id="big-size"
                  name="pizza-size" value="small">
-          <label class="modal-pizza-make__label modal-label" for="big-size">Большая</label>
+          <label class="modal-pizza-make__label-size modal-label" for="big-size">Большая</label>
         </div>
+      </div>
+
+      <div class="modal-pizza-make__dough">
+        <div class="modal-pizza-make__radio-dough-wrapper">
+          <input class="modal-pizza-make__radio" type="radio" id="traditional"
+                 name="pizza-dough" value="traditional" checked>
+          <label class="modal-pizza-make__label-dough modal-label" for="traditional">Традиционное</label>
+        </div>
+        <div class="modal-pizza-make__radio-dough-wrapper">
+          <input class="modal-pizza-make__radio" type="radio" id="thin"
+                 name="pizza-dough" value="thin">
+          <label class="modal-pizza-make__label-dough modal-label" for="thin">Тонкое</label>
+        </div>
+      </div>
+
+
+      <ul class="modal-pizza-make__ingredients">
+        <li class="modal-pizza-make__ingredients-input-wrapper">
+          <input class="modal-pizza-make__ingredient-input" type="checkbox" name="tomato" id="ingredient-1">
+          <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-1">
+            <img class="modal-pizza-make__ingredient-label-image" src='img/tomato.png' alt="this is checked ingredient">
+            <h2 class="modal-pizza-make__ingredient-label-title">
+              Острый халапенью
+            </h2>
+            <p class="modal-pizza-make__ingredient-label-price">
+              от 120 ₽
+            </p>
+          </label>
+        </li>
+        <li class="modal-pizza-make__ingredients-input-wrapper">
+          <input class="modal-pizza-make__ingredient-input" type="checkbox" name="mozzarella" id="ingredient-2" checked>
+          <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-2">
+            <img class="modal-pizza-make__ingredient-label-image" src='img/mozarella.png' alt="this is checked ingredient">
+            <h2 class="modal-pizza-make__ingredient-label-title">
+              Острый халапенью
+            </h2>
+            <p class="modal-pizza-make__ingredient-label-price">
+              от 120 ₽
+            </p>
+          </label>
+        </li>
+        <li class="modal-pizza-make__ingredients-input-wrapper">
+          <input class="modal-pizza-make__ingredient-input" type="checkbox" name="halapenio" id="ingredient-3">
+          <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-3">
+            <img class="modal-pizza-make__ingredient-label-image" src='img/halapenio.png' alt="this is checked ingredient">
+            <h2 class="modal-pizza-make__ingredient-label-title">
+              Острый халапенью
+            </h2>
+            <p class="modal-pizza-make__ingredient-label-price">
+              от 120 ₽
+            </p>
+          </label>
+        </li>
+        <li class="modal-pizza-make__ingredients-input-wrapper">
+          <input class="modal-pizza-make__ingredient-input" type="checkbox" name="tomato" id="ingredient-4">
+          <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-4">
+            <img class="modal-pizza-make__ingredient-label-image" src='img/tomato.png' alt="this is checked ingredient">
+            <h2 class="modal-pizza-make__ingredient-label-title">
+              Острый халапенью
+            </h2>
+            <p class="modal-pizza-make__ingredient-label-price">
+              от 120 ₽
+            </p>
+          </label>
+        </li>
+        <li class="modal-pizza-make__ingredients-input-wrapper">
+          <input class="modal-pizza-make__ingredient-input" type="checkbox" name="mozzarella" id="ingredient-5">
+          <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-5">
+            <img class="modal-pizza-make__ingredient-label-image" src='img/mozarella.png' alt="this is checked ingredient">
+            <h2 class="modal-pizza-make__ingredient-label-title">
+              Острый халапенью
+            </h2>
+            <p class="modal-pizza-make__ingredient-label-price">
+              от 120 ₽
+            </p>
+          </label>
+        </li>
+        <li class="modal-pizza-make__ingredients-input-wrapper">
+          <input class="modal-pizza-make__ingredient-input" type="checkbox" name="halapenio" id="ingredient-6">
+          <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-6">
+            <img class="modal-pizza-make__ingredient-label-image" src='img/halapenio.png' alt="this is checked ingredient">
+            <h2 class="modal-pizza-make__ingredient-label-title">
+              Острый халапенью
+            </h2>
+            <p class="modal-pizza-make__ingredient-label-price">
+              от 120 ₽
+            </p>
+          </label>
+        </li>
+        <li class="modal-pizza-make__ingredients-input-wrapper">
+          <input class="modal-pizza-make__ingredient-input" type="checkbox" name="tomato" id="ingredient-7">
+          <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-7">
+            <img class="modal-pizza-make__ingredient-label-image" src='img/tomato.png' alt="this is checked ingredient">
+            <h2 class="modal-pizza-make__ingredient-label-title">
+              Острый халапенью
+            </h2>
+            <p class="modal-pizza-make__ingredient-label-price">
+              от 120 ₽
+            </p>
+          </label>
+        </li>
+        <li class="modal-pizza-make__ingredients-input-wrapper">
+          <input class="modal-pizza-make__ingredient-input" type="checkbox" name="mozzarella" id="ingredient-8">
+          <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-8">
+            <img class="modal-pizza-make__ingredient-label-image" src='img/mozarella.png' alt="this is checked ingredient">
+            <h2 class="modal-pizza-make__ingredient-label-title">
+              Острый халапенью
+            </h2>
+            <p class="modal-pizza-make__ingredient-label-price">
+              от 120 ₽
+            </p>
+          </label>
+        </li>
+        <li class="modal-pizza-make__ingredients-input-wrapper">
+          <input class="modal-pizza-make__ingredient-input" type="checkbox" name="halapenio" id="ingredient-9">
+          <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-9">
+            <img class="modal-pizza-make__ingredient-label-image" src='img/halapenio.png' alt="this is checked ingredient">
+            <h2 class="modal-pizza-make__ingredient-label-title">
+              Острый халапенью
+            </h2>
+            <p class="modal-pizza-make__ingredient-label-price">
+              от 120 ₽
+            </p>
+          </label>
+        </li>
+
+      </ul>
+      <div class="modal-pizza-make__button button__primary">
+        Добавить в корзину 1 048 ₽
       </div>
 
 
