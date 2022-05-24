@@ -1,3 +1,8 @@
+.modal-window {
+  @include media-phone {
+    padding: 25px;
+  }
+}
 .modal__wrapper {
   display: flex;
   position: fixed;
@@ -13,16 +18,21 @@
   align-items: center;
   justify-content: space-between;
 }
+.modal__title {
+  font-size: 2.5rem;
+}
 
 //  ENTER NUMBER STATE
-.modal__enter-number-wrapper {
-  display: none;
-}
 .modal__form-enter-number {
   display: flex;
   align-items: center;
   gap: 32px;
   padding-top: 40px;
+  @include media-phone {
+    flex-wrap: wrap;
+    padding-top: 28px;
+    row-gap: 10px;
+  }
 }
 .modal__form-label-enter-number {
   opacity: 0.82;
@@ -42,12 +52,20 @@
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.8;
+  @include media-phone {
+    width: 100%;
+  }
 }
 .modal__send-code-enter-number {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 70px;
+  @include media-phone {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 6px;
+  }
 }
 .modal__button-enter-number {
   width: 224px;
@@ -56,6 +74,9 @@
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 1.8;
+  @include media-phone {
+    width: 100%;
+  }
 }
 .modal__info-text-enter-number {
   width: 319px;
@@ -63,20 +84,25 @@
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 1.6;
+  @include media-phone {
+    width: 100%;
+  }
 }
 .modal__info-link-enter-number {
   text-decoration: underline;
 }
 
 //  SEND CODE STATE
-.send-code-wrapper {
-  display: none;
-}
 .modal__form-send-code {
   display: flex;
   align-items: center;
   padding-top: 51px;
   gap: 50px;
+  @include media-phone {
+    flex-wrap: wrap;
+    padding-top: 20px;
+    row-gap: 10px;
+  }
 }
 .modal__form-label-send-code {
   opacity: 0.82;
@@ -85,8 +111,13 @@
   font-weight: 600;
   line-height: 2.1;
 }
+.modal__form-send-code-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
 .modal__input-tel-send-code {
-  width: 168px;
+  width: 150px;
   border: none;
   opacity: 0.82;
   color: var(--color-secondary-400);
@@ -95,7 +126,6 @@
   line-height: 1.8;
 }
 .modal__change-button-send-code {
-  margin-left: -36px;
   border-bottom: 2px dashed;
   opacity: 0.82;
   font-size: 1.4rem;
@@ -107,6 +137,11 @@
   align-items: center;
   gap: 69px;
   padding-top: 34px;
+  @include media-phone {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-top: 23px;
+  }
 }
 .modal__input-send-code {
   width: 86px;
@@ -122,9 +157,6 @@
 }
 
 // ENTERED-CODE STATE
-.entered-code-wrapper {
-  display: none;
-}
 .modal__input-entered-code {
   width: 86px;
   height: 48px;
@@ -139,9 +171,6 @@
 }
 
 // ERROR_CODE STATE
-.error-code-wrapper {
-  display: unset;
-}
 .modal__input-error-code {
   width: 86px;
   height: 48px;
@@ -169,6 +198,12 @@
   font-weight: 700;
   line-height: 2;
   gap: 12px;
+  @include media-phone {
+    margin-left: 148px;
+  }
+  @include media-mini-phone {
+    margin-left: 0;
+  }
 }
 .modal__notification-error-part {
   position: absolute;
@@ -181,6 +216,11 @@
 ///
 ///
 // MODAL-ADDRESS
+.modal-address {
+  @include media-phone {
+    padding: 25px 22px;
+  }
+}
 .modal-address__up-part {
   display: flex;
   align-items: center;
@@ -190,6 +230,9 @@
   display: flex;
   gap: 15px;
   padding-top: 30px;
+  @include media-phone {
+    padding-top: 26px;
+  }
 }
 .modal-address__radio {
   display: none;
@@ -204,6 +247,10 @@
   font-weight: 600;
   line-height: 2;
   text-align: center;
+  @include media-phone {
+    width: 124px;
+    padding: 10px 0;
+  }
 }
 .modal-address__radio-wrapper input:checked + label {
   background: var(--primary-color);
@@ -218,10 +265,18 @@
 }
 .modal-address__form-input-street {
   width: 426px;
+  @include media-phone {
+    width: 77%;
+  }
 }
 .modal-address__form-input-house {
   width: 133px;
   height: fit-content;
+  &:nth-of-type(2) {
+    @include media-phone {
+      width: 20%;
+    }
+  }
 }
 .modal-address__form-input-house-type {
   width: 100%;
@@ -238,6 +293,10 @@
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 1.8;
+  @include media-phone {
+    width: 100%;
+    margin-top: 7px;
+  }
 }
 
 ///
@@ -249,6 +308,7 @@
 }
 .modal-delivery-time__up-part {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .modal-delivery-time__title {
@@ -261,6 +321,10 @@
   justify-content: space-between;
   margin-top: 28px;
   row-gap: 17px;
+  @include media-phone {
+    justify-content: center;
+    gap: 10px;
+  }
 }
 .modal-delivery-time__radio {
   display: none;
@@ -274,6 +338,9 @@
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.8;
+  @include media-phone {
+    width: 260px;
+  }
 }
 .modal-delivery-time__radio-wrapper input:checked + label {
   border: 2px solid var(--primary-color);
@@ -288,29 +355,66 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 965px;
-  padding: 30px 71px 40px 29px;
+  width: 976px;
+  padding: 30px 59px 40px 29px;
   gap: 27px;
+  @include media-max-tablet {
+    width: 80%;
+  }
+  @include media-phone {
+    flex-direction: column;
+    padding: 30px 24px 20px;
+    gap: 18px;
+  }
+}
+.modal-pizza-make__up-part {
+  display: none;
+  @include media-phone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.modal-pizza-make__close-button {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 .modal-pizza-make__image {
   width: 100%;
   height: 100%;
+  @include media-max-tablet {
+    width: 50%;
+  }
+  @include media-phone {
+    width: 251px;
+    height: 251px;
+  }
 }
-.modal-pizza-make__upper-part-wrapper {
+.modal-pizza-make__title-part-wrapper {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
 }
 .modal-pizza-make__title {
   font-size: 2rem;
   font-weight: 800;
   line-height: 1.4;
+  @include media-phone {
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
 }
 .modal-pizza-make__description {
   color: var(--color-secondary-300);
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 2;
+  @include media-phone {
+    font-size: 1.1rem;
+    line-height: 2.5;
+  }
 }
 .modal-pizza-make__selected-options {
   opacity: 0.6;
@@ -318,15 +422,32 @@
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 2.5;
+  @include media-phone {
+    font-size: 1rem;
+    line-height: 2.8;
+  }
 }
 .modal-pizza-make__opt {
   border-bottom: 2px var(--color-secondary-300) dashed;
   font-weight: 700;
 }
-.modal-pizza-make__size {
+.modal-pizza-make__blank-close-button {
+  margin-right: -28px;
+  @include media-phone {
+    display: none;
+  }
+}
+.modal-pizza-make__custom {
   display: flex;
-  gap: 13px;
+  flex-wrap: wrap;
   padding-top: 9px;
+  padding-bottom: 20px;
+  column-gap: 13px;
+  row-gap: 8px;
+  @include media-phone {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 }
 .modal-pizza-make__radio {
   display: none;
@@ -347,15 +468,13 @@
   background-color: var(--primary-color);
   color: var(--color-secondary-600);
 }
-.modal-pizza-make__dough {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 9px;
-  padding-bottom: 20px;
-}
 .modal-pizza-make__label-dough {
   width: 172px;
   padding: 3px 40px;
+  @include media-phone {
+    width: 117px;
+    padding: 3px 0;
+  }
 }
 .modal-pizza-make__ingredients {
   display: flex;
@@ -365,6 +484,10 @@
   padding-right: 6px;
   overflow: scroll;
   row-gap: 13px;
+  @include media-max-tablet {
+    gap: 11px;
+    justify-content: center;
+  }
   &:after {
     content: '';
     position: sticky;
@@ -401,6 +524,9 @@
   font-weight: 700;
   line-height: 1.8;
   text-align: center;
+  @include media-max-tablet {
+    width: 101px;
+  }
 }
 .modal-pizza-make__ingredients-input-wrapper input:checked + label {
   border: 2.5px solid rgb(247 210 45 / 40%);
@@ -426,4 +552,12 @@
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 1.8;
+  @include media-max-tablet {
+    padding: 15px 10px;
+    font-size: 1.3rem;
+    line-height: 2.1;
+  }
+  @include media-phone {
+    padding: 15px 20px;
+  }
 }

@@ -23,6 +23,8 @@
       </h1>
       <div class="modal__close-button close"></div>
     </div>
+
+
     <div class="modal__enter-number-wrapper">
       <div class="modal__form-enter-number">
         <label class="modal__form-label-enter-number" for="phone">
@@ -39,74 +41,57 @@
         </p>
       </div>
     </div>
-    <div class="send-code-wrapper">
+
+
+    <div class="send-code-wrapper invisible">
       <div class="modal__form-send-code">
         <label class="modal__form-label-send-code" for="phone-send-code">
           Номер телефона
         </label>
-        <input class="modal__input-tel-send-code" type="tel" name="user_phone" id="phone-send-code" value="+380 (50) 888-88-88" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" readonly>
-        <div class="modal__change-button-send-code button__tertiary">
-          Изменить
+        <div class="modal__form-send-code-input-wrapper">
+          <input class="modal__input-tel-send-code" type="tel" name="user_phone" id="phone-send-code" value="+380 (50) 888-88-88" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" readonly>
+          <div class="modal__change-button-send-code button__tertiary">
+            Изменить
+          </div>
         </div>
       </div>
       <div class="modal__send-code">
+
         <label class="modal__form-label-send-code" for="code">
           Код из СМС
         </label>
-        <input class="modal__input-send-code" type="text" name="user_code" id="code" value="1234">
-        <div class="modal__change-button-send-code button__tertiary">
-          Получить новый код
-        </div>
-      </div>
-    </div>
 
-    <div class="entered-code-wrapper">
-      <div class="modal__form-send-code">
-        <label class="modal__form-label-send-code" for="phone-send-entered-code">
-          Номер телефона
-        </label>
-        <input class="modal__input-tel-send-code" type="tel" name="user_phone" id="phone-send-entered-code" value="+380 (50) 888-88-88" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" readonly>
-        <div class="modal__change-button-send-code button__tertiary">
-          Изменить
-        </div>
-      </div>
-      <div class="modal__send-code">
-        <label class="modal__form-label-send-code" for="entered-code">
+        <label class="modal__form-label-send-code invisible" for="entered-code">
           Код из СМС
         </label>
-        <input class="modal__input-entered-code" type="text" name="user-entered-code" id="entered-code" value="1234" readonly>
-        <div class="modal__change-button-send-code button__tertiary">
-          Получить новый код
-        </div>
-      </div>
-    </div>
 
-    <div class="error-code-wrapper">
-      <div class="modal__form-send-code">
-        <label class="modal__form-label-send-code" for="phone-send-entered-code">
-          Номер телефона
-        </label>
-        <input class="modal__input-tel-send-code" type="tel" name="user_phone" id="phone-send-error-code" value="+380 (50) 888-88-88" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" readonly>
-        <div class="modal__change-button-send-code button__tertiary">
-          Изменить
-        </div>
-      </div>
-      <div class="modal__send-code">
-        <label class="modal__form-label-send-code" for="error-code">
+        <label class="modal__form-label-send-code invisible" for="error-code">
           Код из СМС
         </label>
-        <input class="modal__input-error-code" type="text" name="user-entered-code" id="error-code" value="1">
-        <div class="modal__change-button-send-code button__tertiary">
-          Получить новый код
+
+        <div class="modal__form-send-code-input-wrapper">
+          <input class="modal__input-send-code" type="text" name="user_code" id="code" value="1234">
+
+          <input class="modal__input-entered-code invisible" type="text" name="user-entered-code" id="entered-code" value="1234" readonly>
+
+          <input class="modal__input-error-code invisible" type="text" name="user-entered-code" id="error-code" value="1">
+
+          <div class="modal__change-button-send-code button__tertiary">
+            Получить новый код
+          </div>
         </div>
       </div>
-      <div class="modal__notification-error-code">
-        <img class="modal__notification-signal" src="img/notification.svg" alt="this is signal">
-        <p class="modal__notification-error-text">
-          Неверный код
-        </p>
-        <span class="modal__notification-error-part"></span>
+
+      <div class="invisible">
+        <div class="modal__notification-error-code">
+          <img class="modal__notification-signal" src="img/notification.svg" alt="this is signal">
+          <p class="modal__notification-error-text">
+            Неверный код
+          </p>
+          <span class="modal__notification-error-part"></span>
+        </div>
       </div>
+
     </div>
 
   </div>
@@ -240,13 +225,21 @@
 
   <!-- MODAL PIZZA-MAKE STARTS -->
 
-  <div class="modal-pizza-make modal-window">
 
-   <img class="modal-pizza-make__image" src="img/pizza-make.jpg" alt="this is your pizza">
+  <div class="modal-pizza-make modal-window invisible">
+
+    <div class="modal-pizza-make__up-part">
+      <h1 class="modal-pizza-make__mobile-title modal-main-title">
+        Вход на сайт
+      </h1>
+      <div class="modal-pizza-make__close-button close"></div>
+    </div>
+
+    <img class="modal-pizza-make__image" src="img/pizza-make.jpg" alt="this is your pizza">
     <div class="modal-pizza-make__blank">
 
-      <div class="modal-pizza-make__upper-part-wrapper">
-        <div class="modal-pizza-make__upper-part">
+      <div class="modal-pizza-make__title-part-wrapper">
+        <div class="modal-pizza-make__title-part">
           <h1 class="modal-pizza-make__title">
             С креветками и трюфелями
           </h1>
@@ -261,11 +254,11 @@
             <img class="modal-pizza-make__opt-cancel" src="img/option-cross.svg" alt="cancel">
           </p>
         </div>
-        <div class="modal-pizza-make__blank__close-button close"></div>
+        <div class="modal-pizza-make__blank-close-button close"></div>
       </div>
 
+      <div class="modal-pizza-make__custom">
 
-      <div class="modal-pizza-make__size">
         <div class="modal-pizza-make__radio-size-wrapper">
           <input class="modal-pizza-make__radio" type="radio" id="small-size"
                  name="pizza-size" value="small" checked>
@@ -281,9 +274,7 @@
                  name="pizza-size" value="small">
           <label class="modal-pizza-make__label-size modal-label" for="big-size">Большая</label>
         </div>
-      </div>
 
-      <div class="modal-pizza-make__dough">
         <div class="modal-pizza-make__radio-dough-wrapper">
           <input class="modal-pizza-make__radio" type="radio" id="traditional"
                  name="pizza-dough" value="traditional" checked>
@@ -294,6 +285,7 @@
                  name="pizza-dough" value="thin">
           <label class="modal-pizza-make__label-dough modal-label" for="thin">Тонкое</label>
         </div>
+
       </div>
 
 
@@ -412,11 +404,10 @@
         Добавить в корзину 1 048 ₽
       </div>
 
-
-
     </div>
 
   </div>
+
 
   <!-- MODAL PIZZA-MAKE ENDS -->
 

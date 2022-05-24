@@ -1,10 +1,10 @@
 @import 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Roboto:wght@400;500;900&display=swap');
 @import 'mixins';
+@import 'general';
 @import 'components/inputs';
 @import 'components/buttons';
 @import 'components/modals';
-@import 'general';
 @import 'libs/glide';
 @import 'pages/index/header';
 @import 'pages/index/catalog';
