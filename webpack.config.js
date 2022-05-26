@@ -40,12 +40,15 @@ module.exports = {
     //new HtmlWebpackPlugin({
     //template: './src/index.html'
     //}),
-    new HtmlWebpackPlugin({
-      template: "./src/promotions.html",
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: "./src/promotions.html",
+    // }),
     // new HtmlWebpackPlugin({
     //   template: './src/cabinet.html'
     // }),
+    new HtmlWebpackPlugin({
+      template: "./src/pay.html",
+    }),
     new MiniCssExtractPlugin(),
   ],
   devServer: {
