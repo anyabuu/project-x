@@ -16,38 +16,33 @@
     <header class="header">
       <div class="container header__container">
         <img class="header__logo" src="img/logo-1.png" alt="this is logo">
-        <div class="header__circles">
-          <div class="header__circle-group">
-            <div class="header__circle-wrapper">
-              <div class="header__circle-active">
-                <div class="header__circle-number-active">1</div>
-              </div>
-              <p class="header__circle-name">
-                Корзина
-              </p>
+        <img class="header__menu-mobile" src="img/menu-lines-header.svg" alt="this is menu">
+        <div class="header__circle-group">
+          <div class="header__circle-wrapper">
+            <div class="header__circle-active">
+              <div class="header__circle-number-active">1</div>
             </div>
-            <div class="header__circle-border"></div>
-            <div class="header__circle-group">
-              <div class="header__circle-wrapper">
-                <div class="header__circle">
-                  <div class="header__circle-number">2</div>
-                </div>
-                <p class="header__circle-name">
-                  Оформление заказа
-                </p>
-              </div>
+            <p class="header__circle-name">
+              Корзина
+            </p>
+          </div>
+          <div class="header__circle-border"></div>
+          <div class="header__circle-wrapper">
+            <div class="header__circle">
+              <div class="header__circle-number">2</div>
             </div>
-            <div class="header__circle-border"></div>
-            <div class="header__circle-group">
-              <div class="header__circle-wrapper">
-                <div class="header__circle">
-                  <div class="header__circle-number">3</div>
-                </div>
-                <p class="header__circle-name">
-                  Заказ принят
-                </p>
-              </div>
+            <p class="header__circle-name">
+              Оформление заказа
+            </p>
+          </div>
+          <div class="header__circle-border"></div>
+          <div class="header__circle-wrapper">
+            <div class="header__circle">
+              <div class="header__circle-number">3</div>
             </div>
+            <p class="header__circle-name">
+              Заказ принят
+            </p>
           </div>
         </div>
       </div>
@@ -72,7 +67,7 @@
             <label class="order__form-label" for="name">
               Имя
             </label>
-            <input class="order__form-input input__form" type="text" name="user_name" id="name" placeholder="Введите имя" value="Илья">
+            <input class="order__form-input delivery-input" type="text" name="user_name" id="name" placeholder="Введите имя" value="Илья">
           </div>
 
           <div class="order__form-item">
@@ -80,7 +75,7 @@
               Номер телефона
             </label>
             <div class="order__input-wrapper">
-              <input class="order__form-input input__form" type="tel" name="user_phone" id="phone" value="+380123456789" readonly pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" disabled>
+              <input class="order__form-input delivery-input" type="tel" name="user_phone" id="phone" value="+380123456789" readonly pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" disabled>
               <button class="order__form-inside-button button__tertiary"  type="submit">
                 Изменить
               </button>
@@ -91,25 +86,22 @@
             <label class="order__form-label" for="delivery-type">
               Адрес доставки
             </label>
-
-            <fieldset class="order__form-fieldset order__form-input input__form">
+            <fieldset class="order__form-fieldset delivery-input">
 
               <div class="order__fieldset-input-wrapper">
-                <input class="order__form-input-fieldset input__form" type="text" name="delivery-type" id="delivery-type" value="Дом" readonly>
+                <input class="order__form-input-fieldset delivery-input" type="text" name="delivery-type" id="delivery-type" value="Дом" readonly>
                 <button class="order__form-fieldset-button button__tertiary"  type="submit">
                   Изменить
                 </button>
               </div>
               <div class="order__fieldset-input-wrapper">
-                <textarea class="order__form-input-textarea input__form" type="text" name="address" id="address" readonly>ул. Крещатик, д. 8, под. Последний, эт. Последний, кв. 23, код Домофон</textarea>
+                <textarea class="order__form-input-textarea delivery-input" type="text" name="address" id="address" readonly>ул. Крещатик, д. 8, под. Последний, эт. Последний, кв. 23, код Домофон</textarea>
                 <button class="order__form-fieldset-button button__tertiary"  type="submit">
                   Выбрать самовывоз
                 </button>
               </div>
 
             </fieldset>
-
-
           </div>
 
           <div class="order__form-item">
@@ -117,21 +109,22 @@
               Время доставки
             </label>
             <div class="order__input-wrapper">
-              <input class="order__form-input input__form" type="text" name="user_phone" id="delivery-time" value="Побыстрее" readonly disabled>
+              <input class="order__form-input delivery-input" type="text" name="user_phone" id="delivery-time" value="Побыстрее" readonly disabled>
               <button class="order__form-inside-button button__tertiary"  type="submit">
                 Изменить
               </button>
             </div>
           </div>
         </form>
-
-        <h2 class="order__promo-title">
-          Промокод
-        </h2>
-        <div class="order__promo-wrapper">
-          <input class="order__promo-input" type="text" name="promo" id="promo" placeholder="Введите промокод">
-          <div class="order__promo-button button__primary"  type="submit">
-            Применить
+        <div class="order__promo-group">
+          <h2 class="order__promo-title">
+            Промокод
+          </h2>
+          <div class="order__promo-wrapper">
+            <input class="order__promo-input" type="text" name="promo" id="promo" placeholder="Введите промокод">
+            <div class="order__promo-button button__primary"  type="submit">
+              Применить
+            </div>
           </div>
         </div>
       </div>
@@ -141,7 +134,6 @@
           Состав заказа
         </h2>
         <ul class="order__basket-list">
-
           <li class="order__basket-item">
             <div class="order__basket-item-names">
               <h3 class="order__basket-item-title">
@@ -246,9 +238,7 @@
               599₴
             </p>
           </li>
-
         </ul>
-
         <div class="order__sum-wrapper">
           <p class="order__basket-sum">
             Сумма заказа
@@ -257,11 +247,9 @@
             1 048 ₴
           </p>
         </div>
-
         <p class="order__basket-free">
           Бесплатная доставка
         </p>
-
       </div>
     </div>
   </div>
@@ -275,81 +263,51 @@
 <section class="pay">
   <div class="container pay__container">
     <div class="pay__window">
+      <h1 class="pay__way-title">
+        Способы оплаты
+      </h1>
+      <div class="pay__way-types">
 
-      <div class="pay__cash invisible">
-        <h1 class="pay__way-title">
-          Способы оплаты
-        </h1>
-        <div class="pay__way-group">
-          <div class="pay__way-radio-wrapper">
-            <input class="pay__radio" type="radio" id="card"
-                  name="pay-type" value="card" checked>
-            <label class="pay__label modal-label" for="card">
-              <img class="pay__label-img" src="img/card-pay-symbol.svg" alt="pay card">
-              Картой на сайте
-            </label>
-          </div>
-          <div class="pay__way-radio-wrapper">
-            <input class="pay__radio" type="radio" id="cash"
-                  name="pay-type" value="cash" checked>
-            <label class="pay__label modal-label" for="cash">
-              Наличными
-            </label>
+        <div class="pay__way-radio-wrapper">
+          <input class="pay__radio" type="radio" id="card"
+                name="pay-way" value="card">
+          <label class="pay__label modal-label" for="card">
+            <img class="pay__label-img" src="img/card-pay-symbol.svg" alt="pay card">
+            Картой на сайте
+          </label>
+          <div class="pay__card-wrapper">
+            <div class="pay__card-data">
+              <input class="pay__card-number-input card-input" type="number" name="card-number" id="card-number" placeholder="Номер карты">
+              <input class="pay__card-date-input card-input" type="text" name="card-date" id="card-date" placeholder="Срок годности карты" value="11/25">
+              <input class="pay__card-cvc-input card-input" type="number" name="card-cvc" id="card-cvc" placeholder="CVC">
+            </div>
+            <img class="pay__card-img-info" src="img/card-sec-info.png" alt="card security">
           </div>
         </div>
-        <div class="pay__exchange-wrapper">
-          <p class="pay__exchange">
-            С какой суммы подготовить сдачу?
-          </p>
-          <input class="pay__input-exchange invisible" type="number" name="exchange" id="exchange" placeholder="₴">
 
-          <input class="pay__input-no-exchange-checked" type="text" name="no-exchange-checked" id="no-exchange-checked" readonly value="1 048 ₴">
+        <div class="pay__way-radio-wrapper">
+          <input class="pay__radio" type="radio" id="cash"
+                name="pay-way" value="cash" checked>
+          <label class="pay__label modal-label" for="cash">
+            Наличными
+          </label>
+          <div class="pay__cash-wrapper">
+            <p class="pay__cash-exchange">
+              С какой суммы подготовить сдачу?
+            </p>
 
-          <div class="pay__input-no-exchange-wrapper">
-            <input class="pay__input-no-exchange" type="checkbox" name="no-exchange" id="no-exchange" checked>
+            <input class="pay__cash-input-exchange-field" type="number" name="exchange-field" id="exchange" placeholder="₴">
 
-            <label class="pay__label-no-exchange" for="no-exchange">
+            <input class="pay__cash-input-sum invisible" type="text" name="no-exchange-sum" id="no-exchange-sum" readonly value="1 048 ₴">
+
+            <input class="pay__cash-input-no-exchange" type="checkbox" name="no-exchange" id="no-exchange" checked>
+            <label class="pay__cash-label-no-exchange" for="no-exchange">
               Без сдачи
             </label>
-
           </div>
         </div>
       </div>
-
-      <div class="pay__card">
-        <h1 class="pay__way-title pay__card-way-title">
-          Способы оплаты
-        </h1>
-        <div class="pay__card-way-group">
-          <div class="pay__way-radio-wrapper">
-            <input class="pay__radio" type="radio" id="by-card"
-                  name="pay-type" value="card" checked>
-            <label class="pay__label pay__card-label modal-label" for="by-card">
-              <img class="pay__label-img" src="img/card-pay-symbol.svg" alt="pay card">
-              Картой на сайте
-            </label>
-            <div class="pay__card-info">
-              <div class="pay__card-data">
-                <input class="pay__card-number-input card-input" type="number" name="card-number" id="card-number" placeholder="Номер карты">
-                <input class="pay__card-date-input card-input" type="text" name="card-date" id="card-date" placeholder="Срок годности карты" value="11/25">
-                <input class="pay__card-cvc-input card-input" type="number" name="card-cvc" id="card-cvc" placeholder="CVC">
-              </div>
-              <img class="pay__card-img-info" src="img/card-sec-info.png" alt="card security">
-            </div>
-          </div>
-          <div class="pay__way-radio-wrapper">
-            <input class="pay__radio" type="radio" id="by-cash"
-                  name="pay-type" value="cash">
-            <label class="pay__label pay__card-label modal-label" for="by-cash">
-              Наличными
-            </label>
-          </div>
-        </div>
-      </div>
-
     </div>
-
-
 
     <form class="pay__subscribe-form" action="" method="post">
       <input class="pay__subscribe-input" type="checkbox" name="subscribe" id="subscribe" checked="checked">
@@ -363,17 +321,140 @@
       </div>
     </form>
 
+    <div class="order__basket-mobile">
+      <h2 class="order__basket-title">
+        Состав заказа
+      </h2>
+      <ul class="order__basket-list">
+        <li class="order__basket-item">
+          <div class="order__basket-item-names">
+            <h3 class="order__basket-item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order__basket-item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order__basket-item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order__basket-item">
+          <div class="order__basket-item-names">
+            <h3 class="order__basket-item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order__basket-item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order__basket-item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order__basket-item">
+          <div class="order__basket-item-names">
+            <h3 class="order__basket-item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order__basket-item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order__basket-item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order__basket-item">
+          <div class="order__basket-item-names">
+            <h3 class="order__basket-item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order__basket-item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order__basket-item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order__basket-item">
+          <div class="order__basket-item-names">
+            <h3 class="order__basket-item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order__basket-item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order__basket-item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order__basket-item">
+          <div class="order__basket-item-names">
+            <h3 class="order__basket-item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order__basket-item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order__basket-item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order__basket-item">
+          <div class="order__basket-item-names">
+            <h3 class="order__basket-item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order__basket-item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order__basket-item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order__basket-item">
+          <div class="order__basket-item-names">
+            <h3 class="order__basket-item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order__basket-item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order__basket-item-price">
+            599₴
+          </p>
+        </li>
+      </ul>
+      <div class="order__sum-wrapper">
+        <p class="order__basket-sum">
+          Сумма заказа
+        </p>
+        <p class="order__basket-total-sum">
+          1 048 ₴
+        </p>
+      </div>
+      <p class="order__basket-free">
+        Бесплатная доставка
+      </p>
+    </div>
+
     <div class="pay__next-step">
       <div class="pay__back-step-button button__tertiary">
         <span class="pay__back"></span>
           Назад в корзину
       </div>
       <div class="pay__next-step-button button__primary">
-        Оформить заказ на 1 048 ₴
+        <p class="pay__next-step-button-text">Оформить заказ на 1 048 ₴</p>
+        <p class="pay__next-step-button-text-mobile">Оформить заказ</p>
         <span class="pay__next"></span>
       </div>
     </div>
-
 
   </div>
 </section>

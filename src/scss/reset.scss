@@ -423,7 +423,8 @@ fieldset {
   border: 0;
 }
 textarea {
-  resize: vertical;
+  font-family: inherit;
+  resize: none;
 }
 .chromeframe {
   margin: 0.2em 0;

@@ -4,21 +4,29 @@
 }
 .header__container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
-.header__circles {
-  display: flex;
-  align-items: center;
+.header__logo {
+  width: 82px;
+  height: 100%;
+  @include media-phone {
+    width: 60px;
+  }
+}
+.header__menu-mobile {
+  display: none;
+  @include media-phone {
+    display: block;
+  }
 }
 .header__circle-group {
   display: flex;
-  align-items: baseline;
-  &:nth-child(3) {
-    margin-right: -50px;
-    margin-left: -50px;
-  }
-  &:nth-child(5) {
-    margin-left: -23px;
+  align-items: center;
+  justify-content: space-between;
+  width: 435px;
+  @include media-phone {
+    width: 100%;
   }
 }
 .header__circle,
@@ -46,24 +54,32 @@
   color: black;
 }
 .header__circle-name {
+  position: absolute;
+  top: 65px;
   opacity: 0.8;
   color: var(--color-secondary-400);
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 2;
+  @include media-phone {
+    top: 135px;
+    font-size: 1.1rem;
+    line-height: 2.5;
+  }
 }
 .header__circle-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2px;
-  &:nth-child(2) {
-    margin-left: -52px;
-  }
 }
 .header__circle-border {
   width: 102px;
-  margin-right: 12px;
-  margin-left: 12px;
   border-bottom: 2px dashed var(--color-background-500);
+  @include media-phone {
+    width: 26%;
+  }
+  @include media-mini-phone {
+    width: 17%;
+  }
 }
