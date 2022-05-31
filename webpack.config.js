@@ -46,6 +46,9 @@ module.exports = {
     // new HtmlWebpackPlugin({
     //   template: './src/cabinet.html'
     // }),
+    // new HtmlWebpackPlugin({
+    //   template: "./src/pay.html",
+    // }),
     new HtmlWebpackPlugin({
       template: "./src/basket.html",
     }),

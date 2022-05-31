@@ -11,9 +11,14 @@
   --color-background-200: #f1f2f5;
   --color-background-300: #f3f3f7;
   --color-background-400: #e2e2e9;
+  --color-background-500: #b8c5d0;
   --color-box-shadow: rgb(0 0 0 / 6%);
   --color-box-shadow-acent: rgb(247 210 45 / 40%);
   --color-box-shadow-100: rgb(0 0 0 / 8%);
+  --color-shadow-200: rgb(241 242 245 / 60%);
+  --color-shadow-300: rgb(35 31 32 / 80%);
+  --color-shadow-400: rgb(35 31 32 / 60%);
+  --color-shadow-500: rgb(0 0 0 / 20%);
   --color-modal-gradient: linear-gradient(0deg, rgb(247 210 45 / 40%), rgb(247 210 45 / 40%)),
     rgb(33 49 52 / 20%);
   --color-modal-gradient-100: linear-gradient(180deg, transparent 0%, white 100%);
@@ -44,4 +49,7 @@ html {
   @include media-tablet {
     width: 96%;
   }
+}
+input {
+  font-family: inherit;
 }
