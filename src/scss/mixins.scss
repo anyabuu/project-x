@@ -33,6 +33,11 @@
     @content;
   }
 }
+@mixin media-micro-phone {
+  @media (max-width: 482px) {
+    @content;
+  }
+}
 @mixin form-text {
   font-size: 1.4rem;
   font-weight: 700;
@@ -40,4 +45,7 @@
 }
 @mixin shadow-0 {
   box-shadow: 0 4px 24px var(--color-box-shadow);
+}
+@mixin shadow-1 {
+  box-shadow: 0 4px 28px var(--color-box-shadow-100), 0 4px 28px var(--color-box-shadow-100);
 }
