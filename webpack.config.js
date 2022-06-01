@@ -1,12 +1,13 @@
 const { join, resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: ['fastify-webpack-hot/client', './src/index.js'],
   output: {
     path: resolve(__dirname, 'build'),
-    filename: '[name].[fullhash].js'
+    filename: '[name].[fullhash].js',
   },
   module: {
     rules: [
@@ -14,44 +15,45 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
-            plugins: ["@babel/plugin-transform-runtime"]
-          }
-        }
+            plugins: ['@babel/plugin-transform-runtime'],
+          },
+        },
       },
       {
         test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          "sass-loader",
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
         ],
       },
       {
         test: /\.(html)$/,
-        use: ['html-loader']
-      }
-    ]
+        use: ['html-loader'],
+      },
+    ],
   },
   plugins: [
-      //new HtmlWebpackPlugin({
-        //template: './src/index.html'
-      //}),
     //new HtmlWebpackPlugin({
-      //template: './src/promotions.html'
+    //template: './src/index.html'
     //}),
+    //new HtmlWebpackPlugin({
+    //template: './src/promotions.html'
+    //}),
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/cabinet.html'
+      template: './src/cabinet.html',
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
   ],
   devServer: {
     static: {
-      directory: join(__dirname, 'src')
+      directory: join(__dirname, 'src'),
     },
     port: 3000,
-  }
+  },
 };
