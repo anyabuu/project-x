@@ -54,6 +54,9 @@ html {
   width: 797px;
   margin-right: auto;
   margin-left: auto;
+  @include media-tablet {
+    width: 94%;
+  }
 }
 input {
   font-family: inherit;

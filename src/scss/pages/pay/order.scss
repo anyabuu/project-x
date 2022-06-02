@@ -217,11 +217,8 @@
 }
 .order__promo-wrapper {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   width: 353px;
-  overflow: hidden;
-  border: 2px solid var(--color-background-400);
-  border-radius: 8px;
   @include media-phone {
     width: 100%;
   }
@@ -230,6 +227,9 @@
   width: 100%;
   padding: 8px 24px;
   border: none;
+  border: 2px solid var(--color-background-400);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
   opacity: 0.82;
   color: var(--color-secondary-300);
   font-size: 1.3rem;
@@ -237,8 +237,8 @@
   line-height: 2.1;
 }
 .order__promo-button {
-  padding: 8px 27px;
-  border-radius: 0;
+  padding: 10px 27px;
+  border-radius: 0 8px 8px 0;
   color: var(--color-secondary-600);
   font-size: 1.3rem;
   font-weight: 700;
