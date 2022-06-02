@@ -21,12 +21,7 @@
   --color-shadow-500: rgb(0 0 0 / 20%);
   --color-modal-gradient: linear-gradient(0deg, rgb(247 210 45 / 40%), rgb(247 210 45 / 40%)),
     rgb(33 49 52 / 20%);
-  --color-modal-gradient-100: linear-gradient(
-    180deg,
-    rgb(255 255 255 / 60%) 0%,
-    rgb(255 255 255 / 98%) 40.42%,
-    white 100%
-  );
+  --color-modal-gradient-100: linear-gradient(180deg, transparent 0%, white 100%);
 }
 * {
   box-sizing: border-box;
@@ -53,6 +48,14 @@ html {
   margin-left: auto;
   @include media-tablet {
     width: 96%;
+  }
+}
+.container-small {
+  width: 797px;
+  margin-right: auto;
+  margin-left: auto;
+  @include media-tablet {
+    width: 94%;
   }
 }
 input {

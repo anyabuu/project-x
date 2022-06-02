@@ -1,29 +1,7 @@
-.modal-window {
-  @include media-phone {
-    padding: 25px;
-  }
-}
-.modal__wrapper {
-  display: flex;
-  position: fixed;
-  z-index: 1;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background: var(--color-modal-gradient);
-}
-.modal__window {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .modal__title {
   font-size: 2.5rem;
 }
-
-//  ENTER NUMBER STATE
-.modal__form-enter-number {
+.modal__form-enter {
   display: flex;
   align-items: center;
   gap: 32px;
@@ -34,18 +12,17 @@
     row-gap: 10px;
   }
 }
-.modal__form-label-enter-number {
+.modal__form-enter-label {
   opacity: 0.82;
   color: var(--color-secondary-300);
   font-size: 1.3rem;
   font-weight: 600;
   line-height: 2.1;
 }
-.modal__input-enter-number {
-  width: 255px;
+.modal__form-enter-input {
   height: 48px;
   padding: 10px 19px;
-  border: 1.5px solid var(--color-background-400);
+  border: 2px solid var(--color-background-400);
   border-radius: 8px;
   background-color: white;
   color: var(--color-secondary-600);
@@ -55,8 +32,24 @@
   @include media-phone {
     width: 100%;
   }
+  &:disabled {
+    border: none;
+    opacity: 0.82;
+    color: var(--color-secondary-400);
+  }
 }
-.modal__send-code-enter-number {
+.modal__form-enter-input--big {
+  width: 255px;
+  &:disabled {
+    width: 150px;
+    padding: 0;
+  }
+}
+.modal__form-enter-input--small {
+  width: 86px;
+  letter-spacing: 4px;
+}
+.modal__form-enter-send-code {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,7 +60,7 @@
     padding-top: 6px;
   }
 }
-.modal__button-enter-number {
+.modal__form-enter-button {
   width: 224px;
   padding: 16px 59px;
   color: white;
@@ -78,7 +71,7 @@
     width: 100%;
   }
 }
-.modal__info-text-enter-number {
+.modal__form-enter-text {
   width: 319px;
   color: var(--color-secondary-100);
   font-size: 1.4rem;
@@ -88,15 +81,13 @@
     width: 100%;
   }
 }
-.modal__info-link-enter-number {
+.modal__form-enter-link {
   text-decoration: underline;
 }
-
-//  SEND CODE STATE
-.modal__form-send-code {
+.modal__form-enter-code {
   display: flex;
   align-items: center;
-  padding-top: 51px;
+  padding-top: 44px;
   gap: 50px;
   @include media-phone {
     flex-wrap: wrap;
@@ -104,84 +95,33 @@
     row-gap: 10px;
   }
 }
-.modal__form-label-send-code {
-  opacity: 0.82;
-  color: var(--color-secondary-300);
-  font-size: 1.3rem;
-  font-weight: 600;
-  line-height: 2.1;
-}
-.modal__form-send-code-input-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-.modal__input-tel-send-code {
-  width: 150px;
-  border: none;
-  opacity: 0.82;
-  color: var(--color-secondary-400);
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.8;
-}
-.modal__change-button-send-code {
+.modal__change-code-button {
   border-bottom: 2px dashed;
   opacity: 0.82;
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 2;
 }
-.modal__send-code {
-  display: flex;
-  align-items: center;
-  gap: 69px;
-  padding-top: 34px;
-  @include media-phone {
-    flex-wrap: wrap;
-    row-gap: 10px;
-    padding-top: 23px;
+.modal__input-code {
+  width: 86px;
+  height: 48px;
+  border: 2px solid var(--color-background-400);
+  border-radius: 8px;
+  color: var(--color-secondary-600);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 1.8;
+  text-align: center;
+  &:disabled {
+    border: none;
+    opacity: 0.82;
+    background-color: inherit;
+    color: var(--color-secondary-400);
   }
 }
-.modal__input-send-code {
-  width: 86px;
-  height: 48px;
-  border: 1.5px solid var(--color-background-400);
-  border-radius: 8px;
-  color: var(--color-secondary-600);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 4px;
-  line-height: 1.8;
-  text-align: center;
-}
-
-// ENTERED-CODE STATE
-.modal__input-entered-code {
-  width: 86px;
-  height: 48px;
-  border: none;
-  opacity: 0.82;
-  color: var(--color-secondary-400);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 4px;
-  line-height: 1.8;
-  text-align: center;
-}
-
-// ERROR_CODE STATE
-.modal__input-error-code {
-  width: 86px;
-  height: 48px;
-  border: 1.5px solid var(--color-accent);
-  border-radius: 8px;
-  color: var(--color-secondary-600);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 4px;
-  line-height: 1.8;
-  text-align: center;
+.modal__input-code--error {
+  border: 2px solid var(--color-accent);
 }
 .modal__notification-error-code {
   display: flex;
@@ -212,19 +152,11 @@
   border: 6px solid var(--color-accent);
 }
 
-///
-///
-///
 // MODAL-ADDRESS
 .modal-address {
   @include media-phone {
     padding: 25px 22px;
   }
-}
-.modal-address__up-part {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 .modal-address__delivery {
   display: flex;
@@ -262,24 +194,33 @@
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 14px;
-}
-.modal-address__form-input-street {
-  width: 426px;
   @include media-phone {
-    width: 77%;
+    justify-content: flex-start;
+    gap: 11px;
   }
 }
-.modal-address__form-input-house {
+.modal-address__form-input--full {
+  width: 100%;
+}
+.modal-address__form-input--big {
+  width: 495px;
+  @include media-phone {
+    width: 100%;
+  }
+}
+.modal-address__form-input--medium {
   width: 133px;
   height: fit-content;
-  &:nth-of-type(2) {
-    @include media-phone {
-      width: 20%;
-    }
+  @include media-phone {
+    width: 124px;
+    padding: 10px 15px;
   }
 }
-.modal-address__form-input-house-type {
-  width: 100%;
+.modal-address__form-input--small {
+  width: 83px;
+  @include media-phone {
+    width: 73px;
+  }
 }
 .modal-address__form-textarea {
   width: 100%;
@@ -297,20 +238,9 @@
   }
 }
 
-///
-///
-///
 // MODAL-DELIVERY-TIME
 .modal-delivery-time {
   background-color: var(--color-background-100);
-}
-.modal-delivery-time__up-part {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.modal-delivery-time__title {
-  color: var(--color-secondary-400);
 }
 .modal-delivery-time__choose {
   display: flex;
@@ -337,7 +267,7 @@
   font-weight: 700;
   line-height: 1.8;
   @include media-phone {
-    width: 260px;
+    width: 100%;
   }
 }
 .modal-delivery-time__radio-wrapper input:checked + label {
@@ -345,39 +275,25 @@
   box-shadow: 0 4px 28px var(--color-box-shadow-100);
 }
 
-///
-///
-///
 // MODAL-PIZZA-MAKE
 .modal-pizza-make {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 976px;
-  padding: 30px 59px 40px 29px;
   gap: 27px;
   @include media-max-tablet {
-    width: 80%;
+    width: 85%;
   }
   @include media-phone {
     flex-direction: column;
+    width: 94%;
     padding: 30px 24px 20px;
     gap: 18px;
   }
-}
-.modal-pizza-make__up-part {
-  display: none;
-  @include media-phone {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  @include media-mini-phone {
+    padding: 18px;
   }
-}
-.modal-pizza-make__close-button {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
 }
 .modal-pizza-make__image {
   width: 100%;
@@ -390,10 +306,9 @@
     height: 251px;
   }
 }
-.modal-pizza-make__title-part-wrapper {
-  display: flex;
+.modal-pizza-make__up-part {
   align-items: flex-start;
-  justify-content: space-between;
+  gap: 15px;
 }
 .modal-pizza-make__title {
   font-size: 2rem;
@@ -430,9 +345,20 @@
   font-weight: 700;
 }
 .modal-pizza-make__blank-close-button {
-  margin-right: -28px;
   @include media-phone {
     display: none;
+  }
+}
+.modal-pizza-make__blank-close-button-mobile {
+  display: none;
+  @include media-phone {
+    display: block;
+    position: absolute;
+    top: 8%;
+    right: 10%;
+  }
+  @include media-micro-phone {
+    top: 5%;
   }
 }
 .modal-pizza-make__custom {
@@ -478,8 +404,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 327px;
-  padding-right: 6px;
+  height: 268px;
+  padding: 2px 10px 0 2px;
   overflow: scroll;
   row-gap: 13px;
   @include media-max-tablet {
@@ -515,8 +441,8 @@
 .modal-pizza-make__ingredient-label {
   width: 110px;
   padding: 14px 12px 17px 13px;
-  border: 1.5px solid var(--color-background-400);
   border-radius: 12px;
+  outline: 2px solid var(--color-background-400);
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.8;
@@ -526,7 +452,7 @@
   }
 }
 .modal-pizza-make__ingredients-input-wrapper input:checked + label {
-  border: 2.5px solid rgb(247 210 45 / 40%);
+  outline: 2px solid rgb(247 210 45 / 40%);
 }
 .modal-pizza-make__ingredient-label-title {
   padding-top: 1px;
@@ -542,9 +468,8 @@
   line-height: 1;
 }
 .modal-pizza-make__button {
-  position: relative;
   width: 100%;
-  margin-top: -26px;
+  margin-top: 26px;
   padding: 15px 55px;
   font-size: 1.5rem;
   font-weight: 800;
