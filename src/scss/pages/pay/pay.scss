@@ -1,9 +1,13 @@
+.pay {
+  @include media-phone {
+    order: 2;
+  }
+}
 .pay__container {
   margin-top: 58px;
   margin-bottom: 30px;
 }
 .pay__window {
-  width: 730px;
   padding: 30px;
   border-radius: 6px;
   background-color: var(--color-shadow-200);
@@ -238,12 +242,14 @@
 }
 .pay__next-step {
   display: flex;
+  grid-column: 1/2;
   flex-wrap: wrap;
   align-items: center;
   padding-top: 60px;
   gap: 269px;
   @include media-phone {
     justify-content: space-between;
+    order: 4;
     padding-top: 44px;
     column-gap: 70px;
     row-gap: 14px;
