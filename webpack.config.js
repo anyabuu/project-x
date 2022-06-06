@@ -6,8 +6,10 @@ const webpack = require('webpack');
 module.exports = {
   entry: ['fastify-webpack-hot/client', './src/index.js'],
   output: {
-    path: resolve(__dirname, 'build'),
+    path: resolve(__dirname, '/build'),
     filename: '[name].[fullhash].js',
+    clean: true,
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -48,7 +50,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/cabinet.html',
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[fullhash].css',
+    }),
   ],
   devServer: {
     static: {
@@ -56,4 +60,5 @@ module.exports = {
     },
     port: 3000,
   },
+  mode: 'development',
 };

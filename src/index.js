@@ -3,7 +3,6 @@ import './scss/styles.scss';
 import Glide from '@glidejs/glide';
 
 document.addEventListener('DOMContentLoaded', (event) => {
-
   new Glide('.glide', {
     type: 'carousel',
     animationTimingFunc: 'linear',
@@ -19,9 +18,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
       },
       550: {
         gap: 17,
-      }
-    }
-
-  }).mount()
+      },
+    },
+  }).mount();
 });
 
+console.log(214);
