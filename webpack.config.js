@@ -43,16 +43,13 @@ module.exports = {
     //new HtmlWebpackPlugin({
     //template: './src/index.html'
     //}),
-    //new HtmlWebpackPlugin({
-    //template: './src/promotions.html'
-    //}),
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/cabinet.html',
+      template: "./src/promotions.html",
     }),
-    new MiniCssExtractPlugin({
-      filename: '[name].[fullhash].css',
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: './src/cabinet.html'
+    // }),
+    new MiniCssExtractPlugin(),
   ],
   devServer: {
     static: {

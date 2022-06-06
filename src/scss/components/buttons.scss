@@ -3,6 +3,7 @@
   border-radius: 8px;
   background: var(--primary-color);
   text-align: center;
+  cursor: pointer;
 }
 .button__secondary {
   display: inline-block;
@@ -11,10 +12,12 @@
   background: var(--color-background-300);
   color: var(--color-secondary-400);
   text-align: center;
+  cursor: pointer;
 }
 .button__outline {
   border: 2px solid var(--color-background-100);
   border-radius: 13px;
+  cursor: pointer;
 }
 .button__tertiary {
   width: fit-content;
@@ -24,4 +27,5 @@
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.86;
+  cursor: pointer;
 }
