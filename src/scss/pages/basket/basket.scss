@@ -218,19 +218,17 @@
   padding: 14px 25px 22px;
   border-radius: 12px;
   outline: 2px solid var(--color-background-400);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1;
   text-align: center;
   cursor: pointer;
   @include media-tablet {
     width: 137px;
   }
 }
-.basket__sauce-item input:checked + label {
+.basket__sauce-input:checked + .basket__sauce-label {
   outline: 2px solid var(--color-box-shadow-acent);
-}
-.basket__sauce-label-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  line-height: 1;
 }
 .basket__sauce-label-price {
   color: var(--color-accent);
@@ -238,25 +236,31 @@
   font-weight: 700;
   line-height: 1.2;
 }
-.basket__promo {
+.basket__promo-title {
+  padding-top: 43px;
+  padding-bottom: 27px;
+  color: var(--color-accent);
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  @include media-phone {
+    padding-top: 35px;
+    font-size: 1.8rem;
+  }
+}
+.basket__promo-content {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   @include media-tablet {
-    gap: 70px;
     justify-content: flex-start;
+    gap: 10%;
+    row-gap: 31px;
   }
   @include media-phone {
-    gap: 30px;
-    justify-content: space-between;
+    justify-content: center;
   }
-}
-.basket__promo-group {
-  padding-bottom: 0;
-}
-.basket__promo-title--accent {
-  color: var(--color-accent);
 }
 .basket__promo-sum {
   display: flex;
