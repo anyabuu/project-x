@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fibo/Pay</title>
+</head>
+<body>
+
+<!--HEADER SECTION STARTS-->
+
+<section class="hero-pay">
+  <header class="header-pay">
+    <div class="container header-pay__container">
+      <img class="header-pay__logo" src="img/logo-1.png" alt="this is logo">
+      <img class="header-pay__menu-mobile" src="img/menu-lines-header.svg" alt="this is menu">
+      <div class="header-pay__circle-group">
+        <div class="header-pay__circle-wrapper">
+          <div class="header-pay__circle header-pay__circle--active">
+            <div class="header-pay__circle-number header-pay__circle-number--active">1</div>
+          </div>
+          <p class="header-pay__circle-name">
+            Корзина
+          </p>
+        </div>
+        <div class="header-pay__circle-border header-pay__circle-border--left"></div>
+        <div class="header-pay__circle-wrapper">
+          <div class="header-pay__circle">
+            <div class="header-pay__circle-number">2</div>
+          </div>
+          <p class="header-pay__circle-name">
+            Оформление заказа
+          </p>
+        </div>
+        <div class="header-pay__circle-border header-pay__circle-border--right"></div>
+        <div class="header-pay__circle-wrapper">
+          <div class="header-pay__circle">
+            <div class="header-pay__circle-number">3</div>
+          </div>
+          <p class="header-pay__circle-name">
+            Заказ принят
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+</section>
+
+<!--HEADER SECTION ENDS-->
+
+<div class="wrapper container">
+
+<!--ORDER SECTION STARTS-->
+
+  <section class="order">
+    <div class="order__container">
+      <h1 class="order__title">
+        Заказ на доставку
+      </h1>
+      <form class="order__form" action="" method="get">
+        <div class="order__form-item">
+          <label class="order__form-label" for="name">
+            Имя
+          </label>
+          <input class="order__form-input delivery-input" type="text" name="user_name" id="name" placeholder="Введите имя" value="Илья">
+        </div>
+        <div class="order__form-item">
+          <label class="order__form-label" for="phone">
+            Номер телефона
+          </label>
+          <div class="order__input-wrapper">
+            <input class="order__form-input delivery-input" type="tel" name="user_phone" id="phone" value="+380123456789" readonly pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" disabled>
+            <button class="order__form-inside-button button__tertiary"  type="submit">
+              Изменить
+            </button>
+          </div>
+        </div>
+        <div class="order__form-item">
+          <label class="order__form-label" for="delivery-type">
+            Адрес доставки
+          </label>
+          <fieldset class="order__form-fieldset delivery-input">
+            <div class="order__fieldset-input-wrapper">
+              <input class="order__form-input-fieldset delivery-input" type="text" name="delivery-type" id="delivery-type" value="Дом" readonly>
+              <button class="order__form-fieldset-button button__tertiary"  type="submit">
+                Изменить
+              </button>
+            </div>
+            <div class="order__fieldset-input-wrapper">
+              <textarea class="order__form-input-textarea delivery-input" type="text" name="address" id="address" readonly>ул. Крещатик, д. 8, под. Последний, эт. Последний, кв. 23, код Домофон</textarea>
+              <button class="order__form-fieldset-button button__tertiary"  type="submit">
+                Выбрать самовывоз
+              </button>
+            </div>
+          </fieldset>
+        </div>
+        <div class="order__form-item">
+          <label class="order__form-label" for="delivery-time">
+            Время доставки
+          </label>
+          <div class="order__input-wrapper">
+            <input class="order__form-input delivery-input" type="text" name="user_phone" id="delivery-time" value="Побыстрее" readonly disabled>
+            <button class="order__form-inside-button button__tertiary"  type="submit">
+              Изменить
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="order__promo-group">
+        <h2 class="order__promo-title">
+          Промокод
+        </h2>
+        <div class="order__promo-wrapper">
+          <input class="order__promo-input" type="text" name="promo" id="promo" placeholder="Введите промокод">
+          <button class="order__promo-button button__primary"  type="submit">
+            Применить
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--ORDER SECTION ENDS-->
+
+  <!--ORDER-BASKET SECTION STARTS-->
+
+  <section class="order-basket">
+    <div class="order-basket__container">
+      <h2 class="order-basket__title">
+        Состав заказа
+      </h2>
+      <ul class="order-basket__list">
+        <li class="order-basket__item">
+          <div class="order-basket__item-names">
+            <h3 class="order-basket__item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order-basket__item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order-basket__item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order-basket__item">
+          <div class="order-basket__item-names">
+            <h3 class="order-basket__item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order-basket__item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order-basket__item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order-basket__item">
+          <div class="order-basket__item-names">
+            <h3 class="order-basket__item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order-basket__item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order-basket__item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order-basket__item">
+          <div class="order-basket__item-names">
+            <h3 class="order-basket__item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order-basket__item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order-basket__item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order-basket__item">
+          <div class="order-basket__item-names">
+            <h3 class="order-basket__item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order-basket__item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order-basket__item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order-basket__item">
+          <div class="order-basket__item-names">
+            <h3 class="order-basket__item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order-basket__item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order-basket__item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order-basket__item">
+          <div class="order-basket__item-names">
+            <h3 class="order-basket__item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order-basket__item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order-basket__item-price">
+            599₴
+          </p>
+        </li>
+        <li class="order-basket__item">
+          <div class="order-basket__item-names">
+            <h3 class="order-basket__item-title">
+              Комбо за 599 ₴
+            </h3>
+            <p class="order-basket__item-description">
+              Средняя 30 см, традиционное тесто
+            </p>
+          </div>
+          <p class="order-basket__item-price">
+            599₴
+          </p>
+        </li>
+      </ul>
+      <div class="order__sum-wrapper">
+        <p class="order-basket__sum">
+          Сумма заказа
+        </p>
+        <p class="order-basket__total-sum">
+          1 048 ₴
+        </p>
+      </div>
+      <p class="order-basket__free">
+        Бесплатная доставка
+      </p>
+    </div>
+  </section>
+
+  <!--ORDER-BASKET SECTION ENDS-->
+
+  <!--PAY SECTION STARTS-->
+
+  <section class="pay">
+    <div class="pay__container">
+      <div class="pay__window">
+        <h1 class="pay__way-title">
+          Способы оплаты
+        </h1>
+        <div class="pay__way-types">
+          <div class="pay__way-radio-wrapper">
+            <input class="pay__radio" type="radio" id="card"
+                  name="pay-way" value="card">
+            <label class="pay__label modal-label" for="card">
+              <img class="pay__label-img" src="img/card-pay-symbol.svg" alt="pay card">
+              Картой на сайте
+            </label>
+            <div class="pay__card-wrapper">
+              <div class="pay__card-data">
+                <input class="pay__card-number-input card-input" type="text" name="card-number" id="card-number" maxlength="12" placeholder="Номер карты">
+                <input class="pay__card-date-input card-input" type="text" name="card-date" id="card-date" placeholder="Срок годности карты" value="11/25">
+                <input class="pay__card-cvc-input card-input" type="text" name="card-cvc" id="card-cvc" maxlength="3" placeholder="CVC">
+              </div>
+              <img class="pay__card-img-info" src="img/card-sec-info.png" alt="card security">
+            </div>
+          </div>
+          <div class="pay__way-radio-wrapper">
+            <input class="pay__radio" type="radio" id="cash"
+                  name="pay-way" value="cash" checked>
+            <label class="pay__label modal-label" for="cash">
+              Наличными
+            </label>
+            <div class="pay__cash-wrapper">
+              <p class="pay__cash-exchange">
+                С какой суммы подготовить сдачу?
+              </p>
+
+              <input class="pay__cash-input-exchange-field" type="number" name="exchange-field" id="exchange" placeholder="₴">
+
+              <input class="pay__cash-input-sum invisible" type="text" name="no-exchange-sum" id="no-exchange-sum" readonly value="1 048 ₴">
+
+              <input class="pay__cash-input-no-exchange" type="checkbox" name="no-exchange" id="no-exchange" checked>
+              <label class="pay__cash-label-no-exchange" for="no-exchange">
+                Без сдачи
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="pay__subscribe-form" action="" method="post">
+        <input class="pay__subscribe-input" type="checkbox" name="subscribe" id="subscribe" checked="checked">
+        <label class="pay__subscribe-label" for="subscribe">
+          Сообщать о бонусах, акциях и новых продуктах
+        </label>
+        <div class="pay__subscribe-info">
+          <p class="pay__info-letter">
+            i
+          </p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div class="pay__next-step">
+    <button class="pay__back-step-button button__tertiary">
+      <span class="pay__back"></span>
+      Назад в корзину
+    </button>
+    <button class="pay__next-step-button button__primary">
+      <p class="pay__next-step-button-text">Оформить заказ на 1 048 ₴</p>
+      <p class="pay__next-step-button-text-mobile">Оформить заказ</p>
+      <span class="pay__next"></span>
+    </button>
+  </div>
+
+<!--PAY SECTION ENDS-->
+
+</div>
+
+<!--FOOTER SECTION STARTS-->
+
+<footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__part-wrapper">
+      <div class="footer__logo-part">
+        <img class="footer__logo" src="./img/logo-1.png" alt="this is logo">
+        <div class="footer__mobile-connect">
+          <a class="footer__mobile-phone number-style" href="tel:84993918449">
+            +380 44 501 0050
+          </a>
+          <a class="footer__mobile-button button-phone-style button__secondary" href="#">
+            Заказать звонок
+          </a>
+        </div>
+        <div class="footer__logo-part-subtitle-group">
+          <h2 class="footer__logo-part-subtitle">
+            Калорийность и состав
+          </h2>
+          <h2 class="footer__logo-part-subtitle">
+            Правовая информация
+          </h2>
+        </div>
+        <div class="footer__socials">
+          <h2 class="footer__logo-part-subtitle">
+            Мы в соцсетях
+          </h2>
+          <ul class="footer__logo-part-media-list">
+            <li class="footer__logo-part-media-item">
+              <a class="footer__logo-part-media" href="#">
+                YouTube
+              </a>
+              <a class="footer__logo-part-media" href="#">
+                Instagram
+              </a>
+            </li>
+            <li class="footer__logo-part-media-item">
+              <a class="footer__logo-part-media" href="#">
+                Facebook
+              </a>
+              <a class="footer__logo-part-media" href="#">
+                ВКонтакте
+              </a>
+            </li>
+            <li class="footer__logo-part-media-item">
+              <a class="footer__logo-part-adress" href="#">
+                Киев ул. Проспект<br>
+                Вернадского 86В
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__ask-part">
+        <h2 class="footer__ask-title">
+          Остались вопросы? А мы всегда на связи:
+        </h2>
+        <ul class="footer__ask-socials-list">
+          <li class="footer__ask-socials-item">
+            <a class="footer__ask-social-link button__outline" href="#">
+              <img class="footer__ask-socials-logo" src="img/viber-logo.svg" alt="this is our viber media">
+            </a>
+          </li>
+          <li class="footer__ask-socials-item">
+            <a class="footer__ask-social-link button__outline" href="#">
+              <img class="footer__ask-socials-logo" src="img/skype-logo.svg" alt="this is our skype media">
+            </a>
+          </li>
+          <li class="footer__ask-socials-item">
+            <a class="footer__ask-social-link button__outline" href="#">
+              <img class="footer__ask-socials-logo" src="img/watsapp-logo.svg" alt="this is our watsapp media">
+            </a>
+          </li>
+          <li class="footer__ask-socials-item">
+            <a class="footer__ask-social-link button__outline" href="#">
+              <img class="footer__ask-socials-logo" src="img/tg-logo.svg" alt="this is our telegram media">
+            </a>
+          </li>
+          <li class="footer__ask-socials-item">
+            <a class="footer__ask-social-link button__outline" href="#">
+              <img class="footer__ask-socials-logo" src="img/facebook-logo.svg" alt="this is our facebook media">
+            </a>
+          </li>
+          <li class="footer__ask-socials-item">
+            <a class="footer__ask-social-link button__outline" href="#">
+              <img class="footer__ask-socials-logo" src="img/vk-logo.svg" alt="this is our vkontakte media">
+            </a>
+          </li>
+          <li class="footer__ask-socials-item footer__button-message-wrapper button__outline">
+            <a class="footer__ask-social-link" href="#">
+              <p class="footer__ask-socials-message">
+                Написать нам
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom-part">
+      <a class="footer__ask-phone-number number-style" href="tel:84993918449">
+        +380 44 501 0050
+      </a>
+      <p class="footer__bottom-part-rights">
+        GoBao Все права защищены © 2022
+      </p>
+      <div class="footer__bottom-part-wallet">
+        <img class="footer__logo-part-wallet-img" src="img/visa.png" alt="this is wallet image">
+        <img class="footer__logo-part-wallet-img" src="img/pp-footer.png" alt="this is wallet image">
+        <img class="footer__logo-part-wallet-img" src="img/mastercard-footer.png" alt="this is wallet image">
+      </div>
+      <a class="footer__bottom-button button-phone-style button__secondary" href="#">
+        Заказать звонок
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!--FOOTER SECTION STARTS-->
+
+
+</body>
+</html>

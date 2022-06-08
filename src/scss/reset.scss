@@ -423,7 +423,8 @@ fieldset {
   border: 0;
 }
 textarea {
-  resize: vertical;
+  font-family: inherit;
+  resize: none;
 }
 .chromeframe {
   margin: 0.2em 0;
@@ -442,4 +443,8 @@ button {
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
