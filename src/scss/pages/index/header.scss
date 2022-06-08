@@ -211,14 +211,14 @@
     content: '';
     display: block;
     position: relative;
-    left: 6px;
+    left: 11px;
     width: 7px;
     height: 7px;
     transform: rotate(45deg);
     border-bottom: 3px solid var(--color-secondary-600);
     border-left: 3px solid var(--color-secondary-600);
     @include media-mini-phone {
-      left: 2px;
+      left: 8px;
       width: 5px;
       height: 5px;
       border-bottom: 2px solid var(--color-secondary-600);
