@@ -1,3 +1,50 @@
+<% const navItem = [
+    {
+      link: '#',
+        text: 'Пицца'
+    },
+    {
+        link: '#',
+        text: 'Паста'
+    },
+    {
+        link: '#',
+        text: 'Супы'
+    },
+    {
+        link: '#',
+        text: 'Салаты'
+    },
+    {
+        link: '#',
+        text: 'Напитки'
+    },
+    {
+        link: '#',
+        text: 'Десерты'
+    },
+    {
+        link: '#',
+        text: 'Бакалея'
+    },
+    {
+        link: '#',
+        text: 'Антипасти'
+    },
+    {
+        link: '#',
+        text: 'Акции'
+    },
+    {
+        link: '#',
+        text: 'Комбо'
+    },
+    {
+        link: '#',
+        text: 'Контакты'
+    }
+]%>
+
 <header class="header">
     <div class="container header__container">
         <div class="header__upper-elements">
@@ -48,61 +95,9 @@
 
         <nav class="header__nav">
             <ul class="header__list">
-                <li class="header__list-item">
-                    <a class="header__list-item-link" href="#">
-                        Пицца
-                    </a>
-                </li>
-                <li class="header__list-item">
-                    <a class="header__list-item-link" href="#">
-                        Паста
-                    </a>
-                </li>
-                <li class="header__list-item">
-                    <a class="header__list-item-link" href="#">
-                        Супы
-                    </a>
-                </li>
-                <li class="header__list-item">
-                    <a class="header__list-item-link" href="#">
-                        Салаты
-                    </a>
-                </li>
-                <li class="header__list-item">
-                    <a class="header__list-item-link" href="#">
-                        Напитки
-                    </a>
-                </li>
-                <li class="header__list-item">
-                    <a class="header__list-item-link" href="#">
-                        Десерты
-                    </a>
-                </li>
-                <li class="header__list-item">
-                    <a class="header__list-item-link" href="#">
-                        Бакалея
-                    </a>
-                </li>
-                <li class="header__list-item">
-                    <a class="header__list-item-link" href="#">
-                        Антипасти
-                    </a>
-                </li>
-                <li class="header__list-item">
-                    <a class="header__list-item-link" href="#">
-                        Акции
-                    </a>
-                </li>
-                <li class="header__list-item">
-                    <a class="header__list-item-link" href="#">
-                        Комбо
-                    </a>
-                </li>
-                <li class="header__list-item">
-                    <a class="header__list-item-link" href="#">
-                        Контакты
-                    </a>
-                </li>
+                <% navItem.forEach((item) => { %>
+                  <%- include('header-nav', {...item}) %>
+                <% }); %>
             </ul>
             <a class="header__enter-link" href="#">
                 Войти
