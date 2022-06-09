@@ -48,7 +48,7 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
-    "@fastify/cors": "^7.0.0",
+    "@fastify/cors": "^8.0.0",
     "@fastify/static": "^5.0.2",
     "@glidejs/glide": "^3.5.2",
     "ejs": "^3.1.8",
