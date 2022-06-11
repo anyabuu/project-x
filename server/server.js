@@ -34,6 +34,24 @@ fastify.get('/promotions', (request, reply) => {
   });
 });
 
+fastify.get('/cabinet', (request, reply) => {
+  return reply.view('/src/templates/cabinet.ejs', {
+    ...getAssets(request),
+  });
+});
+
+fastify.get('/pay', (request, reply) => {
+  return reply.view('/src/templates/pay.ejs', {
+    ...getAssets(request),
+  });
+});
+
+fastify.get('/basket', (request, reply) => {
+  return reply.view('/src/templates/basket.ejs', {
+    ...getAssets(request),
+  });
+});
+
 fastify.listen(port, () => {
   console.log(`Server was running on ${port} port`);
 });
