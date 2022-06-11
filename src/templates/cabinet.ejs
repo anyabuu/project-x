@@ -1,0 +1,137 @@
+<%- include('parts/head', { styles: styles[0], title: 'Fibo/Homepage' }) %>
+
+<!--HEADER SECTION STARTS-->
+
+<section class="hero">
+    <div class="container">
+        <%- include('shared/header/header') %>
+    </div>
+</section>
+
+<!--HEADER SECTION ENDS-->
+
+<!--BONUS SECTION STARTS-->
+
+<section class="bonus">
+    <div class="container bonus__container">
+        <h1 class="bonus__title">
+            Мои бонусы
+        </h1>
+        <div class="bonus__table">
+            <img class="bonus__link-image" src="img/sale-bonus.png" alt="this is your bonus">
+            <a class="bonus__subtitle" href="#">
+                Бонусы появятся здесь после заказа
+            </a>
+        </div>
+        <a class="bonus__all" href="#">
+            Все наши акции
+        </a>
+    </div>
+</section>
+
+<!--BONUS SECTION ENDS-->
+
+<!--PROFILE SECTION STARTS-->
+
+<section class="profile">
+    <div  class="container profile__container">
+        <h1 class="profile__title">
+            Личные данные
+        </h1>
+        <form class="profile__form" action="" method="post">
+            <div class="profile__form-item">
+                <label class="profile__form-label" for="name">
+                    Имя
+                </label>
+                <div class="profile__input-container">
+                    <input class="profile__form-input input__form" type="text" name="user_name" id="name" placeholder="Введите имя" value="Илья" disabled>
+                    <button class="profile__form-inside-button button__tertiary" type="submit">
+                        Изменить
+                    </button>
+                </div>
+            </div>
+            <div class="profile__form-item">
+                <label class="profile__form-label" for="phone">
+                    Номер телефона
+                </label>
+                <input class="profile__form-input input__form" type="tel" name="user_phone" id="phone" value="+380123456789" readonly pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" disabled>
+            </div>
+            <div class="profile__form-item">
+                <label class="profile__form-label">
+                    Дата рождения
+                </label>
+                <div class="profile__data-birth  profile__form-input input__form">
+                    <input class="profile__form-input profile__form-input-day" type="number" name="user_data-birth" value="4">
+                    <input class="profile__form-input profile__form-input-month" type="text" name="user_data-birth" value="Мая">
+                </div>
+                <button class="profile__form-out-button button__tertiary" type="submit">
+                    Сохранить
+                </button>
+            </div>
+            <div class="profile__form-item">
+                <label class="profile__form-label" for="phone-sec">
+                    Номер телефона
+                </label>
+                <div class="profile__input-container">
+                    <input class="profile__form-input input__form" type="tel" name="user_phone" id="phone-sec" value="+380123456789" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Введите номер телефона">
+                    <button class="profile__form-inside-button button__tertiary" type="submit">
+                        Сохранить
+                    </button>
+                </div>
+                <button class="profile__form-out-button button__tertiary" type="reset">
+                    Отменить
+                </button>
+            </div>
+            <div class="profile__form-item">
+                <label class="profile__form-label" for="code">
+                    Код доступа
+                </label>
+                <div class="profile__input-container">
+                    <input class="profile__form-input input__form" type="number" name="user_code" placeholder="Ведите код доступа" id="code" value="1234" disabled>
+                    <button class="profile__form-inside-button button__tertiary"  type="submit">
+                        Изменить
+                    </button>
+                </div>
+                <p class="profile__form-code-info">
+                    Введите четыре цифры
+                </p>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!--PROFILE SECTION ENDS-->
+
+<!--SUBSCRIBE SECTION STARTS-->
+
+<section class="subscribe">
+    <div class="container subscribe__container">
+        <h1 class="subscribe__title">
+            Подписки
+        </h1>
+        <form class="subscribe__form" action="" method="post">
+            <input class="subscribe__input" type="checkbox" name="subscribe" id="subscribe" checked="checked">
+            <label class="subscribe__label" for="subscribe">
+                Сообщать о бонусах, акциях и новых продуктах
+            </label>
+            <div class="subscribe__info">
+                <p class="subscribe__info-letter">
+                    i
+                </p>
+            </div>
+        </form>
+        <button class="subscribe__button">
+            Выйти
+        </button>
+    </div>
+</section>
+
+<!--SUBSCRIBE SECTION ENDS-->
+
+<!--FOOTER SECTION STARTS-->
+
+<%- include('shared/footer/footer')%>
+
+<!--FOOTER SECTION STARTS-->
+
+<%- include('parts/end', { script: scripts[0] }) %>

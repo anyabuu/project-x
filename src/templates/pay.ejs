@@ -1,0 +1,235 @@
+<%- include('parts/head', { styles: styles[0], title: 'Fibo/Pay' }) %>
+
+<!--HEADER SECTION STARTS-->
+
+<%- include('shared/header/header-steps')%>
+
+<!--HEADER SECTION ENDS-->
+
+<div class="wrapper container">
+
+    <!--ORDER SECTION STARTS-->
+
+    <section class="order">
+        <div class="order__container">
+            <h1 class="order__title">
+                Заказ на доставку
+            </h1>
+            <form class="order__form" action="" method="get">
+                <div class="order__form-item">
+                    <label class="order__form-label" for="name">
+                        Имя
+                    </label>
+                    <input class="order__form-input delivery-input" type="text" name="user_name" id="name" placeholder="Введите имя" value="Илья">
+                </div>
+                <div class="order__form-item">
+                    <label class="order__form-label" for="phone">
+                        Номер телефона
+                    </label>
+                    <div class="order__input-wrapper">
+                        <input class="order__form-input delivery-input" type="tel" name="user_phone" id="phone" value="+380123456789" readonly pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" disabled>
+                        <button class="order__form-inside-button button__tertiary"  type="submit">
+                            Изменить
+                        </button>
+                    </div>
+                </div>
+                <div class="order__form-item">
+                    <label class="order__form-label" for="delivery-type">
+                        Адрес доставки
+                    </label>
+                    <fieldset class="order__form-fieldset delivery-input">
+                        <div class="order__fieldset-input-wrapper">
+                            <input class="order__form-input-fieldset delivery-input" type="text" name="delivery-type" id="delivery-type" value="Дом" readonly>
+                            <button class="order__form-fieldset-button button__tertiary"  type="submit">
+                                Изменить
+                            </button>
+                        </div>
+                        <div class="order__fieldset-input-wrapper">
+                            <textarea class="order__form-input-textarea delivery-input" type="text" name="address" id="address" readonly>ул. Крещатик, д. 8, под. Последний, эт. Последний, кв. 23, код Домофон</textarea>
+                            <button class="order__form-fieldset-button button__tertiary"  type="submit">
+                                Выбрать самовывоз
+                            </button>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="order__form-item">
+                    <label class="order__form-label" for="delivery-time">
+                        Время доставки
+                    </label>
+                    <div class="order__input-wrapper">
+                        <input class="order__form-input delivery-input" type="text" name="user_phone" id="delivery-time" value="Побыстрее" readonly disabled>
+                        <button class="order__form-inside-button button__tertiary"  type="submit">
+                            Изменить
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="order__promo-group">
+                <h2 class="order__promo-title">
+                    Промокод
+                </h2>
+                <%- include('shared/promo-input') %>
+            </div>
+        </div>
+    </section>
+
+    <!--ORDER SECTION ENDS-->
+
+    <!--ORDER-BASKET SECTION STARTS-->
+
+    <% const basketItems = [
+        {
+          title: 'Комбо за 599 ₴',
+            description: 'Средняя 30 см, традиционное тесто',
+            price: '599₴'
+        },
+        {
+            title: 'Комбо за 599 ₴',
+            description: 'Средняя 30 см, традиционное тесто',
+            price: '599₴'
+        },
+        {
+            title: 'Комбо за 599 ₴',
+            description: 'Средняя 30 см, традиционное тесто',
+            price: '599₴'
+        },
+        {
+            title: 'Комбо за 599 ₴',
+            description: 'Средняя 30 см, традиционное тесто',
+            price: '599₴'
+        },
+        {
+            title: 'Комбо за 599 ₴',
+            description: 'Средняя 30 см, традиционное тесто',
+            price: '599₴'
+        },
+        {
+            title: 'Комбо за 599 ₴',
+            description: 'Средняя 30 см, традиционное тесто',
+            price: '599₴'
+        },
+        {
+            title: 'Комбо за 599 ₴',
+            description: 'Средняя 30 см, традиционное тесто',
+            price: '599₴'
+        },
+        {
+            title: 'Комбо за 599 ₴',
+            description: 'Средняя 30 см, традиционное тесто',
+            price: '599₴'
+        }
+    ]%>
+
+    <section class="order-basket">
+        <div class="order-basket__container">
+            <h2 class="order-basket__title">
+                Состав заказа
+            </h2>
+            <ul class="order-basket__list">
+
+                <% basketItems.forEach((item) => { %>
+                  <%- include('shared/pay/basket-items', {...item}) %>
+                <% }); %>
+
+            </ul>
+            <div class="order__sum-wrapper">
+                <p class="order-basket__sum">
+                    Сумма заказа
+                </p>
+                <p class="order-basket__total-sum">
+                    1 048 ₴
+                </p>
+            </div>
+            <p class="order-basket__free">
+                Бесплатная доставка
+            </p>
+        </div>
+    </section>
+
+    <!--ORDER-BASKET SECTION ENDS-->
+
+    <!--PAY SECTION STARTS-->
+
+    <section class="pay">
+        <div class="pay__container">
+            <div class="pay__window">
+                <h1 class="pay__way-title">
+                    Способы оплаты
+                </h1>
+                <div class="pay__way-types">
+                    <div class="pay__way-radio-wrapper">
+                        <input class="pay__radio" type="radio" id="card"
+                               name="pay-way" value="card">
+                        <label class="pay__label modal-label" for="card">
+                            <img class="pay__label-img" src="img/card-pay-symbol.svg" alt="pay card">
+                            Картой на сайте
+                        </label>
+                        <div class="pay__card-wrapper">
+                            <div class="pay__card-data">
+                                <input class="pay__card-number-input card-input" type="text" name="card-number" id="card-number" maxlength="12" placeholder="Номер карты">
+                                <input class="pay__card-date-input card-input" type="text" name="card-date" id="card-date" placeholder="Срок годности карты" value="11/25">
+                                <input class="pay__card-cvc-input card-input" type="text" name="card-cvc" id="card-cvc" maxlength="3" placeholder="CVC">
+                            </div>
+                            <img class="pay__card-img-info" src="img/card-sec-info.png" alt="card security">
+                        </div>
+                    </div>
+                    <div class="pay__way-radio-wrapper">
+                        <input class="pay__radio" type="radio" id="cash"
+                               name="pay-way" value="cash" checked>
+                        <label class="pay__label modal-label" for="cash">
+                            Наличными
+                        </label>
+                        <div class="pay__cash-wrapper">
+                            <p class="pay__cash-exchange">
+                                С какой суммы подготовить сдачу?
+                            </p>
+
+                            <input class="pay__cash-input-exchange-field" type="number" name="exchange-field" id="exchange" placeholder="₴">
+
+                            <input class="pay__cash-input-sum invisible" type="text" name="no-exchange-sum" id="no-exchange-sum" readonly value="1 048 ₴">
+
+                            <input class="pay__cash-input-no-exchange" type="checkbox" name="no-exchange" id="no-exchange" checked>
+                            <label class="pay__cash-label-no-exchange" for="no-exchange">
+                                Без сдачи
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="pay__subscribe-form" action="" method="post">
+                <input class="pay__subscribe-input" type="checkbox" name="subscribe" id="subscribe" checked="checked">
+                <label class="pay__subscribe-label" for="subscribe">
+                    Сообщать о бонусах, акциях и новых продуктах
+                </label>
+                <div class="pay__subscribe-info">
+                    <p class="pay__info-letter">
+                        i
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <div class="pay__next-step">
+        <button class="pay__back-step-button button__tertiary">
+            <span class="pay__back"></span>
+            Назад в корзину
+        </button>
+        <button class="pay__next-step-button button__primary">
+            <p class="pay__next-step-button-text">Оформить заказ на 1 048 ₴</p>
+            <p class="pay__next-step-button-text-mobile">Оформить заказ</p>
+            <span class="pay__next"></span>
+        </button>
+    </div>
+
+    <!--PAY SECTION ENDS-->
+
+</div>
+
+<!--FOOTER SECTION STARTS-->
+
+<%- include('shared/footer/footer')%>
+
+<!--FOOTER SECTION STARTS-->
+
+<%- include('parts/end', { script: scripts[0] }) %>
