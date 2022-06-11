@@ -1,0 +1,189 @@
+<%- include('parts/head', { styles: styles[0], title: 'Fibo/Basket' }) %>
+
+<!--HEADER SECTION STARTS-->
+
+<%- include('shared/header/header-steps')%>
+
+<!--HEADER SECTION ENDS-->
+
+<!--BASKET SECTION STARTS-->
+
+<% const listItems = [
+    {
+      image: './img/basket-pizza.png',
+        alternative: 'ordered position',
+        title: 'С креветками и трюфелями',
+        description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
+        price: '120 ₴'
+    },
+    {
+        image: './img/basket-set.png',
+        alternative: 'ordered position',
+        title: 'С креветками и трюфелями',
+        description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
+        price: '120 ₴'
+    }
+] %>
+
+<% const additionalSets = [
+    {
+      image: './img/add-1.png',
+        alternative: 'cocktail',
+        title: 'Молочный коктейль с приятным ароматом',
+        price: 'от 120 ₴',
+        id: 'add-1',
+        name: 'add-1'
+    },
+    {
+        image: './img/add-2.png',
+        alternative: 'pizza-1',
+        title: 'Молочный коктейль с приятным ароматом',
+        price: 'от 120 ₴',
+        id: 'add-2',
+        name: 'add-2'
+    },
+    {
+        image: './img/basket-pizza.png',
+        alternative: 'pizza-2',
+        title: 'Молочный коктейль с приятным ароматом',
+        price: 'от 120 ₴',
+        id: 'add-3',
+        name: 'add-3'
+    },
+]%>
+
+<% const additionalSauces = [
+    {
+      id: 'cheese',
+        name: 'sauce',
+        image: './img/cheesee-sauce.png',
+        alternative: 'additional sauce',
+        title: 'Сырный соус',
+        price: 'от 120 ₴'
+    },
+    {
+        id: 'barbecue',
+        name: 'sauce',
+        image: './img/barbecue-sauce.png',
+        alternative: 'additional sauce',
+        title: 'Барбекю',
+        price: 'от 120 ₴'
+    },
+    {
+        id: 'ranch',
+        name: 'sauce',
+        image: './img/ranch-sauce.png',
+        alternative: 'additional sauce',
+        title: 'Ранч',
+        price: 'от 120 ₴'
+    },
+    {
+        id: 'milk',
+        name: 'sauce',
+        image: './img/milk-sauce.png',
+        alternative: 'additional sauce',
+        title: 'Сгущёнка',
+        price: 'от 120 ₴'
+    },
+    {
+        id: 'jam',
+        name: 'sauce',
+        image: './img/jam-sauce.png',
+        alternative: 'additional sauce',
+        title: 'Малиновое варенье',
+        price: 'от 120 ₴'
+    },
+    {
+        id: 'cheese-2',
+        name: 'sauce',
+        image: './img/cheesee-sauce.png',
+        alternative: 'additional sauce',
+        title: 'Сырный соус',
+        price: 'от 120 ₴'
+    },
+]%>
+
+<section class="basket">
+    <div class="container-small basket__container">
+        <h1 class="basket__title">
+            Корзина
+        </h1>
+        <form class="basket__form-list">
+            <ul class="basket__list">
+
+                <% listItems.forEach((item) => { %>
+                  <%- include('shared/basket/list-items', {...item}) %>
+                <% }); %>
+
+            </ul>
+        </form>
+
+        <div class="basket__add">
+            <h2 class="basket__add-title basket--title">
+                Добавить к заказу?
+            </h2>
+            <ul class="basket__add-form">
+
+                <% additionalSets.forEach((item) => { %>
+                    <%- include('shared/basket/additional-sets', {...item}) %>
+                <% }); %>
+
+            </ul>
+        </div>
+
+        <div class="basket__sauce">
+            <h2 class="basket__sauce-title basket--title">
+                Соусы к бортикам и закускам
+            </h2>
+            <ul class="basket__sauce-list">
+
+                <% additionalSauces.forEach((item) => { %>
+                    <%- include('shared/basket/additional-sauces', {...item}) %>
+                <% }); %>
+
+            </ul>
+        </div>
+
+        <div class="basket__promo">
+            <h2 class="basket__promo-title">
+                Промокод
+            </h2>
+            <div class="basket__promo-content">
+                <%- include('shared/promo-input') %>
+                <div class="basket__promo-sum">
+                    <p class="basket__promo-sum-text">
+                        Сумма заказа:
+                    </p>
+                    <p class="basket__promo-sum-price">
+                        1 048 ₴
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="basket__next-step pay__next-step">
+            <button class="pay__back-step-button button__tertiary">
+                <span class="pay__back"></span>
+                Вернуться в магазин
+            </button>
+            <button class="pay__next-step-button pay__next-step-button--small button__primary">
+                <p class="pay__next-step-button-text basket__next-step-button-text">
+                    Оформить заказ
+                </p>
+                <span class="pay__next"></span>
+            </button>
+        </div>
+
+
+    </div>
+</section>
+
+<!--BASKET SECTION ENDS-->
+
+<!--FOOTER SECTION STARTS-->
+
+<%- include('shared/footer/footer')%>
+
+<!--FOOTER SECTION STARTS-->
+
+<%- include('parts/end', { script: scripts[0] }) %>
