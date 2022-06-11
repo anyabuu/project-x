@@ -1,0 +1,24 @@
+<li class="basket__quantity-item">
+    <img class="basket__quantity-item-image" src="<%= image %>" alt="<%= alternative %>">
+    <div class="basket__quantity-item-description">
+        <h3 class="basket__quantity-item-title">
+            <%= title%>
+        </h3>
+        <p class="basket__quantity-item-text">
+            <%= description %>
+        </p>
+    </div>
+    <p class="basket__quantity-item-price">
+        <%= price %>
+    </p>
+    <div class="basket__quantity-item-amount">
+        <button class="basket__quantity-item-amount-minus-button">
+            -
+        </button>
+        <input class="basket__quantity-item-amount-input" type="number" name="position-amount" id="amount" value="1">
+        <button class="basket__quantity-item-amount-plus-button">
+            +
+        </button>
+    </div>
+    <button class="basket__quantity-item-amount-cross-button"></button>
+</li>

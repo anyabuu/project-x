@@ -13,7 +13,7 @@
     background: url('../img/piza-man-opacity-font-mobile.png') no-repeat left 6px;
   }
 }
-.catalog__novelties {
+.catalog__novelty {
   padding-bottom: 33px;
   font-size: 2.4rem;
   font-weight: 700;
@@ -27,7 +27,7 @@
     font-size: 1.9rem;
   }
 }
-.catalog__novelties-list {
+.catalog__novelty-list {
   display: flex;
   justify-content: space-between;
   padding-bottom: 46px;
@@ -39,7 +39,7 @@
     padding-bottom: 5px;
   }
 }
-.catalog__novelties-card {
+.catalog__novelty-card {
   @include shadow-0;
   display: flex;
   align-items: center;
@@ -106,7 +106,7 @@
     flex-direction: column;
   }
 }
-.catalog__card {
+.catalog__item {
   width: 256px;
   margin-bottom: 49px;
   @include media-tablet {
@@ -121,7 +121,7 @@
     margin-bottom: 10px;
   }
 }
-.catalog__card-link {
+.catalog__item-link {
   @include media-tablet {
     display: flex;
     align-items: center;
@@ -132,7 +132,7 @@
     padding-bottom: 10px;
   }
 }
-.catalog__card-image {
+.catalog__item-image {
   @include media-tablet {
     height: 122px;
   }
@@ -140,7 +140,7 @@
     height: 103px;
   }
 }
-.catalog__card-text-group {
+.catalog__item-text-group {
   @include media-tablet {
     display: flex;
     flex-direction: column;

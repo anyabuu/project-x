@@ -2,22 +2,26 @@
 
 <!--HEADER SECTION STARTS-->
 
-<% const glideItem = [
+<% const glideItems = [
     {
         link: '#',
-        image: './img/yellow-slider.png'
+        image: './img/yellow-slider.png',
+        alternative: 'glide image yellow'
     },
     {
         link: '#',
-        image: './img/black-slider.png'
+        image: './img/black-slider.png',
+        alternative: 'glide image black'
     },
     {
         link: '#',
-        image: './img/yellow-slider.png'
+        image: './img/yellow-slider.png',
+        alternative: 'glide image yellow'
     },
     {
         link: '#',
-        image: './img/black-slider.png'
+        image: './img/black-slider.png',
+        alternative: 'glide image black'
     }
 ]%>
 
@@ -27,8 +31,8 @@
         <div class="glide">
             <div class="header__slider" data-glide-el="track">
                 <ul class="header__slide-list">
-                   <% glideItem.forEach((item) => { %>
-                     <%- include('shared/index/glide-card', {...item} ) %>
+                   <% glideItems.forEach((item) => { %>
+                     <%- include('shared/index/glide-items', {...item} ) %>
                    <% }) %>
                 </ul>
             </div>
@@ -45,24 +49,28 @@
 
 <!--CATALOG SECTION STARTS-->
 
-<% const items = [
+<% const noveltyItems = [
     {
         image: './img/novelty-pizza.png',
+        alternative: 'new pasta',
         title: 'Карбонара',
         price: 'от 120 ₴'
     },
     {
         image: './img/novelty-pizza.png',
+        alternative: 'new pasta',
         title: 'Карбонара',
         price: 'от 120 ₴'
     },
     {
         image: './img/novelty-pizza.png',
+        alternative: 'new pasta',
         title: 'Карбонара',
         price: 'от 120 ₴'
     },
     {
         image: './img/novelty-pizza.png',
+        alternative: 'new pasta',
         title: 'Карбонара',
         price: 'от 120 ₴'
     }
@@ -72,6 +80,7 @@
     {
       link: '#',
         image: './img/cheese-pizza.jpg',
+        alternative: 'pasta',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: 'от 600 ₴',
@@ -80,6 +89,7 @@
     {
         link: '#',
         image: './img/seasons-pizza.jpg',
+        alternative: 'pasta',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: 'от 600 ₴',
@@ -87,6 +97,7 @@
     {
         link: '#',
         image: './img/margarita-pizza.jpg',
+        alternative: 'pasta',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: 'от 600 ₴',
@@ -94,6 +105,7 @@
     {
         link: '#',
         image: './img/mashroom-pizza.jpg',
+        alternative: 'pasta',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: 'от 600 ₴',
@@ -101,6 +113,7 @@
     {
         link: '#',
         image: './img/cheese-pizza.jpg',
+        alternative: 'pasta',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: 'от 600 ₴',
@@ -109,6 +122,7 @@
     {
         link: '#',
         image: './img/seasons-pizza.jpg',
+        alternative: 'pasta',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: 'от 600 ₴',
@@ -116,6 +130,7 @@
     {
         link: '#',
         image: './img/margarita-pizza.jpg',
+        alternative: 'pasta',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: 'от 600 ₴',
@@ -123,6 +138,7 @@
     {
         link: '#',
         image: './img/mashroom-pizza.jpg',
+        alternative: 'pasta',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: 'от 600 ₴',
@@ -133,6 +149,7 @@
     {
         link: '#',
         image: './img/cheese-pizza.jpg',
+        alternative: 'pasta',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: 'от 600 ₴',
@@ -141,6 +158,7 @@
     {
         link: '#',
         image: './img/seasons-pizza.jpg',
+        alternative: 'pasta',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: 'от 600 ₴',
@@ -148,6 +166,7 @@
     {
         link: '#',
         image: './img/margarita-pizza.jpg',
+        alternative: 'pasta',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: 'от 600 ₴',
@@ -155,6 +174,7 @@
     {
         link: '#',
         image: './img/mashroom-pizza.jpg',
+        alternative: 'pasta',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: 'от 600 ₴',
@@ -163,12 +183,12 @@
 
 <section class="catalog">
     <div class="container catalog__container">
-        <h3 class="catalog__novelties">
+        <h3 class="catalog__novelty">
             Новинки
         </h3>
-        <ul class="catalog__novelties-list">
-           <% items.forEach((item) => { %>
-             <%- include('shared/index/catalog-novelties', { ...item } ) %>
+        <ul class="catalog__novelty-list">
+           <% noveltyItems.forEach((item) => { %>
+             <%- include('shared/index/novelty-items', { ...item } ) %>
            <% }); %>
         </ul>
         <h2 class="catalog__menu">
@@ -176,7 +196,7 @@
         </h2>
         <ul class="catalog__menu-list">
             <% menuItems.forEach((item) => { %>
-                <%- include('shared/index/catalog-menu', { ...item } ) %>
+                <%- include('shared/index/menu-items', { ...item } ) %>
             <% }); %>
         </ul>
         <h2 class="catalog__menu">
@@ -184,7 +204,7 @@
         </h2>
         <ul class="catalog__menu-list">
             <% menuItems.forEach((item) => { %>
-                <%- include('shared/index/catalog-menu', { ...item } ) %>
+                <%- include('shared/index/menu-items', { ...item } ) %>
             <% }); %>
         </ul>
         <h2 class="catalog__menu">
@@ -192,7 +212,7 @@
         </h2>
         <ul class="catalog__menu-list">
             <% menuItemsSmallSection.forEach((item) => { %>
-                <%- include('shared/index/catalog-menu', { ...item } ) %>
+                <%- include('shared/index/menu-items', { ...item } ) %>
             <% }); %>
         </ul>
     </div>
@@ -205,23 +225,28 @@
 <% const promoItems = [
     {
         link: '#',
-        image: './img/promo.jpg'
+        image: './img/promo.jpg',
+        alternative: 'our promo'
     },
     {
         link: '#',
-        image: './img/promo.jpg'
+        image: './img/promo.jpg',
+        alternative: 'our promo'
     },
     {
         link: '#',
-        image: './img/promo.jpg'
+        image: './img/promo.jpg',
+        alternative: 'our promo'
     },
     {
         link: '#',
-        image: './img/promo.jpg'
+        image: './img/promo.jpg',
+        alternative: 'our promo'
     },
     {
         link: '#',
-        image: './img/promo.jpg'
+        image: './img/promo.jpg',
+        alternative: 'our promo'
     }
 ]%>
 
@@ -232,7 +257,7 @@
         </h2>
         <ul class="promo__card-group">
             <% promoItems.forEach((item) => { %>
-              <%- include('shared/index/promo-card', {...item} ) %>
+              <%- include('shared/index/promo-items', {...item} ) %>
         <% }); %>
         </ul>
         <button class="promo__button">
@@ -250,18 +275,22 @@
 <% const deliverItems = [
     {
         image: './img/card-icon.svg',
+        alternative: 'delivery type',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
     {
         image: './img/car-icon.svg',
+        alternative: 'delivery type',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
     {
         image: './img/laptop-icon.svg',
+        alternative: 'delivery type',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
     {
         image: './img/car-clock-icon.svg',
+        alternative: 'delivery type',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     }
 ]%>
@@ -273,7 +302,7 @@
         </h2>
         <ul class="delivery__cards">
             <% deliverItems.forEach((item) => { %>
-              <%- include('shared/index/delivery-card', {...item} )%>
+              <%- include('shared/index/deliver-items', {...item} )%>
            <% }) %>
         </ul>
         <div class="delivery__map-wrapper">

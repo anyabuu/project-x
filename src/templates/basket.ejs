@@ -8,24 +8,27 @@
 
 <!--BASKET SECTION STARTS-->
 
-<% const listItem = [
+<% const listItems = [
     {
       image: './img/basket-pizza.png',
+        alternative: 'ordered position',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: '120 ₴'
     },
     {
         image: './img/basket-set.png',
+        alternative: 'ordered position',
         title: 'С креветками и трюфелями',
         description: 'Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350 г',
         price: '120 ₴'
     }
 ] %>
 
-<% const addItem = [
+<% const additionalSets = [
     {
       image: './img/add-1.png',
+        alternative: 'cocktail',
         title: 'Молочный коктейль с приятным ароматом',
         price: 'от 120 ₴',
         id: 'add-1',
@@ -33,6 +36,7 @@
     },
     {
         image: './img/add-2.png',
+        alternative: 'pizza-1',
         title: 'Молочный коктейль с приятным ароматом',
         price: 'от 120 ₴',
         id: 'add-2',
@@ -40,6 +44,7 @@
     },
     {
         image: './img/basket-pizza.png',
+        alternative: 'pizza-2',
         title: 'Молочный коктейль с приятным ароматом',
         price: 'от 120 ₴',
         id: 'add-3',
@@ -47,11 +52,12 @@
     },
 ]%>
 
-<% const addSauce = [
+<% const additionalSauces = [
     {
       id: 'cheese',
         name: 'sauce',
         image: './img/cheesee-sauce.png',
+        alternative: 'additional sauce',
         title: 'Сырный соус',
         price: 'от 120 ₴'
     },
@@ -59,6 +65,7 @@
         id: 'barbecue',
         name: 'sauce',
         image: './img/barbecue-sauce.png',
+        alternative: 'additional sauce',
         title: 'Барбекю',
         price: 'от 120 ₴'
     },
@@ -66,6 +73,7 @@
         id: 'ranch',
         name: 'sauce',
         image: './img/ranch-sauce.png',
+        alternative: 'additional sauce',
         title: 'Ранч',
         price: 'от 120 ₴'
     },
@@ -73,6 +81,7 @@
         id: 'milk',
         name: 'sauce',
         image: './img/milk-sauce.png',
+        alternative: 'additional sauce',
         title: 'Сгущёнка',
         price: 'от 120 ₴'
     },
@@ -80,6 +89,7 @@
         id: 'jam',
         name: 'sauce',
         image: './img/jam-sauce.png',
+        alternative: 'additional sauce',
         title: 'Малиновое варенье',
         price: 'от 120 ₴'
     },
@@ -87,6 +97,7 @@
         id: 'cheese-2',
         name: 'sauce',
         image: './img/cheesee-sauce.png',
+        alternative: 'additional sauce',
         title: 'Сырный соус',
         price: 'от 120 ₴'
     },
@@ -97,13 +108,15 @@
         <h1 class="basket__title">
             Корзина
         </h1>
-        <ul class="basket__list">
+        <form class="basket__form-list">
+            <ul class="basket__list">
 
-            <% listItem.forEach((item) => { %>
-              <%- include('shared/basket/basket-list', {...item}) %>
-            <% }); %>
+                <% listItems.forEach((item) => { %>
+                  <%- include('shared/basket/list-items', {...item}) %>
+                <% }); %>
 
-        </ul>
+            </ul>
+        </form>
 
         <div class="basket__add">
             <h2 class="basket__add-title basket--title">
@@ -111,8 +124,8 @@
             </h2>
             <ul class="basket__add-form">
 
-                <% addItem.forEach((item) => { %>
-                    <%- include('shared/basket/add-items', {...item}) %>
+                <% additionalSets.forEach((item) => { %>
+                    <%- include('shared/basket/additional-sets', {...item}) %>
                 <% }); %>
 
             </ul>
@@ -124,8 +137,8 @@
             </h2>
             <ul class="basket__sauce-list">
 
-                <% addSauce.forEach((item) => { %>
-                    <%- include('shared/basket/add-sauce', {...item}) %>
+                <% additionalSauces.forEach((item) => { %>
+                    <%- include('shared/basket/additional-sauces', {...item}) %>
                 <% }); %>
 
             </ul>
@@ -136,12 +149,7 @@
                 Промокод
             </h2>
             <div class="basket__promo-content">
-                <div class="order__promo-wrapper">
-                    <input class="order__promo-input" type="text" name="promo" id="promo" placeholder="Введите промокод">
-                    <button class="order__promo-button button__primary"  type="submit">
-                        Применить
-                    </button>
-                </div>
+                <%- include('shared/promo-input') %>
                 <div class="basket__promo-sum">
                     <p class="basket__promo-sum-text">
                         Сумма заказа:

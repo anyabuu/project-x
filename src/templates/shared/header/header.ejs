@@ -1,4 +1,4 @@
-<% const navItem = [
+<% const navItems = [
     {
       link: '#',
         text: 'Пицца'
@@ -95,8 +95,8 @@
 
         <nav class="header__nav">
             <ul class="header__list">
-                <% navItem.forEach((item) => { %>
-                  <%- include('header-nav', {...item}) %>
+                <% navItems.forEach((item) => { %>
+                  <%- include('nav-items', {...item}) %>
                 <% }); %>
             </ul>
             <a class="header__enter-link" href="#">
