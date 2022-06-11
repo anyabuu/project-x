@@ -1,6 +1,10 @@
-<%- include('parts/head', { styles: styles[0], title: 'Fibo/Homepage' }) %>
+<%- include('parts/head', { styles: styles[0], title: 'Fibo/Promotions' }) %>
 
-<%- include('shared/header') %>
+<section class="hero">
+    <div class="container">
+        <%- include('shared/header/header') %>
+    </div>
+</section>
 
 <!--PROMO-CARDS SECTION STARTS-->
 
@@ -86,120 +90,7 @@
 
 <!--FOOTER SECTION STARTS-->
 
-<footer class="footer">
-    <div class="container footer__container">
-        <div class="footer__part-wrapper">
-            <div class="footer__logo-part">
-                <img class="footer__logo" src="./img/logo-1.png" alt="this is logo">
-                <div class="footer__mobile-connect">
-                    <a class="footer__mobile-phone number-style" href="tel:84993918449">
-                        +380 44 501 0050
-                    </a>
-                    <a class="footer__mobile-button button-phone-style button__secondary" href="#">
-                        Заказать звонок
-                    </a>
-                </div>
-                <div class="footer__logo-part-subtitle-group">
-                    <h2 class="footer__logo-part-subtitle">
-                        Калорийность и состав
-                    </h2>
-                    <h2 class="footer__logo-part-subtitle">
-                        Правовая информация
-                    </h2>
-                </div>
-                <div class="footer__socials">
-                    <h2 class="footer__logo-part-subtitle">
-                        Мы в соцсетях
-                    </h2>
-                    <ul class="footer__logo-part-media-list">
-                        <li class="footer__logo-part-media-item">
-                            <a class="footer__logo-part-media" href="#">
-                                YouTube
-                            </a>
-                            <a class="footer__logo-part-media" href="#">
-                                Instagram
-                            </a>
-                        </li>
-                        <li class="footer__logo-part-media-item">
-                            <a class="footer__logo-part-media" href="#">
-                                Facebook
-                            </a>
-                            <a class="footer__logo-part-media" href="#">
-                                ВКонтакте
-                            </a>
-                        </li>
-                        <li class="footer__logo-part-media-item">
-                            <a class="footer__logo-part-adress" href="#">
-                                Киев ул. Проспект<br>
-                                Вернадского 86В
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__ask-part">
-                <h2 class="footer__ask-title">
-                    Остались вопросы? А мы всегда на связи:
-                </h2>
-                <ul class="footer__ask-socials-list">
-                    <li class="footer__ask-socials-item">
-                        <a class="footer__ask-social-link button__outline" href="#">
-                            <img class="footer__ask-socials-logo" src="img/viber-logo.svg" alt="this is our viber media">
-                        </a>
-                    </li>
-                    <li class="footer__ask-socials-item">
-                        <a class="footer__ask-social-link button__outline" href="#">
-                            <img class="footer__ask-socials-logo" src="img/skype-logo.svg" alt="this is our skype media">
-                        </a>
-                    </li>
-                    <li class="footer__ask-socials-item">
-                        <a class="footer__ask-social-link button__outline" href="#">
-                            <img class="footer__ask-socials-logo" src="img/watsapp-logo.svg" alt="this is our watsapp media">
-                        </a>
-                    </li>
-                    <li class="footer__ask-socials-item">
-                        <a class="footer__ask-social-link button__outline" href="#">
-                            <img class="footer__ask-socials-logo" src="img/tg-logo.svg" alt="this is our telegram media">
-                        </a>
-                    </li>
-                    <li class="footer__ask-socials-item">
-                        <a class="footer__ask-social-link button__outline" href="#">
-                            <img class="footer__ask-socials-logo" src="img/facebook-logo.svg" alt="this is our facebook media">
-                        </a>
-                    </li>
-                    <li class="footer__ask-socials-item">
-                        <a class="footer__ask-social-link button__outline" href="#">
-                            <img class="footer__ask-socials-logo" src="img/vk-logo.svg" alt="this is our vkontakte media">
-                        </a>
-                    </li>
-                    <li class="footer__ask-socials-item footer__button-message-wrapper button__outline">
-                        <a class="footer__ask-social-link" href="#">
-                            <p class="footer__ask-socials-message">
-                                Написать нам
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer__bottom-part">
-            <a class="footer__ask-phone-number number-style" href="tel:84993918449">
-                +380 44 501 0050
-            </a>
-            <p class="footer__bottom-part-rights">
-                GoBao Все права защищены © 2022
-            </p>
-            <div class="footer__bottom-part-wallet">
-                <img class="footer__logo-part-wallet-img" src="img/visa.png" alt="this is wallet image">
-                <img class="footer__logo-part-wallet-img" src="img/pp-footer.png" alt="this is wallet image">
-                <img class="footer__logo-part-wallet-img" src="img/mastercard-footer.png" alt="this is wallet image">
-            </div>
-            <a class="footer__bottom-button button-phone-style button__secondary" href="#">
-                Заказать звонок
-            </a>
-        </div>
-    </div>
-</footer>
+<%- include('shared/footer/footer')%>
 
 <!--FOOTER SECTION STARTS-->
 
