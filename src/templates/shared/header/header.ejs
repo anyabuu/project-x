@@ -1,0 +1,117 @@
+<% const navItems = [
+    {
+      link: '#',
+        text: 'Пицца'
+    },
+    {
+        link: '#',
+        text: 'Паста'
+    },
+    {
+        link: '#',
+        text: 'Супы'
+    },
+    {
+        link: '#',
+        text: 'Салаты'
+    },
+    {
+        link: '#',
+        text: 'Напитки'
+    },
+    {
+        link: '#',
+        text: 'Десерты'
+    },
+    {
+        link: '#',
+        text: 'Бакалея'
+    },
+    {
+        link: '#',
+        text: 'Антипасти'
+    },
+    {
+        link: '#',
+        text: 'Акции'
+    },
+    {
+        link: '#',
+        text: 'Комбо'
+    },
+    {
+        link: '#',
+        text: 'Контакты'
+    }
+]%>
+
+<header class="header">
+    <div class="container header__container">
+        <div class="header__upper-elements">
+            <div class="header__upper-wrapper">
+                <img class="header__logo" src="img/logo-1.png" alt="this is logo">
+                <div class="header__upper-item">
+                    <div class="header__item-description">
+                        <h2 class="header__subtitle-del">
+                            Доставка пасты
+                        </h2>
+                        <h2 class="header__subtitle-city">
+                            Киев
+                        </h2>
+                    </div>
+                    <div class="header__item-yandex">
+                        <div class="header__yandex-descript">
+                            <img class="header__yandex-logo" src="img/yandex-circle.svg" alt="this is yandex logo">
+                            <p class="header__item-text">
+                                Google еда
+                            </p>
+                            <div class="header__round"></div>
+                            <p class="header__item-text">
+                                4.8
+                            </p>
+                            <img class="header__star-rate" src="img/star.svg" alt="this is image">
+                        </div>
+                        <div class="header__yandex-descript">
+                            <p class="header__item-text">
+                                Время доставки
+                            </p>
+                            <div class="header__round"></div>
+                            <p class="header__item-text">
+                                от 31 мин
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__upper-phone-wrapper">
+                <a class="header__call-button button__secondary" href="#">
+                    Заказать звонок
+                </a>
+                <p class="header__phone-number">
+                    +380 44 501 0050
+                </p>
+            </div>
+        </div>
+
+        <nav class="header__nav">
+            <ul class="header__list">
+                <% navItems.forEach((item) => { %>
+                  <%- include('nav-items', {...item}) %>
+                <% }); %>
+            </ul>
+            <a class="header__enter-link" href="#">
+                Войти
+            </a>
+            <div class="header__shop-button button__primary">
+                <a class="header__shop-link" href="#">
+                    Корзина
+                </a>
+                <a class="header__shop-number">
+                    1
+                </a>
+            </div>
+            <img class="header__menu-bar" src="img/menu-lines-header.svg" alt="'this is menu">
+        </nav>
+    </div>
+</header>
+

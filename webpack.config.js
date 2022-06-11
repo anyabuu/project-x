@@ -40,20 +40,20 @@ module.exports = {
     ],
   },
   plugins: [
-    //new HtmlWebpackPlugin({
-    //template: './src/index.html'
-    //}),
-    // new HtmlWebpackPlugin({
-    //   template: "./src/promotions.html",
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: './src/cabinet.html'
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: "./src/pay.html",
-    // }),
     new HtmlWebpackPlugin({
-      template: "./src/basket.html",
+      template: './src/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/promotions.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/cabinet.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pay.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/basket.html',
     }),
     new MiniCssExtractPlugin(),
   ],
