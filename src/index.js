@@ -23,4 +23,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }).mount();
 });
 
-console.log(214);
+document.addEventListener('DOMContentLoaded', (event) => {
+  let menuBtn = document.querySelector('.header__menu-bar');
+  let menu = document.querySelector('.header__burger');
+  let logo = document.querySelector('.header__logo');
+
+  if (document.querySelector('.header__menu-bar')) {
+    menuBtn.addEventListener('click', function () {
+      menu.classList.toggle('active');
+      menuBtn.classList.toggle('active');
+      logo.classList.toggle('active');
+    });
+  }
+});
