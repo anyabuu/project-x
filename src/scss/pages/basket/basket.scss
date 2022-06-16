@@ -143,12 +143,16 @@
 .basket__add-form {
   display: flex;
   justify-content: space-between;
-  padding-top: 32px;
+  gap: 15px;
+  padding: 32px 0 0;
+  overflow: auto;
+  scroll-behavior: smooth;
   @include media-tablet {
     justify-content: flex-start;
-    padding: 28px 2px 2px;
-    overflow: hidden;
     gap: 15px;
+  }
+  &::-webkit-scrollbar {
+    width: 0;
   }
 }
 .basket__add-form-input {
@@ -157,15 +161,18 @@
 .basket__add-form-label {
   display: flex;
   align-items: center;
-  width: 255px;
+  width: 100%;
   padding: 14px 9px 14px 17px;
+  border: 2px solid var(--color-background-400);
   border-radius: 12px;
-  outline: 2px solid var(--color-background-400);
   cursor: pointer;
   gap: 15px;
 }
+.basket__add-form-checkbox-wrapper {
+  flex-shrink: 0;
+}
 .basket__add-form-checkbox-wrapper input:checked + label {
-  outline: 2px solid var(--color-box-shadow-acent);
+  border: 2px solid var(--color-box-shadow-acent);
 }
 .basket__add-form-label-image {
   width: 71px;
@@ -295,4 +302,26 @@
 }
 .basket__next-step-button-text {
   display: block;
+}
+.basket__slider-buttons {
+  position: relative;
+  @include media-tablet {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+.button-arrows--basket {
+  @include media-tablet {
+    position: initial;
+  }
+}
+.basket__prev-button {
+  top: -85px;
+  left: -7%;
+}
+.basket__next-button {
+  top: -85px;
+  left: 103%;
+  transform: rotate(180deg);
 }

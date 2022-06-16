@@ -122,13 +122,118 @@
             <h2 class="basket__add-title basket--title">
                 Добавить к заказу?
             </h2>
-            <ul class="basket__add-form">
+<!--            <ul class="basket__add-form">-->
 
-                <% additionalSets.forEach((item) => { %>
-                    <%- include('shared/basket/additional-sets', {...item}) %>
-                <% }); %>
+<!--                <% additionalSets.forEach((item) => { %>-->
+<!--                    <%- include('shared/basket/additional-sets', {...item}) %>-->
+<!--                <% }); %>-->
 
-            </ul>
+<!--            </ul>-->
+
+
+            <div class="slider__container">
+
+                <ul class="basket__add-form">
+
+                    <li class="basket__add-form-checkbox-wrapper" data-id = "1">
+                        <input class="basket__add-form-input" type="checkbox" id="add-1"
+                               name="add-1">
+                        <label class="basket__add-form-label" for="add-1">
+                            <img class="basket__add-form-label-image" src="img/add-1.png" alt="add this item">
+                            <span class="basket__add-form-label-content">
+                      <span class="basket__add-form-label-title">
+                        Молочный коктейль с приятным ароматом
+                      </span>
+                      <span class="basket__add-form-label-price">
+                        от 120 ₴
+                      </span>
+                    </span>
+                        </label>
+                    </li>
+                    <li class="basket__add-form-checkbox-wrapper" data-id = "2">
+                        <input class="basket__add-form-input" type="checkbox" id="add-2"
+                               name="add-2" checked>
+                        <label class="basket__add-form-label" for="add-2">
+                            <img class="basket__add-form-label-image" src="img/add-2.png" alt="add this item">
+                            <span class="basket__add-form-label-content">
+                      <span class="basket__add-form-label-title">
+                        Молочный коктейль с приятным ароматом
+                      </span>
+                      <span class="basket__add-form-label-price">
+                        от 120 ₴
+                      </span>
+                    </span>
+                        </label>
+                    </li>
+                    <li class="basket__add-form-checkbox-wrapper" data-id = "3">
+                        <input class="basket__add-form-input" type="checkbox" id="add-3"
+                               name="add-3">
+                        <label class="basket__add-form-label" for="add-3">
+                            <img class="basket__add-form-label-image" src="img/basket-pizza.png" alt="add this item">
+                            <span class="basket__add-form-label-content">
+                      <span class="basket__add-form-label-title">
+                        Молочный коктейль с приятным ароматом
+                      </span>
+                      <span class="basket__add-form-label-price">
+                        от 120 ₴
+                      </span>
+                    </span>
+                        </label>
+                    </li>
+                    <li class="basket__add-form-checkbox-wrapper" data-id = "4">
+                        <input class="basket__add-form-input" type="checkbox" id="add-4"
+                               name="add-1">
+                        <label class="basket__add-form-label" for="add-4">
+                            <img class="basket__add-form-label-image" src="img/add-1.png" alt="add this item">
+                            <span class="basket__add-form-label-content">
+                      <span class="basket__add-form-label-title">
+                        Молочный коктейль с приятным ароматом
+                      </span>
+                      <span class="basket__add-form-label-price">
+                        от 120 ₴
+                      </span>
+                    </span>
+                        </label>
+                    </li>
+                    <li class="basket__add-form-checkbox-wrapper" data-id = "5">
+                        <input class="basket__add-form-input" type="checkbox" id="add-5"
+                               name="add-2" checked>
+                        <label class="basket__add-form-label" for="add-5">
+                            <img class="basket__add-form-label-image" src="img/add-2.png" alt="add this item">
+                            <span class="basket__add-form-label-content">
+                      <span class="basket__add-form-label-title">
+                        Молочный коктейль с приятным ароматом
+                      </span>
+                      <span class="basket__add-form-label-price">
+                        от 120 ₴
+                      </span>
+                    </span>
+                        </label>
+                    </li>
+                    <li class="basket__add-form-checkbox-wrapper" data-id = "6">
+                        <input class="basket__add-form-input" type="checkbox" id="add-6"
+                               name="add-3">
+                        <label class="basket__add-form-label" for="add-6">
+                            <img class="basket__add-form-label-image" src="img/basket-pizza.png" alt="add this item">
+                            <span class="basket__add-form-label-content">
+                      <span class="basket__add-form-label-title">
+                        Молочный коктейль с приятным ароматом
+                      </span>
+                      <span class="basket__add-form-label-price">
+                        от 120 ₴
+                      </span>
+                    </span>
+                        </label>
+                    </li>
+
+                </ul>
+
+                <div class="basket__slider-buttons">
+                    <button class="basket__prev-button button-arrows button-arrows--basket"></button>
+                    <button class="basket__next-button button-arrows button-arrows--basket"></button>
+                </div>
+            </div>
+
         </div>
 
         <div class="basket__sauce">
