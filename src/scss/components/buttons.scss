@@ -29,3 +29,23 @@
   line-height: 1.86;
   cursor: pointer;
 }
+.button-arrows {
+  position: absolute;
+  top: 134px;
+  width: 31px;
+  height: 31px;
+  border: none;
+  border-radius: 27px;
+  background-color: var(--primary-color);
+  &:after {
+    content: '';
+    display: block;
+    position: relative;
+    left: 11px;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    border-bottom: 3px solid var(--color-secondary-600);
+    border-left: 3px solid var(--color-secondary-600);
+  }
+}
