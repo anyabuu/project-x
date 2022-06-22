@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       btnNext,
       btnPrev,
       countToSlide: 1,
-      interval: 1000,
+      interval: 0,
     });
   }
 
