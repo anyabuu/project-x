@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const container = document.querySelector('.slider__container');
   const track = document.querySelector('.basket__add-form');
   const item = document.querySelector('.basket__add-form-checkbox-wrapper');
-  const items = document.getElementsByClassName(
+  const itemss = document.getElementsByClassName(
     'basket__add-form-checkbox-wrapper'
   );
 
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       btnNext,
       btnPrev,
       countToSlide: 1,
-      interval: 0,
+      interval: 1000,
     });
   }
 
@@ -71,15 +71,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
   //     this.append(items[0]);
   //   }
   // });
-
-  //   track.scrollTop = 1;
-  //   track.addEventListener('scroll', function (element) {
-  //     console.log(this.scrollTop, this.scrollHeight, this.clientHeight);
   //
-  //     let items = this.querySelectorAll('.basket__add-form-checkbox-wrapper');
-  //     this.scrollTop = items[items.length - 1].clientHeight;
+  // track.scrollTop = 1;
+  // track.addEventListener('scroll', function (element) {
+  //   console.log(this.scrollTop, this.scrollHeight, this.clientHeight);
+  //
+  //   let items = this.querySelectorAll('.basket__add-form-checkbox-wrapper');
+  //
+  //   this.scrollTop = items[items.length - 1].clientHeight;
+  //   this.prepend(items[items.length - 1]);
+  //   // this.scrollTop = 1;
+  //   return false;
+  // });
+  //
+  // track.scrollLeft = 1;
+  // track.addEventListener('scroll', function (ev) {
+  //   let items = this.querySelectorAll('.basket__add-form-checkbox-wrapper');
+  //   if (parseInt(this.scrollLeft) == 0) {
+  //     this.scrollLeft = items[items.length - 1].clientWidth;
   //     this.prepend(items[items.length - 1]);
-  //     // this.scrollTop = 1;
-  //     return false;
-  //   });
+  //     this.scrollLeft = 1;
+  //   } else if (this.scrollLeft > this.scrollWidth - this.clientWidth - 1) {
+  //     this.append(items[0]);
+  //   }
+  //   return false;
+  // });
 });
