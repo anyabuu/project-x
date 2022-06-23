@@ -79,18 +79,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     },
   ];
 
-  new modalShow(modals[3].name, modals[3].nameCloseBut);
+  let i;
+  i = 2;
 
-  // track.scrollLeft = 1;
-  // track.addEventListener('scroll', function (ev) {
-  //   let items = this.querySelectorAll('.basket__add-form-checkbox-wrapper');
-  //   if (parseInt(this.scrollLeft) == 0) {
-  //     this.scrollLeft = items[items.length - 1].clientWidth;
-  //     this.prepend(items[items.length - 1]);
-  //     this.scrollLeft = 1;
-  //   } else if (this.scrollLeft > this.scrollWidth - this.clientWidth - 1) {
-  //     this.append(items[0]);
-  //   }
-  //   return false;
-  // });
+  new modalShow(modals[i].name, modals[i].nameCloseBut);
 });
