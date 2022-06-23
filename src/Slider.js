@@ -5,18 +5,13 @@ export function Slider({
   containerWidth,
   btnNext,
   btnPrev,
-  interval,
   countToSlide,
+  interval,
 }) {
   let elements = [...wrapper.children];
   let width = (containerWidth - gap * (count - 1)) / count;
 
   let i = 0;
-
-  let items = document.querySelectorAll('.basket__add-form-checkbox-wrapper');
-
-  console.log(wrapper);
-  console.log(elements);
 
   elements.forEach((item) => {
     item.style.width = `${width}px`;
@@ -29,28 +24,24 @@ export function Slider({
   }
 
   btnNext.addEventListener('click', function () {
-    if (i === elements.length) {
+    console.log(i);
+    if (i >= elements.length) {
       i = 0;
-
-      wrapper.append(elements[0]);
-      slide(countToSlide);
     }
-    wrapper.append(items[i]);
+    console.log(i);
+
+    wrapper.append(elements[i]);
     slide(countToSlide);
     i++;
   });
 
   btnPrev.addEventListener('click', function () {
-    if (i === 0 || i > elements.length) {
+    console.log(i);
+    if (i === 0 || i === elements.length) {
       i = 0;
-      wrapper.prepend(elements[elements.length - 1]);
-      slide(-countToSlide);
-      i++;
-    } else {
-      wrapper.prepend(items[elements.length - i]);
-      slide(-countToSlide);
     }
-
+    wrapper.prepend(elements[elements.length - i - 1]);
+    slide(-countToSlide);
     i++;
   });
 
@@ -65,9 +56,7 @@ export function Slider({
     });
 
     function startInterval() {
-      return setInterval(function () {
-        slide(countToSlide);
-      }, interval);
+      return setInterval(test, interval);
     }
   }
 

@@ -3,6 +3,7 @@ import './scss/styles.scss';
 import Glide from '@glidejs/glide';
 import translate from '@glidejs/glide/src/components/translate';
 import { Slider } from './Slider';
+import { modalShow } from './Modal';
 
 document.addEventListener('DOMContentLoaded', (event) => {
   new Glide('.glide', {
@@ -42,10 +43,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 document.addEventListener('DOMContentLoaded', (event) => {
   const container = document.querySelector('.slider__container');
   const track = document.querySelector('.basket__add-form');
-  const item = document.querySelector('.basket__add-form-checkbox-wrapper');
-  const itemss = document.getElementsByClassName(
-    'basket__add-form-checkbox-wrapper'
-  );
 
   const btnPrev = document.querySelector('.basket__prev-button');
   const btnNext = document.querySelector('.basket__next-button');
@@ -63,27 +60,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   }
 
-  // track.addEventListener('wheel', function (element) {
-  //   let items = this.querySelectorAll('.basket__add-form-checkbox-wrapper');
-  //   if (element.wheelDelta > 0) {
-  //     this.prepend(items[items.length - 1]);
-  //   } else {
-  //     this.append(items[0]);
-  //   }
-  // });
-  //
-  // track.scrollTop = 1;
-  // track.addEventListener('scroll', function (element) {
-  //   console.log(this.scrollTop, this.scrollHeight, this.clientHeight);
-  //
-  //   let items = this.querySelectorAll('.basket__add-form-checkbox-wrapper');
-  //
-  //   this.scrollTop = items[items.length - 1].clientHeight;
-  //   this.prepend(items[items.length - 1]);
-  //   // this.scrollTop = 1;
-  //   return false;
-  // });
-  //
+  const modals = [
+    {
+      name: '.modal',
+      nameCloseBut: '.modal__close-button',
+    },
+    {
+      name: '.modal-address',
+      nameCloseBut: '.modal-address__close-button',
+    },
+    {
+      name: '.modal-delivery-time ',
+      nameCloseBut: '.modal-delivery-time__close-button',
+    },
+    {
+      name: '.modal-pizza-make',
+      nameCloseBut: '.modal-pizza-make__blank-close-button',
+    },
+  ];
+
+  new modalShow(modals[3].name, modals[3].nameCloseBut);
+
   // track.scrollLeft = 1;
   // track.addEventListener('scroll', function (ev) {
   //   let items = this.querySelectorAll('.basket__add-form-checkbox-wrapper');
