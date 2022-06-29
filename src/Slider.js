@@ -45,12 +45,4 @@ export function Slider({
       }, interval);
     }
   }
-
-  wrapper.addEventListener('scroll', function () {
-    console.log(fds);
-    this.scrollLeft = elements[elements.length - 1].clientWidth;
-    this.prepend(elements[elements.length - 1]);
-
-    return false;
-  });
 }
