@@ -11,8 +11,6 @@ export function Slider({
   let elements = [...wrapper.children];
   let width = (containerWidth - gap * (count - 1)) / count;
 
-  let i = 0;
-
   elements.forEach((item) => {
     item.style.width = `${width}px`;
   });
@@ -24,25 +22,11 @@ export function Slider({
   }
 
   btnNext.addEventListener('click', function () {
-    console.log(i);
-    if (i >= elements.length) {
-      i = 0;
-    }
-    console.log(i);
-
-    wrapper.append(elements[i]);
     slide(countToSlide);
-    i++;
   });
 
   btnPrev.addEventListener('click', function () {
-    console.log(i);
-    if (i === 0 || i === elements.length) {
-      i = 0;
-    }
-    wrapper.prepend(elements[elements.length - i - 1]);
     slide(-countToSlide);
-    i++;
   });
 
   if (interval) {
@@ -56,15 +40,9 @@ export function Slider({
     });
 
     function startInterval() {
-      return setInterval(test, interval);
+      return setInterval(function () {
+        slide(countToSlide);
+      }, interval);
     }
   }
-
-  // wrapper.addEventListener('scroll', function () {
-  //   console.log(fds);
-  //   this.scrollLeft = elements[elements.length - 1].clientWidth;
-  //   this.prepend(elements[elements.length - 1]);
-  //
-  //   return false;
-  // });
 }

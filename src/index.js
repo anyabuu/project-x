@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 document.addEventListener('DOMContentLoaded', (event) => {
   const container = document.querySelector('.slider__container');
   const track = document.querySelector('.basket__add-form');
-
   const btnPrev = document.querySelector('.basket__prev-button');
   const btnNext = document.querySelector('.basket__next-button');
 
