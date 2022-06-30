@@ -3,7 +3,7 @@ import './scss/styles.scss';
 import Glide from '@glidejs/glide';
 import translate from '@glidejs/glide/src/components/translate';
 import { Slider } from './Slider';
-import { modalShow } from './Modal';
+import { modalHide, modalShow, modalShoww } from './Modal';
 
 document.addEventListener('DOMContentLoaded', (event) => {
   new Glide('.glide', {
@@ -58,28 +58,31 @@ document.addEventListener('DOMContentLoaded', (event) => {
       interval: 0,
     });
   }
-
-  const modals = [
-    {
-      name: '.modal',
-      nameCloseBut: '.modal__close-button',
-    },
-    {
-      name: '.modal-address',
-      nameCloseBut: '.modal-address__close-button',
-    },
-    {
-      name: '.modal-delivery-time ',
-      nameCloseBut: '.modal-delivery-time__close-button',
-    },
-    {
-      name: '.modal-pizza-make',
-      nameCloseBut: '.modal-pizza-make__blank-close-button',
-    },
-  ];
-
-  let i;
-  i = 2;
-
-  new modalShow(modals[i].name, modals[i].nameCloseBut);
 });
+
+const modalOpenBut = document.querySelector('.header__shop-button');
+
+if (modalOpenBut) {
+  modalOpenBut.addEventListener('click', function () {
+    modalShow('make-pizza');
+  });
+}
+
+document
+  .querySelector('.modal-pizza-make__button')
+  .addEventListener('click', function () {
+    modalHide();
+  });
+
+const modalOpenEnterBut = document.querySelector('.header__enter-link');
+
+if (modalOpenEnterBut) {
+  modalOpenEnterBut.addEventListener('click', function () {
+    modalShow('index');
+  });
+}
+
+// modalShow('index');
+// modalShow('address');
+// modalShow('delivery');
+// modalShow('make-pizza');

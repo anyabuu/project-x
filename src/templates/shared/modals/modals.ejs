@@ -3,12 +3,12 @@
 
     <!-- MODAL SIGN-IN STARTS -->
 
-    <div class="modal modal-window">
+    <div class="modal modal-window" data-type="index">
         <div class="modal-up-part">
             <h2 class="modal__title modal-main-title">
                 Вход на сайт
             </h2>
-            <button class="modal__close-button close-button"></button>
+            <button data-action="close" class="modal__close-button close-button"></button>
         </div>
 
         <div class="enter-number-wrapper">
@@ -76,12 +76,12 @@
 
     <!-- MODAL ADDRESS STARTS -->
 
-    <div class="modal-address modal-window">
+    <div class="modal-address modal-window" data-type="address">
         <div class="modal-address__up-part modal-up-part">
             <h2 class="modal-address__title modal-main-title">
                 Куда доставить?
             </h2>
-            <button class="modal-address__close-button close-button"></button>
+            <button data-action="close" class="modal-address__close-button close-button"></button>
         </div>
         <div class="modal-address__delivery">
             <div class="modal-address__radio-wrapper">
@@ -141,13 +141,13 @@
 
     <!-- MODAL DELIVERY-TIME STARTS -->
 
-    <div class="modal-delivery-time modal-window">
+    <div class="modal-delivery-time modal-window" data-type="delivery">
 
         <div class="modal-delivery-time__up-part modal-up-part">
             <h2 class="modal-delivery-time__title modal-main-title">
                 Время доставки
             </h2>
-            <button class="modal-delivery-time__close-button close-button"></button>
+            <button data-action="close" class="modal-delivery-time__close-button close-button"></button>
         </div>
 
         <div class="modal-delivery-time__choose">
@@ -209,10 +209,10 @@
 
     <!-- MODAL PIZZA-MAKE STARTS -->
 
-    <div class="modal-pizza-make modal-window">
+    <div class="modal-pizza-make modal-window" data-type="make-pizza">
 
         <img class="modal-pizza-make__image" src="img/pizza-make.jpg" alt="this is your pizza">
-        <button class="modal-pizza-make__blank-close-button-mobile close-button"></button>
+        <button data-action="close" class="modal-pizza-make__blank-close-button-mobile close-button"></button>
         <div class="modal-pizza-make__blank">
 
             <div class="modal-pizza-make__up-part modal-up-part">
@@ -231,7 +231,7 @@
                         <img class="modal-pizza-make__opt-cancel" src="img/option-cross.svg" alt="cancel">
                     </p>
                 </div>
-                <button class="modal-pizza-make__blank-close-button close-button"></button>
+                <button data-action="close" class="modal-pizza-make__blank-close-button close-button"></button>
             </div>
 
             <div class="modal-pizza-make__custom">

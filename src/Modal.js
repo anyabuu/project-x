@@ -1,22 +1,47 @@
-export function modalShow(name, button) {
+/**
+ *
+ * @param {'index'|'address'|'delivery'|'make-pizza'} modalName
+ */
+
+export const modalShow = (modalName) => {
   const modalWrapper = document.querySelector('.modal-wrapper');
-  const modal = document.querySelector(name);
-  const modalCloseBut = document.querySelector(button);
-  const modalOpenBut = document.querySelector('.header__shop-button');
+  const modal = document.querySelector(`[data-type="${modalName}"]`);
 
-  modalOpenBut.addEventListener('click', function () {
-    modalWrapper.style.display = 'flex';
-    modal.classList.add('active');
-  });
+  modalWrapper.classList.add('modal-wrapper__active');
+  modal.classList.add('active');
 
-  modalCloseBut.addEventListener('click', function () {
-    modalWrapper.style.display = 'none';
+  modalWrapper.addEventListener('click', function () {
+    const currElement = event.target;
+    console.log(currElement);
+    if (
+      currElement.matches('.modal-wrapper') ||
+      currElement.matches('[data-action="close"]')
+    ) {
+      modalWrapper.classList.remove('modal-wrapper__active');
+      modal.classList.remove('active');
+    }
+  }),
+    {
+      once: true,
+    };
+};
+
+/**
+ *
+ * @param {'index'|'address'|'delivery'|'make-pizza'} modalName
+ */
+
+export const modalHide = (modalName) => {
+  const modalWrapper = document.querySelector('.modal-wrapper');
+  const modal = document.querySelector(`[data-type="${modalName}"]`);
+
+  if (modalName) {
+    modalWrapper.classList.remove('modal-wrapper__active');
+    modal.classList.remove('active');
+    return;
+  }
+  modalWrapper.classList.remove('modal-wrapper__active');
+  [...modalWrapper.children].forEach(function (modal) {
     modal.classList.remove('active');
   });
-
-  window.onclick = function (event) {
-    if (event.target == modalWrapper) {
-      modalWrapper.style.display = 'none';
-    }
-  };
-}
+};
