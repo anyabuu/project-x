@@ -1,9 +1,8 @@
 import './scss/styles.scss';
 
 import Glide from '@glidejs/glide';
-import translate from '@glidejs/glide/src/components/translate';
 import { Slider } from './Slider';
-import { modalHide, modalShow, modalShoww } from './Modal';
+import { modalHide, modalShow } from './Modal';
 
 document.addEventListener('DOMContentLoaded', (event) => {
   new Glide('.glide', {
@@ -119,17 +118,6 @@ if (modalOpenEnterBut) {
   });
 }
 
-document
-  .querySelector('.modal__form-enter-button')
-  .addEventListener('click', function () {
-    document
-      .querySelector('.enter-number-wrapper')
-      .classList.add('enter-number-wrapper--passive');
-    document
-      .querySelector('.send-code-wrapper')
-      .classList.add('send-code-wrapper--active');
-  });
-
 if (modalOpenEnterBurgerBut) {
   modalOpenEnterBurgerBut.addEventListener('click', function () {
     modalShow('index');
@@ -139,8 +127,3 @@ if (modalOpenEnterBurgerBut) {
     logo.classList.remove('active');
   });
 }
-
-// modalShow('index');
-// modalShow('address');
-// modalShow('delivery');
-// modalShow('make-pizza');
