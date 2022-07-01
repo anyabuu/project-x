@@ -5,8 +5,8 @@ export function Slider({
   containerWidth,
   btnNext,
   btnPrev,
-  interval,
   countToSlide,
+  interval,
 }) {
   let elements = [...wrapper.children];
   let width = (containerWidth - gap * (count - 1)) / count;

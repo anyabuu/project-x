@@ -1,5 +1,7 @@
 <%- include('parts/head', { styles: styles[0], title: 'Fibo/Basket' }) %>
 
+<%- include('shared/modals/modals') %>
+
 <!--HEADER SECTION STARTS-->
 
 <%- include('shared/header/header-steps')%>
@@ -135,7 +137,7 @@
 
                 <ul class="basket__add-form">
 
-                    <li class="basket__add-form-checkbox-wrapper" data-id = "1">
+                    <li class="basket__add-form-checkbox-wrapper" data-id = "0">
                         <input class="basket__add-form-input" type="checkbox" id="add-1"
                                name="add-1">
                         <label class="basket__add-form-label" for="add-1">
@@ -150,7 +152,7 @@
                     </span>
                         </label>
                     </li>
-                    <li class="basket__add-form-checkbox-wrapper" data-id = "2">
+                    <li class="basket__add-form-checkbox-wrapper" data-id = "1">
                         <input class="basket__add-form-input" type="checkbox" id="add-2"
                                name="add-2" checked>
                         <label class="basket__add-form-label" for="add-2">
@@ -165,7 +167,7 @@
                     </span>
                         </label>
                     </li>
-                    <li class="basket__add-form-checkbox-wrapper" data-id = "3">
+                    <li class="basket__add-form-checkbox-wrapper" data-id = "2">
                         <input class="basket__add-form-input" type="checkbox" id="add-3"
                                name="add-3">
                         <label class="basket__add-form-label" for="add-3">
@@ -180,7 +182,7 @@
                     </span>
                         </label>
                     </li>
-                    <li class="basket__add-form-checkbox-wrapper" data-id = "4">
+                    <li class="basket__add-form-checkbox-wrapper" data-id = "3">
                         <input class="basket__add-form-input" type="checkbox" id="add-4"
                                name="add-1">
                         <label class="basket__add-form-label" for="add-4">
@@ -195,7 +197,7 @@
                     </span>
                         </label>
                     </li>
-                    <li class="basket__add-form-checkbox-wrapper" data-id = "5">
+                    <li class="basket__add-form-checkbox-wrapper" data-id = "4">
                         <input class="basket__add-form-input" type="checkbox" id="add-5"
                                name="add-2" checked>
                         <label class="basket__add-form-label" for="add-5">
@@ -210,7 +212,7 @@
                     </span>
                         </label>
                     </li>
-                    <li class="basket__add-form-checkbox-wrapper" data-id = "6">
+                    <li class="basket__add-form-checkbox-wrapper" data-id = "5">
                         <input class="basket__add-form-input" type="checkbox" id="add-6"
                                name="add-3">
                         <label class="basket__add-form-label" for="add-6">
@@ -289,6 +291,6 @@
 
 <%- include('shared/footer/footer')%>
 
-<!--FOOTER SECTION STARTS-->
+<!--FOOTER SECTION ENDS-->
 
 <%- include('parts/end', { script: scripts[0] }) %>

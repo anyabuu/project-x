@@ -1,5 +1,7 @@
 <%- include('parts/head', { styles: styles[0], title: 'Fibo/Homepage' }) %>
 
+<%- include('shared/modals/modals') %>
+
 <!--HEADER SECTION STARTS-->
 
 <% const glideItems = [
@@ -261,7 +263,7 @@
         <% }); %>
         </ul>
         <button class="promo__button">
-            <a class="promo__all-button" href="#">
+            <a class="promo__all-button" href="http://localhost:3001/promotions">
                 Все акции
             </a>
         </button>

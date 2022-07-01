@@ -1,3 +1,9 @@
+.modal {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
 .modal__title {
   font-size: 2.5rem;
 }
@@ -41,7 +47,7 @@
 .modal__form-enter-input--big {
   width: 255px;
   &:disabled {
-    width: 150px;
+    width: 160px;
     padding: 0;
   }
 }
@@ -154,8 +160,12 @@
 
 // MODAL-ADDRESS
 .modal-address {
+  display: none;
   @include media-phone {
     padding: 25px 22px;
+  }
+  &.active {
+    display: block;
   }
 }
 .modal-address__delivery {
@@ -240,7 +250,11 @@
 
 // MODAL-DELIVERY-TIME
 .modal-delivery-time {
+  display: none;
   background-color: var(--color-background-100);
+  &.active {
+    display: block;
+  }
 }
 .modal-delivery-time__choose {
   display: flex;
@@ -277,7 +291,7 @@
 
 // MODAL-PIZZA-MAKE
 .modal-pizza-make {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 976px;
@@ -293,6 +307,9 @@
   }
   @include media-mini-phone {
     padding: 18px;
+  }
+  &.active {
+    display: flex;
   }
 }
 .modal-pizza-make__image {

@@ -1,0 +1,386 @@
+
+<div class="modal-wrapper">
+
+    <!-- MODAL SIGN-IN STARTS -->
+
+    <div class="modal modal-window" data-type="index">
+        <div class="modal-up-part">
+            <h2 class="modal__title modal-main-title">
+                Вход на сайт
+            </h2>
+            <button data-action="close" class="modal__close-button close-button"></button>
+        </div>
+
+        <div class="enter-number-wrapper">
+            <div class="modal__form-enter">
+                <label class="modal__form-enter-label" for="phone">
+                    Номер телефона
+                </label>
+                <input class="modal__form-enter-input" type="tel" name="user_phone" id="phone" value="+380" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}">
+            </div>
+            <div class="modal__form-enter-send-code">
+                <button class="modal__form-enter-button button__primary">
+                    Выслать код
+                </button>
+                <p class="modal__form-enter-text">
+                    Продолжая, вы соглашаетесь <a href="#" class="modal__form-enter-link">со сбором и обработкой персональных данных и пользовательским соглашением</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="send-code-wrapper">
+            <div class="modal__form-enter-code">
+                <label class="modal__form-enter-label" for="phone-send-code">
+                    Номер телефона
+                </label>
+                <input class="modal__form-enter-input modal__form-enter-input--big" type="tel" name="user_phone" id="phone-send-code" value="+380 (50) 888-88-88" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" disabled readonly>
+                <button class="modal__change-code-button button__tertiary">
+                    Изменить
+                </button>
+            </div>
+
+            <div class="modal__form-enter-code">
+                <label class="modal__form-enter-label" for="code">
+                    Код из СМС
+                </label>
+                <input class="modal__form-enter-input modal__form-enter-input--small" type="text" name="user_code" id="code" value="1234">
+
+                <label class="modal__form-enter-label invisible" for="entered-code">
+                    Код из СМС
+                </label>
+                <input class="modal__form-enter-input modal__form-enter-input--small  invisible" type="text" name="user-entered-code" id="entered-code" value="1234" readonly disabled>
+
+                <label class="modal__form-enter-label invisible" for="error-code">
+                    Код из СМС
+                </label>
+                <input class="modal__form-enter-input modal__form-enter-input--small modal__input-code--error invisible" type="text" name="user-entered-code" id="error-code" value="1">
+
+                <button class="modal__change-code-button button__tertiary">
+                    Получить новый код
+                </button>
+            </div>
+
+            <div class="modal__notification-error-code invisible">
+                <img class="modal__notification-signal" src="img/notification.svg" alt="this is signal">
+                <p class="modal__notification-error-text">
+                    Неверный код
+                </p>
+                <span class="modal__notification-error-part"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MODAL SIGN-IN ENDS -->
+
+
+    <!-- MODAL ADDRESS STARTS -->
+
+    <div class="modal-address modal-window" data-type="address">
+        <div class="modal-address__up-part modal-up-part">
+            <h2 class="modal-address__title modal-main-title">
+                Куда доставить?
+            </h2>
+            <button data-action="close" class="modal-address__close-button close-button"></button>
+        </div>
+        <div class="modal-address__delivery">
+            <div class="modal-address__radio-wrapper">
+                <input class="modal-address__radio" type="radio" id="shipping"
+                       name="delivery-type" value="shipping" checked>
+                <label class="modal-address__label modal-label" for="shipping">Доставка</label>
+            </div>
+            <div class="modal-address__radio-wrapper">
+                <input class="modal-address__radio" type="radio" id="pickup"
+                       name="delivery-type" value="pickup">
+                <label class="modal-address__label modal-label" for="pickup">Самовывоз</label>
+            </div>
+        </div>
+
+        <form class="modal-address__form" action="" method="post">
+            <div class="modal-address__form-item">
+                <input class="modal-address__form-input modal-address__form-input--big modal-form-input" type="text" name="user_address" id="address" placeholder="Введите адрес доставки" value="Киев, ул.Крещатик">
+            </div>
+            <div class="modal-address__form-item">
+                <input class="modal-address__form-input modal-address__form-input--small modal-form-input" type="text" name="user_address" id="house-1" placeholder="Дом">
+            </div>
+            <div class="modal-address__form-item">
+                <input class="modal-address__form-input modal-address__form-input--medium modal-form-input" type="text" name="user_address" id="house-2" placeholder="Дом">
+            </div>
+            <div class="modal-address__form-item">
+                <input class="modal-address__form-input modal-address__form-input--medium modal-form-input" type="text" name="user_address" id="house-3" placeholder="Дом">
+                <p class="modal-address__form-input-house-info-text modal-form-info-text">
+                    Последний
+                </p>
+            </div>
+            <div class="modal-address__form-item">
+                <input class="modal-address__form-input modal-address__form-input--medium modal-form-input" type="text" name="user_address" id="house-4" placeholder="Дом">
+                <p class="modal-address__form-input-house-info-text modal-form-info-text">
+                    Домофон
+                </p>
+            </div>
+            <div class="modal-address__form-item">
+                <input class="modal-address__form-input modal-address__form-input--medium modal-form-input" type="text" name="user_address" id="house-5" placeholder="Дом">
+                <p class="modal-address__form-input-house-info-text modal-form-info-text">
+                    Последний
+                </p>
+            </div>
+            <div class="modal-address__form-item modal-address__form-input--full">
+                <input class="modal-address__form-input modal-address__form-input--full modal-form-input" type="text" name="user_address-type" id="address-type" placeholder="Тип адреса">
+                <p class="modal-address__form-input-house-type-text modal-form-info-text">
+                    <span style="color:var(--color-secondary-400)">Например,</span> Дом <span style="color:var(--color-secondary-400)">или</span> Работа
+                </p>
+            </div>
+            <textarea class="modal-address__form-item modal-address__form-textarea modal-form-input" type="text" name="user_comment" id="delivery-comment" placeholder="Комментарий к заказу"></textarea>
+            <button class="modal-address__button button__primary" type="button">
+                Подтвердить адрес
+            </button>
+        </form>
+    </div>
+
+    <!-- MODAL ADDRESS ENDS -->
+
+    <!-- MODAL DELIVERY-TIME STARTS -->
+
+    <div class="modal-delivery-time modal-window" data-type="delivery">
+
+        <div class="modal-delivery-time__up-part modal-up-part">
+            <h2 class="modal-delivery-time__title modal-main-title">
+                Время доставки
+            </h2>
+            <button data-action="close" class="modal-delivery-time__close-button close-button"></button>
+        </div>
+
+        <div class="modal-delivery-time__choose">
+            <div class="modal-delivery-time__radio-wrapper">
+                <input class="modal-delivery-time__radio" type="radio" id="delivery-time-1"
+                       name="delivery-time" value="time" checked>
+                <label class="modal-delivery-time__label modal-label" for="delivery-time-1">Побыстрее</label>
+            </div>
+            <div class="modal-delivery-time__radio-wrapper">
+                <input class="modal-delivery-time__radio" type="radio" id="delivery-time-2"
+                       name="delivery-time" value="time">
+                <label class="modal-delivery-time__label modal-label" for="delivery-time-2">15:00 - 15:30</label>
+            </div>
+            <div class="modal-delivery-time__radio-wrapper">
+                <input class="modal-delivery-time__radio" type="radio" id="delivery-time-3"
+                       name="delivery-time" value="time">
+                <label class="modal-delivery-time__label modal-label" for="delivery-time-3">15:00 - 15:30</label>
+            </div>
+            <div class="modal-delivery-time__radio-wrapper">
+                <input class="modal-delivery-time__radio" type="radio" id="delivery-time-4"
+                       name="delivery-time" value="time">
+                <label class="modal-delivery-time__label modal-label" for="delivery-time-4">15:00 - 15:30</label>
+            </div>
+            <div class="modal-delivery-time__radio-wrapper">
+                <input class="modal-delivery-time__radio" type="radio" id="delivery-time-5"
+                       name="delivery-time" value="time">
+                <label class="modal-delivery-time__label modal-label" for="delivery-time-5">15:00 - 15:30</label>
+            </div>
+            <div class="modal-delivery-time__radio-wrapper">
+                <input class="modal-delivery-time__radio" type="radio" id="delivery-time-6"
+                       name="delivery-time" value="time">
+                <label class="modal-delivery-time__label modal-label" for="delivery-time-6">15:00 - 15:30</label>
+            </div>
+            <div class="modal-delivery-time__radio-wrapper">
+                <input class="modal-delivery-time__radio" type="radio" id="delivery-time-7"
+                       name="delivery-time" value="time">
+                <label class="modal-delivery-time__label modal-label" for="delivery-time-7">15:00 - 15:30</label>
+            </div>
+            <div class="modal-delivery-time__radio-wrapper">
+                <input class="modal-delivery-time__radio" type="radio" id="delivery-time-8"
+                       name="delivery-time" value="time">
+                <label class="modal-delivery-time__label modal-label" for="delivery-time-8">15:00 - 15:30</label>
+            </div>
+            <div class="modal-delivery-time__radio-wrapper">
+                <input class="modal-delivery-time__radio" type="radio" id="delivery-time-9"
+                       name="delivery-time" value="time">
+                <label class="modal-delivery-time__label modal-label" for="delivery-time-9">15:00 - 15:30</label>
+            </div>
+            <div class="modal-delivery-time__radio-wrapper">
+                <input class="modal-delivery-time__radio" type="radio" id="delivery-time-10"
+                       name="delivery-time" value="time">
+                <label class="modal-delivery-time__label modal-label" for="delivery-time-10">15:00 - 15:30</label>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MODAL DELIVERY-TIME ENDS -->
+
+    <!-- MODAL PIZZA-MAKE STARTS -->
+
+    <div class="modal-pizza-make modal-window" data-type="make-pizza">
+
+        <img class="modal-pizza-make__image" src="img/pizza-make.jpg" alt="this is your pizza">
+        <button data-action="close" class="modal-pizza-make__blank-close-button-mobile close-button"></button>
+        <div class="modal-pizza-make__blank">
+
+            <div class="modal-pizza-make__up-part modal-up-part">
+                <div class="modal-pizza-make__title-part">
+                    <h2 class="modal-pizza-make__title">
+                        С креветками и трюфелями
+                    </h2>
+                    <p class="modal-pizza-make__description">
+                        25 см, традиционное тесто, 360 г
+                    </p>
+                    <p class="modal-pizza-make__selected-options">
+                        Моцарелла, соус
+                        <span class="modal-pizza-make__opt">
+                  альфредо
+                </span>
+                        <img class="modal-pizza-make__opt-cancel" src="img/option-cross.svg" alt="cancel">
+                    </p>
+                </div>
+                <button data-action="close" class="modal-pizza-make__blank-close-button close-button"></button>
+            </div>
+
+            <div class="modal-pizza-make__custom">
+
+                <div class="modal-pizza-make__radio-size-wrapper">
+                    <input class="modal-pizza-make__radio" type="radio" id="small-size"
+                           name="pizza-size" value="small" checked>
+                    <label class="modal-pizza-make__label-size modal-label" for="small-size">Маленькая</label>
+                </div>
+                <div class="modal-pizza-make__radio-size-wrapper">
+                    <input class="modal-pizza-make__radio" type="radio" id="medium-size"
+                           name="pizza-size" value="small">
+                    <label class="modal-pizza-make__label-size modal-label" for="medium-size">Средняя</label>
+                </div>
+                <div class="modal-pizza-make__radio-size-wrapper">
+                    <input class="modal-pizza-make__radio" type="radio" id="big-size"
+                           name="pizza-size" value="small">
+                    <label class="modal-pizza-make__label-size modal-label" for="big-size">Большая</label>
+                </div>
+
+                <div class="modal-pizza-make__radio-dough-wrapper">
+                    <input class="modal-pizza-make__radio" type="radio" id="traditional"
+                           name="pizza-dough" value="traditional" checked>
+                    <label class="modal-pizza-make__label-dough modal-label" for="traditional">Традиционное</label>
+                </div>
+                <div class="modal-pizza-make__radio-dough-wrapper">
+                    <input class="modal-pizza-make__radio" type="radio" id="thin"
+                           name="pizza-dough" value="thin">
+                    <label class="modal-pizza-make__label-dough modal-label" for="thin">Тонкое</label>
+                </div>
+            </div>
+
+            <ul class="modal-pizza-make__ingredients">
+                <li class="modal-pizza-make__ingredients-input-wrapper">
+                    <input class="modal-pizza-make__ingredient-input" type="checkbox" name="tomato" id="ingredient-1">
+                    <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-1">
+                        <img class="modal-pizza-make__ingredient-label-image" src='img/tomato.png' alt="this is checked ingredient">
+                        <h2 class="modal-pizza-make__ingredient-label-title">
+                            Острый халапенью
+                        </h2>
+                        <p class="modal-pizza-make__ingredient-label-price">
+                            от 120 ₽
+                        </p>
+                    </label>
+                </li>
+                <li class="modal-pizza-make__ingredients-input-wrapper">
+                    <input class="modal-pizza-make__ingredient-input" type="checkbox" name="mozzarella" id="ingredient-2" checked>
+                    <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-2">
+                        <img class="modal-pizza-make__ingredient-label-image" src='img/mozarella.png' alt="this is checked ingredient">
+                        <h2 class="modal-pizza-make__ingredient-label-title">
+                            Острый халапенью
+                        </h2>
+                        <p class="modal-pizza-make__ingredient-label-price">
+                            от 120 ₽
+                        </p>
+                    </label>
+                </li>
+                <li class="modal-pizza-make__ingredients-input-wrapper">
+                    <input class="modal-pizza-make__ingredient-input" type="checkbox" name="halapenio" id="ingredient-3">
+                    <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-3">
+                        <img class="modal-pizza-make__ingredient-label-image" src='img/halapenio.png' alt="this is checked ingredient">
+                        <h2 class="modal-pizza-make__ingredient-label-title">
+                            Острый халапенью
+                        </h2>
+                        <p class="modal-pizza-make__ingredient-label-price">
+                            от 120 ₽
+                        </p>
+                    </label>
+                </li>
+                <li class="modal-pizza-make__ingredients-input-wrapper">
+                    <input class="modal-pizza-make__ingredient-input" type="checkbox" name="tomato" id="ingredient-4">
+                    <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-4">
+                        <img class="modal-pizza-make__ingredient-label-image" src='img/tomato.png' alt="this is checked ingredient">
+                        <h2 class="modal-pizza-make__ingredient-label-title">
+                            Острый халапенью
+                        </h2>
+                        <p class="modal-pizza-make__ingredient-label-price">
+                            от 120 ₽
+                        </p>
+                    </label>
+                </li>
+                <li class="modal-pizza-make__ingredients-input-wrapper">
+                    <input class="modal-pizza-make__ingredient-input" type="checkbox" name="mozzarella" id="ingredient-5">
+                    <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-5">
+                        <img class="modal-pizza-make__ingredient-label-image" src='img/mozarella.png' alt="this is checked ingredient">
+                        <h2 class="modal-pizza-make__ingredient-label-title">
+                            Острый халапенью
+                        </h2>
+                        <p class="modal-pizza-make__ingredient-label-price">
+                            от 120 ₽
+                        </p>
+                    </label>
+                </li>
+                <li class="modal-pizza-make__ingredients-input-wrapper">
+                    <input class="modal-pizza-make__ingredient-input" type="checkbox" name="halapenio" id="ingredient-6">
+                    <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-6">
+                        <img class="modal-pizza-make__ingredient-label-image" src='img/halapenio.png' alt="this is checked ingredient">
+                        <h2 class="modal-pizza-make__ingredient-label-title">
+                            Острый халапенью
+                        </h2>
+                        <p class="modal-pizza-make__ingredient-label-price">
+                            от 120 ₽
+                        </p>
+                    </label>
+                </li>
+                <li class="modal-pizza-make__ingredients-input-wrapper">
+                    <input class="modal-pizza-make__ingredient-input" type="checkbox" name="tomato" id="ingredient-7">
+                    <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-7">
+                        <img class="modal-pizza-make__ingredient-label-image" src='img/tomato.png' alt="this is checked ingredient">
+                        <h2 class="modal-pizza-make__ingredient-label-title">
+                            Острый халапенью
+                        </h2>
+                        <p class="modal-pizza-make__ingredient-label-price">
+                            от 120 ₽
+                        </p>
+                    </label>
+                </li>
+                <li class="modal-pizza-make__ingredients-input-wrapper">
+                    <input class="modal-pizza-make__ingredient-input" type="checkbox" name="mozzarella" id="ingredient-8">
+                    <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-8">
+                        <img class="modal-pizza-make__ingredient-label-image" src='img/mozarella.png' alt="this is checked ingredient">
+                        <h2 class="modal-pizza-make__ingredient-label-title">
+                            Острый халапенью
+                        </h2>
+                        <p class="modal-pizza-make__ingredient-label-price">
+                            от 120 ₽
+                        </p>
+                    </label>
+                </li>
+                <li class="modal-pizza-make__ingredients-input-wrapper">
+                    <input class="modal-pizza-make__ingredient-input" type="checkbox" name="halapenio" id="ingredient-9">
+                    <label class="modal-pizza-make__ingredient-label modal-label" for="ingredient-9">
+                        <img class="modal-pizza-make__ingredient-label-image" src='img/halapenio.png' alt="this is checked ingredient">
+                        <h2 class="modal-pizza-make__ingredient-label-title">
+                            Острый халапенью
+                        </h2>
+                        <p class="modal-pizza-make__ingredient-label-price">
+                            от 120 ₽
+                        </p>
+                    </label>
+                </li>
+            </ul>
+            <button class="modal-pizza-make__button button__primary">
+                Добавить в корзину 1 048 ₽
+            </button>
+
+        </div>
+    </div>
+
+    <!-- MODAL PIZZA-MAKE STARTS -->
+
+</div>

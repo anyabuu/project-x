@@ -1,8 +1,8 @@
 import './scss/styles.scss';
 
 import Glide from '@glidejs/glide';
-import translate from '@glidejs/glide/src/components/translate';
 import { Slider } from './Slider';
+import { modalHide, modalShow } from './Modal';
 
 document.addEventListener('DOMContentLoaded', (event) => {
   new Glide('.glide', {
@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }).mount();
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  const menuBtn = document.querySelector('.header__menu-bar');
-  const menu = document.querySelector('.header__burger');
-  const logo = document.querySelector('.header__logo-burger');
+const menuBtn = document.querySelector('.header__menu-bar');
+const menu = document.querySelector('.header__burger');
+const logo = document.querySelector('.header__logo-burger');
 
+document.addEventListener('DOMContentLoaded', (event) => {
   if (menuBtn) {
     menuBtn.addEventListener('click', function () {
       menu.classList.toggle('active');
@@ -58,3 +58,72 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   }
 });
+
+const addToBasketBut = document.querySelectorAll('.catalog__basket-button');
+
+if (addToBasketBut) {
+  for (let i = 0; i < addToBasketBut.length; i++) {
+    addToBasketBut[i].addEventListener('click', function () {
+      modalShow('make-pizza');
+    });
+  }
+}
+document
+  .querySelector('.modal-pizza-make__button')
+  .addEventListener('click', function () {
+    modalHide();
+  });
+
+const changeAddressButton = document.querySelector(
+  '.order__form-fieldset-button-address'
+);
+const changeAddressPickupButton = document.querySelector(
+  '.order__form-fieldset-button-pickup'
+);
+if (changeAddressButton) {
+  changeAddressButton.addEventListener('click', function () {
+    modalShow('address');
+  });
+}
+if (changeAddressPickupButton) {
+  changeAddressPickupButton.addEventListener('click', function () {
+    modalShow('address');
+  });
+}
+
+document
+  .querySelector('.modal-address__button')
+  .addEventListener('click', function () {
+    modalHide();
+  });
+
+const changeDeliveryTimeButton = document.querySelector(
+  '.order__form-inside-button-time'
+);
+
+if (changeDeliveryTimeButton) {
+  changeDeliveryTimeButton.addEventListener('click', function () {
+    modalShow('delivery');
+  });
+}
+
+const modalOpenEnterBut = document.querySelector('.header__enter-link');
+const modalOpenEnterBurgerBut = document.querySelector(
+  '.header__burger-button'
+);
+
+if (modalOpenEnterBut) {
+  modalOpenEnterBut.addEventListener('click', function () {
+    modalShow('index');
+  });
+}
+
+if (modalOpenEnterBurgerBut) {
+  modalOpenEnterBurgerBut.addEventListener('click', function () {
+    modalShow('index');
+
+    menu.classList.remove('active');
+    menuBtn.classList.remove('active');
+    logo.classList.remove('active');
+  });
+}
