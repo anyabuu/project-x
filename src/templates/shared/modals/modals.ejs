@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div class="send-code-wrapper invisible">
+        <div class="send-code-wrapper">
             <div class="modal__form-enter-code">
                 <label class="modal__form-enter-label" for="phone-send-code">
                     Номер телефона
@@ -39,21 +39,21 @@
                 </button>
             </div>
 
-            <div class="modal__form-enter-code invisible">
-                <label class="modal__form-enter-label invisible" for="code">
+            <div class="modal__form-enter-code">
+                <label class="modal__form-enter-label" for="code">
                     Код из СМС
                 </label>
-                <input class="modal__form-enter-input modal__form-enter-input--small invisible" type="text" name="user_code" id="code" value="1234">
+                <input class="modal__form-enter-input modal__form-enter-input--small" type="text" name="user_code" id="code" value="1234">
 
                 <label class="modal__form-enter-label invisible" for="entered-code">
                     Код из СМС
                 </label>
                 <input class="modal__form-enter-input modal__form-enter-input--small  invisible" type="text" name="user-entered-code" id="entered-code" value="1234" readonly disabled>
 
-                <label class="modal__form-enter-label" for="error-code">
+                <label class="modal__form-enter-label invisible" for="error-code">
                     Код из СМС
                 </label>
-                <input class="modal__form-enter-input modal__form-enter-input--small modal__input-code--error" type="text" name="user-entered-code" id="error-code" value="1">
+                <input class="modal__form-enter-input modal__form-enter-input--small modal__input-code--error invisible" type="text" name="user-entered-code" id="error-code" value="1">
 
                 <button class="modal__change-code-button button__tertiary">
                     Получить новый код

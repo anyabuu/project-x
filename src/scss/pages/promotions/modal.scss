@@ -7,6 +7,15 @@
 .modal__title {
   font-size: 2.5rem;
 }
+.enter-number-wrapper--passive {
+  display: none;
+}
+.send-code-wrapper {
+  display: none;
+}
+.send-code-wrapper--active {
+  display: block;
+}
 .modal__form-enter {
   display: flex;
   align-items: center;
@@ -47,7 +56,7 @@
 .modal__form-enter-input--big {
   width: 255px;
   &:disabled {
-    width: 150px;
+    width: 160px;
     padding: 0;
   }
 }

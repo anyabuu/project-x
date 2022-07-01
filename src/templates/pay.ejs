@@ -30,7 +30,7 @@
                     </label>
                     <div class="order__input-wrapper">
                         <input class="order__form-input delivery-input" type="tel" name="user_phone" id="phone" value="+380123456789" readonly pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" disabled>
-                        <button class="order__form-inside-button button__tertiary"  type="submit">
+                        <button class="order__form-inside-button button__tertiary"  type="button">
                             Изменить
                         </button>
                     </div>
@@ -42,13 +42,13 @@
                     <fieldset class="order__form-fieldset delivery-input">
                         <div class="order__fieldset-input-wrapper">
                             <input class="order__form-input-fieldset delivery-input" type="text" name="delivery-type" id="delivery-type" value="Дом" readonly>
-                            <button class="order__form-fieldset-button button__tertiary"  type="submit">
+                            <button class="order__form-fieldset-button order__form-fieldset-button-address button__tertiary"  type="button">
                                 Изменить
                             </button>
                         </div>
                         <div class="order__fieldset-input-wrapper">
                             <textarea class="order__form-input-textarea delivery-input" type="text" name="address" id="address" readonly>ул. Крещатик, д. 8, под. Последний, эт. Последний, кв. 23, код Домофон</textarea>
-                            <button class="order__form-fieldset-button button__tertiary"  type="submit">
+                            <button class="order__form-fieldset-button order__form-fieldset-button-pickup button__tertiary"  type="button">
                                 Выбрать самовывоз
                             </button>
                         </div>
@@ -60,7 +60,7 @@
                     </label>
                     <div class="order__input-wrapper">
                         <input class="order__form-input delivery-input" type="text" name="user_phone" id="delivery-time" value="Побыстрее" readonly disabled>
-                        <button class="order__form-inside-button button__tertiary"  type="submit">
+                        <button class="order__form-inside-button order__form-inside-button-time button__tertiary" type="button">
                             Изменить
                         </button>
                     </div>

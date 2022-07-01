@@ -26,11 +26,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }).mount();
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  const menuBtn = document.querySelector('.header__menu-bar');
-  const menu = document.querySelector('.header__burger');
-  const logo = document.querySelector('.header__logo-burger');
+const menuBtn = document.querySelector('.header__menu-bar');
+const menu = document.querySelector('.header__burger');
+const logo = document.querySelector('.header__logo-burger');
 
+document.addEventListener('DOMContentLoaded', (event) => {
   if (menuBtn) {
     menuBtn.addEventListener('click', function () {
       menu.classList.toggle('active');
@@ -60,25 +60,77 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 });
 
-const modalOpenBut = document.querySelector('.header__shop-button');
+const addToBasketBut = document.querySelectorAll('.catalog__basket-button');
 
-if (modalOpenBut) {
-  modalOpenBut.addEventListener('click', function () {
-    modalShow('make-pizza');
-  });
+if (addToBasketBut) {
+  for (let i = 0; i < addToBasketBut.length; i++) {
+    addToBasketBut[i].addEventListener('click', function () {
+      modalShow('make-pizza');
+    });
+  }
 }
-
 document
   .querySelector('.modal-pizza-make__button')
   .addEventListener('click', function () {
     modalHide();
   });
 
+const changeAddressButton = document.querySelector(
+  '.order__form-fieldset-button-address'
+);
+const changeAddressPickupButton = document.querySelector(
+  '.order__form-fieldset-button-pickup'
+);
+if (changeAddressButton) {
+  changeAddressButton.addEventListener('click', function () {
+    modalShow('address');
+  });
+}
+if (changeAddressPickupButton) {
+  changeAddressPickupButton.addEventListener('click', function () {
+    modalShow('address');
+  });
+}
+
+const changeDeliveryTimeButton = document.querySelector(
+  '.order__form-inside-button-time'
+);
+
+if (changeDeliveryTimeButton) {
+  changeDeliveryTimeButton.addEventListener('click', function () {
+    modalShow('delivery');
+  });
+}
+
 const modalOpenEnterBut = document.querySelector('.header__enter-link');
+const modalOpenEnterBurgerBut = document.querySelector(
+  '.header__burger-button'
+);
 
 if (modalOpenEnterBut) {
   modalOpenEnterBut.addEventListener('click', function () {
     modalShow('index');
+  });
+}
+
+document
+  .querySelector('.modal__form-enter-button')
+  .addEventListener('click', function () {
+    document
+      .querySelector('.enter-number-wrapper')
+      .classList.add('enter-number-wrapper--passive');
+    document
+      .querySelector('.send-code-wrapper')
+      .classList.add('send-code-wrapper--active');
+  });
+
+if (modalOpenEnterBurgerBut) {
+  modalOpenEnterBurgerBut.addEventListener('click', function () {
+    modalShow('index');
+
+    menu.classList.remove('active');
+    menuBtn.classList.remove('active');
+    logo.classList.remove('active');
   });
 }
 
