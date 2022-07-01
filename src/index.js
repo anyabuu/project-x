@@ -92,6 +92,12 @@ if (changeAddressPickupButton) {
   });
 }
 
+document
+  .querySelector('.modal-address__button')
+  .addEventListener('click', function () {
+    modalHide();
+  });
+
 const changeDeliveryTimeButton = document.querySelector(
   '.order__form-inside-button-time'
 );
