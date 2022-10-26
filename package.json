@@ -49,7 +49,7 @@
   },
   "dependencies": {
     "@fastify/static": "^6.4.0",
-    "@fastify/cors": "^8.0.0",
+    "@fastify/cors": "^8.1.1",
     "@glidejs/glide": "^3.5.2",
     "ejs": "^3.1.8",
     "fastify": "^4.2.0",
