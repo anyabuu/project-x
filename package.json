@@ -37,7 +37,7 @@
     "mini-css-extract-plugin": "^2.6.1",
     "postcss": "^8.4.14",
     "postcss-loader": "^7.0.0",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.0",
     "rammfall-stylelint-scss": "^0.1.1",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
